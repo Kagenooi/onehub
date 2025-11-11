@@ -1,0 +1,16 @@
+#adaptive {
+    min-width: 1920px;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow-x: hidden;
+
+    @media (max-width: 1296px) {
+        min-width: 1150px;
+        max-width: 1150px;
+    }
+
+    @media (max-width: 768px) {
+        min-width: 320px;
+        max-width: 320px;
+    }
+}
