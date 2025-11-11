@@ -1,1 +1,42 @@
-/*# sourceMappingURL=index.css.map */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background: #EFEFEF;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  display: block;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+textarea {
+  resize: none;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}/*# sourceMappingURL=index.css.map */
