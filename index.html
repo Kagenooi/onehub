@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="scss/index/index.css">
 </head>
+
 <body>
     <div id="adaptive">
 
@@ -37,7 +39,7 @@
                                         <span class="navbar__lang_list_link_txten"></span>
                                         <span class="navbar__lang_list_link_txt"></span>
                                         <!-- if language is active, "navbar__lang_list_link_checked" element have a active class -->
-                                        <img src="" alt="" class="navbar__lang_list_link_checked"> 
+                                        <img src="" alt="" class="navbar__lang_list_link_checked">
                                     </a>
                                 </li>
                             </ul>
@@ -54,10 +56,27 @@
                         <button type="button" class="navbar__burger_btn">
                             <img src="" alt="" class="navbar__burger_btn_icon">
                         </button>
-                        <div class="navbar__burger_wrapper" id="burger">
-                            <ul class="navbar__burger_list">
-                                <li class="navbar__burger_list_el">
-                                    <a href="" class="navbar__burger_list_el_link"></a>
+                        <div class="navbar__burger_wrapper burger" id="burger">
+                            <ul class="burger__list">
+                                <li class="burger__list_el">
+                                    <a href="" class="burger__list_el_link"></a>
+                                </li>
+                                <li class="burger__list_el">
+                                    <a href="" class="burger__list_el_link subhover"></a>
+                                    <!--  -->
+                                    <ul class="burger__list_el_sub subburger">
+                                        <li class="subburger__el">
+                                            <a href="" class="subburger__el_link subhover"></a>
+                                            <!--  -->
+                                            <ul class="subburger__el_sub subburger">
+                                                <li class="subburger__el">
+                                                    <a href="" class="subburger__el_link"></a>
+                                                </li>
+                                            </ul>
+                                            <!--  -->
+                                        </li>
+                                    </ul>
+                                    <!--  -->
                                 </li>
                             </ul>
                         </div>
@@ -97,4 +116,5 @@
 
     <script type="module" src="js/index.js"></script>
 </body>
+
 </html>
