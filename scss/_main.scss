@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background: #EFEFEF;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    display: block;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+textarea {
+    resize: none;
+}
+
+select {
+    appearance: none;
+}
