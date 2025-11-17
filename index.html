@@ -12,34 +12,34 @@
     <div id="adaptive">
 
         <nav class="navbar">
-            <div class="navbar__container">
-                <div class="navbar__wrapper black">
+            <div class="navbar__container black">
+                <div class="navbar__wrapper">
                     <ul class="navbar__contacts">
                         <li class="navbar__contacts_el">
-                            <img src="" alt="" class="navbar__contacts_el_icon">
-                            <a href="" class="navbar__contacts_el_link"></a>
-                            <a href="" class="navbar__contacts_el_link"></a>
+                            <img src="images/phoneNavTop.svg" alt="" class="navbar__contacts_el_icon">
+                            <a href="tel:+37496949466" class="navbar__contacts_el_link">+374-96-94-94-66</a>
+                            <a href="tel:+37496949466" class="navbar__contacts_el_link">+374-96-94-94-66</a>
                         </li>
                         <li class="navbar__contacts_el">
-                            <img src="" alt="" class="navbar__contacts_el_icon">
-                            <a href="" class="navbar__contacts_el_link"></a>
+                            <img src="images/locationNavTop.svg" alt="" class="navbar__contacts_el_icon">
+                            <a href="" class="navbar__contacts_el_link">Ք. Երևան, Դավիթ Բեկի 11/8</a>
                         </li>
                     </ul>
                     <div class="navbar__lang">
-                        <button type="button" class="navbar__lang_btn">
-                            <img src="" alt="" class="navbar__lang_btn_flag">
-                            <span class="navbar__lang_btn_txt"></span>
+                        <button type="button" class="navbar__lang_btn" onclick="toggleActive(this, 'langWrapper')">
+                            <img src="images/flag.png" alt="" class="navbar__lang_btn_flag">
+                            <span class="navbar__lang_btn_txt">ARM</span>
                         </button>
                         <div class="navbar__lang_wrapper" id="langWrapper">
-                            <p class="navbar__lang_title"></p>
+                            <p class="navbar__lang_title">Լեզու</p>
                             <ul class="navbar__lang_list">
                                 <li>
                                     <a href="" class="navbar__lang_list_link">
-                                        <img src="" alt="" class="navbar__lang_list_link_flag">
-                                        <span class="navbar__lang_list_link_txten"></span>
-                                        <span class="navbar__lang_list_link_txt"></span>
+                                        <img src="images/flag.png" alt="" class="navbar__lang_list_link_flag">
+                                        <span class="navbar__lang_list_link_txten">ARM</span>
+                                        <span class="navbar__lang_list_link_txt">Հայերեն</span>
                                         <!-- if language is active, "navbar__lang_list_link_checked" element have a active class -->
-                                        <img src="" alt="" class="navbar__lang_list_link_checked">
+                                        <img src="images/langchecked.svg" alt="" class="navbar__lang_list_link_checked">
                                     </a>
                                 </li>
                             </ul>
@@ -48,69 +48,485 @@
                 </div>
             </div>
             <div class="navbar__container">
-                <div class="navbar__wrapper">
+                <div class="navbar__wrapper bottom">
                     <a href="" class="navbar__logo">
-                        <img src="" alt="" class="navbar__logo_img">
+                        <img src="images/logo.png" alt="" class="navbar__logo_img">
                     </a>
                     <div class="navbar__burger">
                         <button type="button" class="navbar__burger_btn">
-                            <img src="" alt="" class="navbar__burger_btn_icon">
+                            <img src="images/burger.svg" alt="" class="navbar__burger_btn_icon">
                         </button>
                         <div class="navbar__burger_wrapper burger" id="burger">
-                            <ul class="burger__list">
-                                <li class="burger__list_el">
-                                    <a href="" class="burger__list_el_link"></a>
-                                </li>
-                                <li class="burger__list_el">
-                                    <a href="" class="burger__list_el_link subhover"></a>
-                                    <!--  -->
-                                    <ul class="burger__list_el_sub subburger">
-                                        <li class="subburger__el">
-                                            <a href="" class="subburger__el_link subhover"></a>
-                                            <!--  -->
-                                            <ul class="subburger__el_sub subburger">
-                                                <li class="subburger__el">
-                                                    <a href="" class="subburger__el_link"></a>
-                                                </li>
-                                            </ul>
-                                            <!--  -->
-                                        </li>
-                                    </ul>
-                                    <!--  -->
-                                </li>
-                            </ul>
+
                         </div>
                     </div>
                     <div class="navbar__search">
                         <form action="">
                             <div class="navbar__search_wrapper">
-                                <input type="search" class="navbar__search_inp" placeholder="">
+                                <input type="search" class="navbar__search_inp"
+                                    placeholder="Գտի՛ր ցանկացած պահեստամաս ONE HUB-ում">
                                 <button type="button" class="navbar__search_photo">
-                                    <img src="" alt="" class="navbar__search_photo_icon">
+                                    <img src="images/photo.svg" alt="" class="navbar__search_photo_icon">
                                 </button>
                                 <button type="button" class="navbar__search_loop">
-                                    <img src="" alt="" class="navbar__search_loop_icon">
+                                    <img src="images/loop.svg" alt="" class="navbar__search_loop_icon">
                                 </button>
                             </div>
                         </form>
                     </div>
                     <div class="navbar__controls">
                         <button type="button" class="navbar__controls_btn">
-                            <img src="" alt="" class="navbar__controls_btn_icon">
-                            <span class="navbar__controls_btn_txt"></span>
+                            <img src="images/location.svg" alt="" class="navbar__controls_btn_icon">
+                            <span class="navbar__controls_btn_txt">Հասցե</span>
                         </button>
                         <button type="button" class="navbar__controls_btn">
-                            <img src="" alt="" class="navbar__controls_btn_icon">
-                            <span class="navbar__controls_btn_txt"></span>
+                            <img src="images/user.svg" alt="" class="navbar__controls_btn_icon">
+                            <span class="navbar__controls_btn_txt">Մուտք</span>
                         </button>
                         <button type="button" class="navbar__controls_btn">
-                            <img src="" alt="" class="navbar__controls_btn_icon">
-                            <span class="navbar__controls_btn_txt"></span>
+                            <img src="images/basket.svg" alt="" class="navbar__controls_btn_icon">
+                            <span class="navbar__controls_btn_txt">Զամբյուղ</span>
                         </button>
                     </div>
                 </div>
             </div>
         </nav>
+
+        <header class="header">
+            <h1 class="header__title">ԲՈԼՈՐԸ ՄԵԿ ՎԱՅՐՈՒՄ</h1>
+            <div class="header__wrapper header__categories">
+                <a href="" class="header__categories_el orange">
+                    <h2 class="header__categories_el_title">ՊԱՀԵՍՏԱՄԱՍ</h2>
+                    <img src="images/cat1.png" alt="" class="header__categories_el_img">
+                </a>
+                <a href="" class="header__categories_el black">
+                    <h2 class="header__categories_el_title">ԱՎՏՈՄԵՔԵՆԱ</h2>
+                    <img src="images/cat2.png" alt="" class="header__categories_el_img">
+                </a>
+                <a href="" class="header__categories_el blue">
+                    <h2 class="header__categories_el_title">ՍՊԱՍԱՐԿՈՒՄ</h2>
+                    <img src="images/cat3.png" alt="" class="header__categories_el_img">
+                </a>
+            </div>
+            <div class="header__wrapper">
+                <div class="header__filter">
+                    <form action="">
+                        <div class="header__filter_container">
+                            <h3 class="header__filter_title">
+                                <img src="images/filterLoop.svg" alt="" class="header__filter_title_icon">
+                                Փնտրի՛ր մեքենադ VIN համարով
+                            </h3>
+                            <div class="header__filter_search">
+                                <p class="header__filter_search_name">VIN</p>
+                                <input type="search" class="header__filter_search_inp" placeholder="VIN DPJ022408777">
+                                <button class="header__filter_search_btn">
+                                    <img src="images/filterLoop2.svg" alt="" class="header__filter_search_btn_icon">
+                                </button>
+                            </div>
+                            <div class="header__filter_wrapper">
+                                <div class="header__filter_select">
+                                    <button class="header__filter_select_btn">
+                                        <span class="header__filter_select_btn_txt">Ընտրել մակնիշը</span>
+                                        <img src="images/filterArrow.svg" alt="" class="header__filter_select_btn_arr">
+                                    </button>
+                                    <div class="header__filter_select_options">
+                                        <p class="header__filter_select_options_title">Հայտնի մակնիշներ</p>
+                                        <div class="header__filter_select_options_wrapper">
+                                            <button class="header__filter_select_options_el">Mercedes-Benz</button>
+                                            <button class="header__filter_select_options_el">Toyota</button>
+                                            <button class="header__filter_select_options_el">Honda</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="header__filter_submit">ՓՆՏՐԵԼ</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="header__slider swiper" id="headerSlider">
+                    <h2 class="header__slider_title">
+                        <img src="images/fire.svg" alt="" class="header__slider_title_img">
+                    </h2>
+                    <div class="header__slider_btns">
+                        <button type="button" class="header__slider_btns_btn prev">
+                            <img src="images/sliderChervon.svg" alt="" class="header__slider_btns_btn_icon">
+                        </button>
+                        <button type="button" class="header__slider_btns_btn next">
+                            <img src="images/sliderChervon.svg" alt="" class="header__slider_btns_btn_icon">
+                        </button>
+                    </div>
+                    <div class="header__slider_wrapper swiper-wrapper">
+                        <div class="header__slider_el swiper-slide">
+                            <div class="product">
+                                <div class="product__pic">
+                                    <img src="images/product.png" alt="" class="product__pic_img">
+                                </div>
+                                <button class="product__wishlist">
+                                    <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                                    <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
+                                </button>
+                                <div class="product__desc">
+                                    <p class="product__desc_price">
+                                        <span class="product__desc_price_static">3.600֏</span>
+                                        <span class="product__desc_price_new">2.600֏</span>
+                                    </p>
+                                    <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                                    <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                                </div>
+                                <button type="button" class="product__btn">
+                                    <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                                    <span class="product__btn_txt">Այսօր</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="ads blueGradient">
+            <div class="ads__wrapper">
+                <div class="ads__desc">
+                    <h2 class="ads__desc_title">ԱՄԵՆԻՆՉ</h2>
+                    <h3 class="ads__desc_subtitle">ՄԵԿ ՏԵՂՈՒՄ</h3>
+                </div>
+                <img src="images/ads.png" alt="" class="ads__img">
+            </div>
+        </section>
+
+        <section class="brands">
+            <div class="brands__container">
+                <h2 class="brands__title">Հայտնի մակնիշներ</h2>
+                <div class="brands__wrapper">
+                    <a href="" class="brands__link">
+                        <img src="images/brands.png" alt="" class="brands__link_img">
+                    </a>
+                </div>
+                <a href="" class="seeMore">
+                    Տեսնել բոլորը
+                    <img src="images/seeMoreArrow.svg" alt="" class="seeMore__icon">
+                </a>
+            </div>
+        </section>
+
+        <section class="spares">
+            <div class="spares__container">
+                <h2 class="spares__title">Փնտրի՛ր ցանկացած պահեստամաս քո՛ մեքենայի համար</h2>
+                <div class="spares__wrapper">
+                    <a href="" class="spares__link">
+                        <img src="images/spares.png" alt="" class="spares__link_img">
+                        <span class="spares__link_name">Անիվներ</span>
+                    </a>
+                </div>
+                <a href="" class="seeMore">
+                    Տեսնել բոլորը
+                    <img src="images/seeMoreArrow.svg" alt="" class="seeMore__icon">
+                </a>
+            </div>
+        </section>
+
+        <section class="ads gray">
+            <div class="ads__wrapper">
+                <div class="ads__desc">
+                    <h2 class="ads__desc_title black textRight">ԱՐԱԳ</h2>
+                    <h3 class="ads__desc_subtitle black textRight">ԱՌԱՔՈՒՄ</h3>
+                </div>
+                <img src="images/truck.png" alt="" class="ads__img">
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="products__container">
+                <h2 class="products__title">ՊԱՀԵՍՏԱՄԱՍԵՐԻ ԱՄԵՆԱՄԵԾ ԽԱՆՈՒԹԸ ՀԱՅԱՍՏԱՆՈՒՄ</h2>
+                <div class="products__wrapper">
+                    <div class="product">
+                        <div class="product__pic">
+                            <img src="images/product.png" alt="" class="product__pic_img">
+                        </div>
+                        <button class="product__wishlist">
+                            <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                            <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
+                        </button>
+                        <div class="product__desc">
+                            <p class="product__desc_price">
+                                <span class="product__desc_price_static">3.600֏</span>
+                                <span class="product__desc_price_new">2.600֏</span>
+                            </p>
+                            <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                            <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                        </div>
+                        <button type="button" class="product__btn">
+                            <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                            <span class="product__btn_txt">Այսօր</span>
+                        </button>
+                    </div>
+                    <div class="product">
+                        <div class="product__pic">
+                            <img src="images/product.png" alt="" class="product__pic_img">
+                        </div>
+                        <button class="product__wishlist">
+                            <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                            <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
+                        </button>
+                        <div class="product__desc">
+                            <p class="product__desc_price">
+                                <span class="product__desc_price_static">3.600֏</span>
+                                <span class="product__desc_price_new">2.600֏</span>
+                            </p>
+                            <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                            <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                        </div>
+                        <button type="button" class="product__btn">
+                            <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                            <span class="product__btn_txt">Այսօր</span>
+                        </button>
+                    </div>
+                </div>
+                <a href="" class="seeMore">
+                    Տեսնել բոլորը
+                    <img src="images/seeMoreArrow.svg" alt="" class="seeMore__icon">
+                </a>
+            </div>
+        </section>
+
+        <section class="callAction">
+            <div class="callAction__wrapper">
+                <div class="callAction__desc">
+                    <h2 class="callAction__desc_title">Massol յուղերի պաշտոնական ներմուծող</h2>
+                    <a href="" class="callAction__desc_link">Տեսնել կատալոգում</a>
+                </div>
+                <img src="images/callAction.png" alt="" class="callAction__img">
+            </div>
+        </section>
+
+        <section class="productsSlider">
+            <div class="productsSlider__container">
+                <h2 class="productsSlider__title">Յուղերի պաշտոնական ապրանքանիշեր</h2>
+                <div class="productsSlider__wrapper swiper">
+                    <div class="productsSlider__btns">
+                        <button type="button" class="productsSlider__btns_btn prev">
+                            <img src="images/sliderChervon.svg" alt="" class="productsSlider__btns_btn_icon">
+                        </button>
+                        <button type="button" class="productsSlider__btns_btn next">
+                            <img src="images/sliderChervon.svg" alt="" class="productsSlider__btns_btn_icon">
+                        </button>
+                    </div>
+                    <div class="swiper-wrapper">
+                        <div class="productsSlider__el swiper-slide">
+                            <div class="product">
+                                <div class="product__pic">
+                                    <img src="images/product.png" alt="" class="product__pic_img">
+                                </div>
+                                <button class="product__wishlist">
+                                    <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                                    <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
+                                </button>
+                                <div class="product__desc">
+                                    <p class="product__desc_price">
+                                        <span class="product__desc_price_static">3.600֏</span>
+                                        <span class="product__desc_price_new">2.600֏</span>
+                                    </p>
+                                    <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                                    <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                                </div>
+                                <button type="button" class="product__btn">
+                                    <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                                    <span class="product__btn_txt">Այսօր</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="oil">
+            <div class="oil__container">
+                <h2 class="oil__title">Յուղերի հայտնի ապրանքանիշեր</h2>
+                <div class="oil__wrapper">
+                    <a href="" class="oil__link">
+                        <img src="images/oil.png" alt="" class="oil__link_img">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="ads greenGradient">
+            <div class="ads__wrapper">
+                <div class="ads__desc">
+                    <h2 class="ads__desc_title">ՑԱՆԿԱՑԱԾ</h2>
+                    <h3 class="ads__desc_subtitle">ԽՆԴԻՐ</h3>
+                </div>
+                <img src="images/ads.png" alt="" class="ads__img">
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="services__container">
+                <h2 class="services__title">Ծառայություններ, որոնք մեր մասնագետները կանեն պրոֆեսիոնալ կերպով</h2>
+                <div class="services__wrapper">
+                    <a href="" class="services__link">Փոխանցման տուփ</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contactUs">
+            <form action="">
+                <div class="contactUs__container">
+                    <h2 class="contactUs__title">Ձեր Մեքենան ունի խնդիր, իսկ դուք չունեք ժամանակ</h2>
+                    <div class="contactUs__wrapper">
+                        <div class="contactUs__el">
+                            <input type="text" name="" id="" class="contactUs__inp">
+                            <input type="text" name="" id="" class="contactUs__inp">
+                            <textarea name="" id="" class="contactUs__textarea"></textarea>
+                            <label for="" class="contactUs__agree">
+                                <input type="checkbox" name="" id="" class="contactUs__agree_inp">
+                                <span class="contactUs__agree_checkbox"></span>
+                                <span class="contactUs__agree_txt"></span>
+                            </label>
+                            <p class="contactUs__txt"></p>
+                        </div>
+                        <div class="contactUs__el">
+                            <div class="contactUs__file">
+
+                            </div>
+                            <button type="submit" class="contactUs__submit"></button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section class="news">
+            <div class="news__container">
+                <h2 class="news__title">Հետևեք մեզ Սոցիալական հարթակներում</h2>
+                <div class="news__wrapper">
+                    <div class="news__about">
+                        <h3 class="news__about_title">Մեքենայի վերանորոգումը երբեք այսքան հեշտ չի եղել</h3>
+                        <p class="news__about_txt">Ասա «ոչ» բարդ հրահանգներին և շփոթեցնող դիագրամներին: Օգտվեք ONEHUB-ի
+                            գործնական և հեշտ մեքենաների վերանորոգման ձեռնարկներից:</p>
+                        <div class="news__about_video">
+                            <!-- video in youtube, delete image -->
+                            <img src="images/about.png" alt="">
+                        </div>
+                    </div>
+                    <div class="news__list">
+                        <div class="news__list_el">
+                            <img src="images/newsLogo.png" alt="" class="news__list_el_logo">
+                            <div class="news__list_el_media">
+                                <!-- image or video -->
+                                <img src="images/news.png" alt="" class="news__list_el_media_img">
+                            </div>
+                            <p class="p news__list_el_txt">
+                                Անվճար մանրամասն ուղեցույցներ և
+                                տեսանյութեր՝ ինքնուրույն մեքենաների
+                                վերանորոգման համար
+                            </p>
+                            <a href="" class="news__list_el_link">
+                                ՄԻԱՑԻՐ ՄԵՐ ԱԿՈՒՄԲԻՆ
+                                <img src="images/newsLinkIcon.svg" alt="" class="news__list_el_link_icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer__container gray">
+                <div class="footer__wrapper top">
+                    <div class="footer__menu">
+                        <div class="footer__menu_el">
+                            <h3 class="footer__menu_el_title">ONE HUB-ի ՄԱՍԻՆ</h3>
+                            <ul class="footer__menu_el_list">
+                                <li>
+                                    <a href="" class="footer__menu_el_list_link">Մեր մասին</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu_el">
+                            <h3 class="footer__menu_el_title">ՕԳՆՈՒԹՅՈՒՆ ԵՎ ԱՋԱԿՑՈՒԹՅՈՒՆ</h3>
+                            <ul class="footer__menu_el_list">
+                                <li>
+                                    <a href="" class="footer__menu_el_list_link">Մեր մասին</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu_el">
+                            <h3 class="footer__menu_el_title">ONE HUB-ի ՄԱՍԻՆ</h3>
+                            <ul class="footer__menu_el_list">
+                                <li>
+                                    <a href="" class="footer__menu_el_list_link">Մեր մասին</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu_el">
+                            <h3 class="footer__menu_el_title">ONE HUB-ի ՄԱՍԻՆ</h3>
+                            <ul class="footer__menu_el_list">
+                                <li>
+                                    <a href="" class="footer__menu_el_list_link">Մեր մասին</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__container black">
+                <div class="footer__wrapper bottom">
+                    <ul class="footer__bankList">
+                        <li>
+                            <a href="" class="footer__bankList_link">
+                                <img src="images/bank.png" alt="" class="footer__bankList_link_img">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer__content">
+                        <div class="footer__desc">
+                            <h3 class="footer__desc_title">Ուշադրություն</h3>
+                            <p class="footer__desc_txt">
+                                Այստեղ ցուցադրված տվյալները, մասնավորապես ամբողջ
+                                տվյալների բազան, չեն կարող պատճենվել: Տվյալների և տվյալների բազայի վերարտադրումն ու
+                                տարածումը առանց ONEHUB-ի նախնական համաձայնության և/կամ երրորդ կողմերին նման
+                                գործողություններում ներգրավելը խստիվ արգելվում է: Բովանդակության ցանկացած չարտոնված
+                                օգտագործում համարվում է հեղինակային իրավունքի խախտում և կհանգեցնի իրավական հետևանքների:
+                            </p>
+                        </div>
+                        <div class="footer__desc">
+                            <h3 class="footer__desc_title">
+                                Հաճախորդների սպասարկման
+                                ժամերը հայաստանում
+                            </h3>
+                            <p class="footer__desc_txt">
+                                Երկուշաբթի-Ուրբաթ 7:00-20:00
+                                Շաբաթ 7:00-16:00
+                                Կիրակի՝ փակ է
+                            </p>
+                        </div>
+                        <div class="footer__desc_social">
+                            <ul class="footer__desc_social_list">
+                                <li>
+                                    <a href="" class="footer__desc_social_link">
+                                        <img src="images/social.svg" alt="" class="footer__desc_social_link_icon">
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="mailto:info@onehub.am" class="footer__desc_social_link">info@onehub.am</a>
+                            <p class="footer__desc_social_txt">Davit Bek 21/80, Yerevan</p>
+                            <a href="tel:+37496949466" class="footer__desc_social_link bold">+374-96-94-94-66</a>
+                        </div>
+                        <div class="footer__pic">
+                            <img src="images/footerLogo.png" alt="" class="footer__pic_img">
+                            <p class="footer__pic_txt">Բոլոր իրավունքները պաշտպանված են</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__wrapper">
+                    <div class="footer__lang">
+                        <!--  -->
+                    </div>
+                </div>
+            </div>
+        </footer>
 
     </div>
 

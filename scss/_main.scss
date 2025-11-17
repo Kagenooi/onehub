@@ -1,6 +1,89 @@
+/* Подключение Montserrat Arm */
+@font-face {
+    font-family: "montserrat arm";
+    src: url("../../fonts/montserratarm/Montserratarm-Thin.otf") format("opentype");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "montserrat arm";
+    src: url("../../fonts/montserratarm/Montserratarm-ExtraLight.otf") format("opentype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "montserrat arm";
+    src: url("../../fonts/montserratarm/Montserratarm-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "montserrat arm";
+    src: url("../../fonts/montserratarm/Montserratarm-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "montserrat arm";
+    src: url("../../fonts/montserratarm/Montserratarm-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "montserrat arm";
+    src: url("../../fonts/montserratarm/Montserratarm-SemiBold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "montserrat arm";
+    src: url("../../fonts/montserratarm/Montserratarm-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "montserrat arm";
+    src: url("../../fonts/montserratarm/Montserratarm-ExtraBold.otf") format("opentype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "montserrat arm";
+    src: url("../../fonts/montserratarm/Montserratarm-Black.otf") format("opentype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 * {
     margin: 0;
     padding: 0;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    font-family: "montserrat arm", sans-serif;
+    transition: .3s;
+
+    &:hover {
+        transition: .3s;
+    }
 }
 
 html {
@@ -12,7 +95,8 @@ body {
     background: #EFEFEF;
 }
 
-ul, ol {
+ul,
+ol {
     list-style: none;
 }
 
@@ -31,10 +115,27 @@ select {
     background: none;
 }
 
+button,
+select {
+    cursor: pointer;
+}
+
 textarea {
     resize: none;
 }
 
 select {
     appearance: none;
+}
+
+input[type="search"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
 }

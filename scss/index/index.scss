@@ -1,3 +1,147 @@
 @import '../main';
 @import '../footer';
 @import '../navbar';
+
+
+.ads {
+
+    &__wrapper {
+        width: fit-content;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 0 15px;
+    }
+
+    &.blueGradient {
+        background: linear-gradient(91.91deg, #0B2543 -1.62%, #0C94FF 101.26%);
+    }
+
+    &.greenGradient {
+        background: linear-gradient(91.91deg, #306000 -1.62%, #6CFA00 101.26%);
+
+        .ads__wrapper {
+            gap: 60px;
+        }
+    }
+
+    &.gray {
+        background: #E8E4E4;
+    }
+
+    &__desc {
+
+        &_title {
+            font-size: 118px;
+        }
+
+        &_subtitle {
+            font-size: 94px;
+        }
+
+
+        &_title,
+        &_subtitle {
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #fff;
+
+            &.black {
+                color: #302F2F;
+            }
+
+            &.textRight {
+                text-align: right;
+            }
+        }
+    }
+}
+
+
+.header {
+    margin-top: 180px;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        width: 100%;
+        max-width: 1700px;
+        margin: 0 auto;
+        padding: 20px 15px;
+    }
+
+    &__title {
+        text-align: center;
+        padding-top: 20px;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &__categories {
+        margin-bottom: -8px;
+
+        &_el {
+            width: 100%;
+            padding-top: 8px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &.orange {
+                background: linear-gradient(113.73deg, #F72E04 0%, #FF7518 100%);
+            }
+
+            &.black {
+                background: linear-gradient(113.8deg, #030208 0%, #2A2A2A 100%);
+            }
+
+            &.blue {
+                background: linear-gradient(113.73deg, #0383E8 0%, #239EFD 100%);
+            }
+
+            &_title {
+                text-align: center;
+                color: #fff;
+                font-size: 62px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            &_img {
+                display: block;
+                margin: 0 auto;
+                max-width: 100%;
+            }
+
+            &:hover &_img {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__filter,
+    &__slider {
+        background: #E8E4E4;
+        border-radius: 12px;
+        padding: 20px;
+    }
+
+    &__slider {
+        grid-column: 2 / 4;
+    }
+
+    &__filter {
+
+        &_title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+    }
+}
