@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="scss/index/index.css">
 </head>
 
@@ -125,16 +126,80 @@
                             </div>
                             <div class="header__filter_wrapper">
                                 <div class="header__filter_select">
-                                    <button class="header__filter_select_btn">
+                                    <button type="button" class="header__filter_select_btn" data-acc="carBrands"
+                                        onclick="toggleAcc(this)">
                                         <span class="header__filter_select_btn_txt">Ընտրել մակնիշը</span>
                                         <img src="images/filterArrow.svg" alt="" class="header__filter_select_btn_arr">
                                     </button>
-                                    <div class="header__filter_select_options">
+                                    <div class="header__filter_select_options" id="carBrands">
                                         <p class="header__filter_select_options_title">Հայտնի մակնիշներ</p>
                                         <div class="header__filter_select_options_wrapper">
-                                            <button class="header__filter_select_options_el">Mercedes-Benz</button>
-                                            <button class="header__filter_select_options_el">Toyota</button>
-                                            <button class="header__filter_select_options_el">Honda</button>
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Mercedes-Benz</button>
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Toyota</button>
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Honda</button>
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Honda</button>
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Honda</button>
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Honda</button>
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Honda</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header__filter_select">
+                                    <button type="button" class="header__filter_select_btn" data-acc="carBrands2"
+                                        onclick="toggleAcc(this)">
+                                        <span class="header__filter_select_btn_txt">Ընտրել մակնիշը</span>
+                                        <img src="images/filterArrow.svg" alt="" class="header__filter_select_btn_arr">
+                                    </button>
+                                    <div class="header__filter_select_options" id="carBrands2">
+                                        <p class="header__filter_select_options_title">Հայտնի մակնիշներ</p>
+                                        <div class="header__filter_select_options_wrapper">
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Mercedes-Benz</button>
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Toyota</button>
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Honda</button>
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Honda</button>
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Honda</button>
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Honda</button>
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Honda</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header__filter_select">
+                                    <button type="button" class="header__filter_select_btn" data-acc="carBrands3"
+                                        onclick="toggleAcc(this)">
+                                        <span class="header__filter_select_btn_txt">Ընտրել մակնիշը</span>
+                                        <img src="images/filterArrow.svg" alt="" class="header__filter_select_btn_arr">
+                                    </button>
+                                    <div class="header__filter_select_options" id="carBrands3">
+                                        <p class="header__filter_select_options_title">Հայտնի մակնիշներ</p>
+                                        <div class="header__filter_select_options_wrapper">
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Mercedes-Benz</button>
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Toyota</button>
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Honda</button>
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Honda</button>
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Honda</button>
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Honda</button>
+                                            <button type="button"
+                                                class="header__filter_select_options_el">Honda</button>
                                         </div>
                                     </div>
                                 </div>
@@ -146,6 +211,7 @@
                 <div class="header__slider swiper" id="headerSlider">
                     <h2 class="header__slider_title">
                         <img src="images/fire.svg" alt="" class="header__slider_title_img">
+                        Շատ փնտրվող ապրանքներ
                     </h2>
                     <div class="header__slider_btns">
                         <button type="button" class="header__slider_btns_btn prev">
@@ -161,22 +227,149 @@
                                 <div class="product__pic">
                                     <img src="images/product.png" alt="" class="product__pic_img">
                                 </div>
-                                <button class="product__wishlist">
+                                <button class="product__wishlist" onclick="toggleWishlist(this)">
                                     <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
                                     <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
                                 </button>
                                 <div class="product__desc">
                                     <p class="product__desc_price">
-                                        <span class="product__desc_price_static">3.600֏</span>
-                                        <span class="product__desc_price_new">2.600֏</span>
+                                        <!-- if we have discount(скидка) product__desc_price_static is in here else delete element -->
+                                        <span class="product__desc_price_new">
+                                            2.600
+                                            <span class="currency">֏</span>
+                                        </span>
+                                        <span class="product__desc_price_static">
+                                            3.600
+                                            <span class="currency">֏</span>
+                                        </span>
                                     </p>
                                     <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
                                     <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
                                 </div>
-                                <button type="button" class="product__btn">
+                                <a href="" class="product__btn">
                                     <img src="images/productBasket.svg" alt="" class="product__btn_icon">
                                     <span class="product__btn_txt">Այսօր</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header__slider_el swiper-slide">
+                            <div class="product">
+                                <div class="product__pic">
+                                    <img src="images/product.png" alt="" class="product__pic_img">
+                                </div>
+                                <button class="product__wishlist" onclick="toggleWishlist(this)">
+                                    <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                                    <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
                                 </button>
+                                <div class="product__desc">
+                                    <p class="product__desc_price">
+                                        <!-- if we have discount(скидка) product__desc_price_static is in here else delete element -->
+                                        <span class="product__desc_price_new">
+                                            2.600
+                                            <span class="currency">֏</span>
+                                        </span>
+                                        <span class="product__desc_price_static">
+                                            3.600
+                                            <span class="currency">֏</span>
+                                        </span>
+                                    </p>
+                                    <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                                    <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                                </div>
+                                <a href="" class="product__btn">
+                                    <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                                    <span class="product__btn_txt">Այսօր</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header__slider_el swiper-slide">
+                            <div class="product">
+                                <div class="product__pic">
+                                    <img src="images/product.png" alt="" class="product__pic_img">
+                                </div>
+                                <button class="product__wishlist" onclick="toggleWishlist(this)">
+                                    <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                                    <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
+                                </button>
+                                <div class="product__desc">
+                                    <p class="product__desc_price">
+                                        <!-- if we have discount(скидка) product__desc_price_static is in here else delete element -->
+                                        <span class="product__desc_price_new">
+                                            2.600
+                                            <span class="currency">֏</span>
+                                        </span>
+                                        <span class="product__desc_price_static">
+                                            3.600
+                                            <span class="currency">֏</span>
+                                        </span>
+                                    </p>
+                                    <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                                    <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                                </div>
+                                <a href="" class="product__btn">
+                                    <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                                    <span class="product__btn_txt">Այսօր</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header__slider_el swiper-slide">
+                            <div class="product">
+                                <div class="product__pic">
+                                    <img src="images/product.png" alt="" class="product__pic_img">
+                                </div>
+                                <button class="product__wishlist" onclick="toggleWishlist(this)">
+                                    <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                                    <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
+                                </button>
+                                <div class="product__desc">
+                                    <p class="product__desc_price">
+                                        <!-- if we have discount(скидка) product__desc_price_static is in here else delete element -->
+                                        <span class="product__desc_price_new">
+                                            2.600
+                                            <span class="currency">֏</span>
+                                        </span>
+                                        <span class="product__desc_price_static">
+                                            3.600
+                                            <span class="currency">֏</span>
+                                        </span>
+                                    </p>
+                                    <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                                    <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                                </div>
+                                <a href="" class="product__btn">
+                                    <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                                    <span class="product__btn_txt">Այսօր</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header__slider_el swiper-slide">
+                            <div class="product">
+                                <div class="product__pic">
+                                    <img src="images/product.png" alt="" class="product__pic_img">
+                                </div>
+                                <button class="product__wishlist" onclick="toggleWishlist(this)">
+                                    <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                                    <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
+                                </button>
+                                <div class="product__desc">
+                                    <p class="product__desc_price">
+                                        <!-- if we have discount(скидка) product__desc_price_static is in here else delete element -->
+                                        <span class="product__desc_price_new">
+                                            2.600
+                                            <span class="currency">֏</span>
+                                        </span>
+                                        <span class="product__desc_price_static">
+                                            3.600
+                                            <span class="currency">֏</span>
+                                        </span>
+                                    </p>
+                                    <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                                    <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                                </div>
+                                <a href="" class="product__btn">
+                                    <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                                    <span class="product__btn_txt">Այսօր</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -292,7 +485,7 @@
         <section class="callAction">
             <div class="callAction__wrapper">
                 <div class="callAction__desc">
-                    <h2 class="callAction__desc_title">Massol յուղերի պաշտոնական ներմուծող</h2>
+                    <h2 class="callAction__desc_title">Massol յուղերի <br> պաշտոնական ներմուծող</h2>
                     <a href="" class="callAction__desc_link">Տեսնել կատալոգում</a>
                 </div>
                 <img src="images/callAction.png" alt="" class="callAction__img">
@@ -302,7 +495,7 @@
         <section class="productsSlider">
             <div class="productsSlider__container">
                 <h2 class="productsSlider__title">Յուղերի պաշտոնական ապրանքանիշեր</h2>
-                <div class="productsSlider__wrapper swiper">
+                <div class="productsSlider__wrapper swiper" id="productsSwiper">
                     <div class="productsSlider__btns">
                         <button type="button" class="productsSlider__btns_btn prev">
                             <img src="images/sliderChervon.svg" alt="" class="productsSlider__btns_btn_icon">
@@ -312,6 +505,121 @@
                         </button>
                     </div>
                     <div class="swiper-wrapper">
+                        <div class="productsSlider__el swiper-slide">
+                            <div class="product">
+                                <div class="product__pic">
+                                    <img src="images/product.png" alt="" class="product__pic_img">
+                                </div>
+                                <button class="product__wishlist">
+                                    <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                                    <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
+                                </button>
+                                <div class="product__desc">
+                                    <p class="product__desc_price">
+                                        <span class="product__desc_price_static">3.600֏</span>
+                                        <span class="product__desc_price_new">2.600֏</span>
+                                    </p>
+                                    <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                                    <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                                </div>
+                                <button type="button" class="product__btn">
+                                    <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                                    <span class="product__btn_txt">Այսօր</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="productsSlider__el swiper-slide">
+                            <div class="product">
+                                <div class="product__pic">
+                                    <img src="images/product.png" alt="" class="product__pic_img">
+                                </div>
+                                <button class="product__wishlist">
+                                    <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                                    <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
+                                </button>
+                                <div class="product__desc">
+                                    <p class="product__desc_price">
+                                        <span class="product__desc_price_static">3.600֏</span>
+                                        <span class="product__desc_price_new">2.600֏</span>
+                                    </p>
+                                    <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                                    <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                                </div>
+                                <button type="button" class="product__btn">
+                                    <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                                    <span class="product__btn_txt">Այսօր</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="productsSlider__el swiper-slide">
+                            <div class="product">
+                                <div class="product__pic">
+                                    <img src="images/product.png" alt="" class="product__pic_img">
+                                </div>
+                                <button class="product__wishlist">
+                                    <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                                    <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
+                                </button>
+                                <div class="product__desc">
+                                    <p class="product__desc_price">
+                                        <span class="product__desc_price_static">3.600֏</span>
+                                        <span class="product__desc_price_new">2.600֏</span>
+                                    </p>
+                                    <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                                    <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                                </div>
+                                <button type="button" class="product__btn">
+                                    <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                                    <span class="product__btn_txt">Այսօր</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="productsSlider__el swiper-slide">
+                            <div class="product">
+                                <div class="product__pic">
+                                    <img src="images/product.png" alt="" class="product__pic_img">
+                                </div>
+                                <button class="product__wishlist">
+                                    <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                                    <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
+                                </button>
+                                <div class="product__desc">
+                                    <p class="product__desc_price">
+                                        <span class="product__desc_price_static">3.600֏</span>
+                                        <span class="product__desc_price_new">2.600֏</span>
+                                    </p>
+                                    <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                                    <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                                </div>
+                                <button type="button" class="product__btn">
+                                    <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                                    <span class="product__btn_txt">Այսօր</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="productsSlider__el swiper-slide">
+                            <div class="product">
+                                <div class="product__pic">
+                                    <img src="images/product.png" alt="" class="product__pic_img">
+                                </div>
+                                <button class="product__wishlist">
+                                    <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                                    <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
+                                </button>
+                                <div class="product__desc">
+                                    <p class="product__desc_price">
+                                        <span class="product__desc_price_static">3.600֏</span>
+                                        <span class="product__desc_price_new">2.600֏</span>
+                                    </p>
+                                    <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                                    <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                                </div>
+                                <button type="button" class="product__btn">
+                                    <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                                    <span class="product__btn_txt">Այսօր</span>
+                                </button>
+                            </div>
+                        </div>
                         <div class="productsSlider__el swiper-slide">
                             <div class="product">
                                 <div class="product__pic">
@@ -347,6 +655,57 @@
                     <a href="" class="oil__link">
                         <img src="images/oil.png" alt="" class="oil__link_img">
                     </a>
+                    <a href="" class="oil__link">
+                        <img src="images/oil.png" alt="" class="oil__link_img">
+                    </a>
+                    <a href="" class="oil__link">
+                        <img src="images/oil.png" alt="" class="oil__link_img">
+                    </a>
+                    <a href="" class="oil__link">
+                        <img src="images/oil.png" alt="" class="oil__link_img">
+                    </a>
+                    <a href="" class="oil__link">
+                        <img src="images/oil.png" alt="" class="oil__link_img">
+                    </a>
+                    <a href="" class="oil__link">
+                        <img src="images/oil.png" alt="" class="oil__link_img">
+                    </a>
+                    <a href="" class="oil__link">
+                        <img src="images/oil.png" alt="" class="oil__link_img">
+                    </a>
+                    <a href="" class="oil__link">
+                        <img src="images/oil.png" alt="" class="oil__link_img">
+                    </a>
+                    <a href="" class="oil__link">
+                        <img src="images/oil.png" alt="" class="oil__link_img">
+                    </a>
+                    <a href="" class="oil__link">
+                        <img src="images/oil.png" alt="" class="oil__link_img">
+                    </a>
+                    <a href="" class="oil__link">
+                        <img src="images/oil.png" alt="" class="oil__link_img">
+                    </a>
+                    <a href="" class="oil__link">
+                        <img src="images/oil.png" alt="" class="oil__link_img">
+                    </a>
+                    <a href="" class="oil__link">
+                        <img src="images/oil.png" alt="" class="oil__link_img">
+                    </a>
+                    <a href="" class="oil__link">
+                        <img src="images/oil.png" alt="" class="oil__link_img">
+                    </a>
+                    <a href="" class="oil__link">
+                        <img src="images/oil.png" alt="" class="oil__link_img">
+                    </a>
+                    <a href="" class="oil__link">
+                        <img src="images/oil.png" alt="" class="oil__link_img">
+                    </a>
+                    <a href="" class="oil__link">
+                        <img src="images/oil.png" alt="" class="oil__link_img">
+                    </a>
+                    <a href="" class="oil__link">
+                        <img src="images/oil.png" alt="" class="oil__link_img">
+                    </a>
                 </div>
             </div>
         </section>
@@ -376,21 +735,35 @@
                     <h2 class="contactUs__title">Ձեր Մեքենան ունի խնդիր, իսկ դուք չունեք ժամանակ</h2>
                     <div class="contactUs__wrapper">
                         <div class="contactUs__el">
-                            <input type="text" name="" id="" class="contactUs__inp">
-                            <input type="text" name="" id="" class="contactUs__inp">
-                            <textarea name="" id="" class="contactUs__textarea"></textarea>
-                            <label for="" class="contactUs__agree">
-                                <input type="checkbox" name="" id="" class="contactUs__agree_inp">
-                                <span class="contactUs__agree_checkbox"></span>
-                                <span class="contactUs__agree_txt"></span>
+                            <input type="text" name="" id="" class="contactUs__inp" placeholder="Անուն">
+                            <input type="phone" name="" id="" class="contactUs__inp" placeholder="Հեռախոսահամար">
+                            <textarea name="" id="" class="contactUs__textarea"
+                                placeholder="Նկարագրել ձեր մեքենայի խնդիրը կամ խնդիրները"></textarea>
+                            <label for="agreement" class="contactUs__agree">
+                                <input type="checkbox" name="" id="agreement" class="contactUs__agree_inp">
+                                <span class="contactUs__agree_checkbox">
+                                    <img src="images/checked.svg" alt="">
+                                </span>
+                                <span class="contactUs__agree_txt">Ես համաձայն եմ, բոլոր դրույթներին</span>
                             </label>
-                            <p class="contactUs__txt"></p>
+                            <p class="contactUs__txt">Մեր մասնագետները կվերլուծեն ձեր մեքենայի խնդիրը և կկապնվեն ձեր հետ
+                            </p>
                         </div>
-                        <div class="contactUs__el">
+                        <div class="contactUs__el file">
                             <div class="contactUs__file">
-
+                                <div class="contactUs__file_inner" id="files">
+                                    <!-- there is attached files -->
+                                    <img src="images/attachDecor.png" alt="" class="contactUs__file_inner_decor">
+                                </div>
+                                <label for="fileAttach" class="contactUs__file_lab">
+                                    <input type="file" name="" id="fileAttach" class="contactUs__file_lab_inp" multiple>
+                                    <img src="images/attach.svg" alt="" class="contactUs__file_lab_icon">
+                                    <img src="images/attachHover.svg" alt="" class="contactUs__file_lab_icon hover">
+                                    <span class="contactUs__file_lab_txt">կցեք այստեղ ցանկացած խնդրի կամ վթարված մասի
+                                        լուսանկար կամ վիդեո</span>
+                                </label>
                             </div>
-                            <button type="submit" class="contactUs__submit"></button>
+                            <button type="submit" class="contactUs__submit">ՈՒՂԱՐԿԵԼ</button>
                         </div>
                     </div>
                 </div>
@@ -402,7 +775,7 @@
                 <h2 class="news__title">Հետևեք մեզ Սոցիալական հարթակներում</h2>
                 <div class="news__wrapper">
                     <div class="news__about">
-                        <h3 class="news__about_title">Մեքենայի վերանորոգումը երբեք այսքան հեշտ չի եղել</h3>
+                        <h3 class="news__about_title">Մեքենայի վերանորոգումը երբեք այսքան հեշտ <br> չի եղել</h3>
                         <p class="news__about_txt">Ասա «ոչ» բարդ հրահանգներին և շփոթեցնող դիագրամներին: Օգտվեք ONEHUB-ի
                             գործնական և հեշտ մեքենաների վերանորոգման ձեռնարկներից:</p>
                         <div class="news__about_video">
@@ -411,6 +784,38 @@
                         </div>
                     </div>
                     <div class="news__list">
+                        <div class="news__list_el">
+                            <img src="images/newsLogo.png" alt="" class="news__list_el_logo">
+                            <div class="news__list_el_media">
+                                <!-- image or video -->
+                                <img src="images/news.png" alt="" class="news__list_el_media_img">
+                            </div>
+                            <p class="p news__list_el_txt">
+                                Անվճար մանրամասն ուղեցույցներ և
+                                տեսանյութեր՝ ինքնուրույն մեքենաների
+                                վերանորոգման համար
+                            </p>
+                            <a href="" class="news__list_el_link">
+                                ՄԻԱՑԻՐ ՄԵՐ ԱԿՈՒՄԲԻՆ
+                                <img src="images/newsLinkIcon.svg" alt="" class="news__list_el_link_icon">
+                            </a>
+                        </div>
+                        <div class="news__list_el">
+                            <img src="images/newsLogo.png" alt="" class="news__list_el_logo">
+                            <div class="news__list_el_media">
+                                <!-- image or video -->
+                                <img src="images/news.png" alt="" class="news__list_el_media_img">
+                            </div>
+                            <p class="p news__list_el_txt">
+                                Անվճար մանրամասն ուղեցույցներ և
+                                տեսանյութեր՝ ինքնուրույն մեքենաների
+                                վերանորոգման համար
+                            </p>
+                            <a href="" class="news__list_el_link">
+                                ՄԻԱՑԻՐ ՄԵՐ ԱԿՈՒՄԲԻՆ
+                                <img src="images/newsLinkIcon.svg" alt="" class="news__list_el_link_icon">
+                            </a>
+                        </div>
                         <div class="news__list_el">
                             <img src="images/newsLogo.png" alt="" class="news__list_el_logo">
                             <div class="news__list_el_media">
@@ -479,6 +884,31 @@
                                 <img src="images/bank.png" alt="" class="footer__bankList_link_img">
                             </a>
                         </li>
+                        <li>
+                            <a href="" class="footer__bankList_link">
+                                <img src="images/bank.png" alt="" class="footer__bankList_link_img">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__bankList_link">
+                                <img src="images/bank.png" alt="" class="footer__bankList_link_img">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__bankList_link">
+                                <img src="images/bank.png" alt="" class="footer__bankList_link_img">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__bankList_link">
+                                <img src="images/bank.png" alt="" class="footer__bankList_link_img">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__bankList_link">
+                                <img src="images/bank.png" alt="" class="footer__bankList_link_img">
+                            </a>
+                        </li>
                     </ul>
                     <div class="footer__content">
                         <div class="footer__desc">
@@ -493,17 +923,32 @@
                         </div>
                         <div class="footer__desc">
                             <h3 class="footer__desc_title">
-                                Հաճախորդների սպասարկման
+                                Հաճախորդների սպասարկման <br>
                                 ժամերը հայաստանում
                             </h3>
                             <p class="footer__desc_txt">
-                                Երկուշաբթի-Ուրբաթ 7:00-20:00
-                                Շաբաթ 7:00-16:00
-                                Կիրակի՝ փակ է
+                                Երկուշաբթի-Ուրբաթ 7:00-20:00 <br>
+                                Շաբաթ 7:00-16:00 <br>
+                                Կիրակի՝ փակ է <br>
                             </p>
                         </div>
                         <div class="footer__desc_social">
                             <ul class="footer__desc_social_list">
+                                <li>
+                                    <a href="" class="footer__desc_social_link">
+                                        <img src="images/social.svg" alt="" class="footer__desc_social_link_icon">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer__desc_social_link">
+                                        <img src="images/social.svg" alt="" class="footer__desc_social_link_icon">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer__desc_social_link">
+                                        <img src="images/social.svg" alt="" class="footer__desc_social_link_icon">
+                                    </a>
+                                </li>
                                 <li>
                                     <a href="" class="footer__desc_social_link">
                                         <img src="images/social.svg" alt="" class="footer__desc_social_link_icon">
@@ -530,6 +975,7 @@
 
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="js/index.js"></script>
 </body>
 
