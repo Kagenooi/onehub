@@ -9,26 +9,47 @@ window.addEventListener('resize', function () { adaptive(); });
 import {
     toggleActive,
     toggleAcc,
-    toggleWishlist
+    toggleWishlist,
+    showSubmenu
 } from "./module.js";
 
+window.showSubmenu = showSubmenu;
 window.toggleActive = toggleActive;
 window.toggleAcc = toggleAcc;
 window.toggleWishlist = toggleWishlist;
 
-
+showSubmenu();
 
 const headerSwiper = new Swiper("#headerSlider", {
     cssMode: true,
     loop: true,
-    slidesPerView: 4,
-    spaceBetween: 32,
+    slidesPerView: 2,
+    spaceBetween: 4,
     navigation: {
         nextEl: ".header__slider_btns_btn.next",
         prevEl: ".header__slider_btns_btn.prev",
     },
     mousewheel: true,
     keyboard: true,
+    breakpoints: {
+        // when window width is >=
+        769: {
+            slidesPerView: 3,
+            spaceBetween: 32
+        },
+        // when window width is >=
+        1296: {
+            slidesPerView: 4,
+            spaceBetween: 32
+        }
+    }
+});
+
+const headerCategories = new Swiper("#headerCategories", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 10,
+    loop: true,
 });
 
 const productsSwiper = new Swiper("#productsSwiper", {
@@ -42,7 +63,44 @@ const productsSwiper = new Swiper("#productsSwiper", {
     },
     mousewheel: true,
     keyboard: true,
+    breakpoints: {
+        // when window width is >= 
+        769: {
+            slidesPerView: 4,
+            spaceBetween: 32
+        },
+        // when window width is >=
+        1296: {
+            slidesPerView: 5,
+            spaceBetween: 94
+        }
+    }
 });
+
+
+document.addEventListener('click', (event) => {
+    const burgerBlock = document.getElementById('burger');
+    if (!burgerBlock) return;
+
+    // 1) Клик по кнопке открытия бургер-меню
+    const burgerBtn = event.target.closest('.navbar__burger_btn');
+    if (burgerBtn) {
+        burgerBlock.classList.add('active');
+        return; // дальше не идём, чтобы не сработало закрытие
+    }
+
+    // 2) Клик внутри области navbar__burger или burger
+    const burgerArea = event.target.closest('.navbar__burger, .burger');
+    if (!burgerArea) return; // не наш кейс вообще
+
+    // 3) Если клик по .toggle (или его детям) — игнорируем
+    const isToggleClick = event.target.closest('.toggle');
+    if (isToggleClick) return;
+
+    // 4) Клик внутри бургер-области, но НЕ по .toggle и НЕ по кнопке → закрываем
+    burgerBlock.classList.remove('active');
+});
+
 
 
 

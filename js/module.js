@@ -21,3 +21,26 @@ export function toggleAcc(event) {
         })
     });
 }
+
+export function showSubmenu() {
+    let links = document.querySelectorAll('.burger__menu_list_link');
+    
+    links.forEach(element => {
+        element.addEventListener('mouseover', function () {
+            let submenu = document.querySelector(`#${this.dataset.submenu}`);
+            submenu.classList.add('active');
+
+            submenu.addEventListener('mouseover', function () {
+                element.classList.add('active');
+            });
+            submenu.addEventListener('mouseout', function () {
+                element.classList.remove('active');
+            });
+        });
+        element.addEventListener('mouseout', function () {
+            let submenu = document.querySelector(`#${this.dataset.submenu}`);
+            submenu.classList.remove('active');
+            element.classList.remove('active');
+        });
+    });
+}

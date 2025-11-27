@@ -57,8 +57,45 @@
                         <button type="button" class="navbar__burger_btn">
                             <img src="images/burger.svg" alt="" class="navbar__burger_btn_icon">
                         </button>
-                        <div class="navbar__burger_wrapper burger" id="burger">
-
+                        <div class="navbar__burger_wrapper innerHeight" id="burger">
+                            <div class="burger">
+                                <div class="burger__menu firstItem toggle">
+                                    <ul class="burger__menu_list">
+                                        <li>
+                                            <a href="" class="burger__menu_list_link" data-submenu="first">
+                                                <img src="images/menuLink.png" alt=""
+                                                    class="burger__menu_list_link_icon">
+                                                <span class="burger__menu_list_link_txt">Պահեստամասեր</span>
+                                                <img src="images/chevron.svg" alt="" class="burger__menu_list_link_arr">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="burger__menu_list_link" data-submenu="second">
+                                                <img src="images/menuLink.png" alt=""
+                                                    class="burger__menu_list_link_icon">
+                                                <span class="burger__menu_list_link_txt">Պահեստամասեր 2</span>
+                                                <img src="images/chevron.svg" alt="" class="burger__menu_list_link_arr">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="burger__submenu toggle" id="first">
+                                    <h3 class="burger__submenu_title">Պահեստամասեր</h3>
+                                    <ul class="burger__submenu_list">
+                                        <li>
+                                            <a href="" class="burger__submenu_list_link">Պահեստամասեր</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="burger__submenu toggle" id="second">
+                                    <h3 class="burger__submenu_title">Պահեստամասեր 2</h3>
+                                    <ul class="burger__submenu_list">
+                                        <li>
+                                            <a href="" class="burger__submenu_list_link">Պահեստամասեր 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="navbar__search">
@@ -95,19 +132,21 @@
 
         <header class="header">
             <h1 class="header__title">ԲՈԼՈՐԸ ՄԵԿ ՎԱՅՐՈՒՄ</h1>
-            <div class="header__wrapper header__categories">
-                <a href="" class="header__categories_el orange">
-                    <h2 class="header__categories_el_title">ՊԱՀԵՍՏԱՄԱՍ</h2>
-                    <img src="images/cat1.png" alt="" class="header__categories_el_img">
-                </a>
-                <a href="" class="header__categories_el black">
-                    <h2 class="header__categories_el_title">ԱՎՏՈՄԵՔԵՆԱ</h2>
-                    <img src="images/cat2.png" alt="" class="header__categories_el_img">
-                </a>
-                <a href="" class="header__categories_el blue">
-                    <h2 class="header__categories_el_title">ՍՊԱՍԱՐԿՈՒՄ</h2>
-                    <img src="images/cat3.png" alt="" class="header__categories_el_img">
-                </a>
+            <div class="header__scroll swiper" id="headerCategories">
+                <div class="header__wrapper header__categories swiper-wrapper">
+                    <a href="" class="header__categories_el orange swiper-slide">
+                        <h2 class="header__categories_el_title">ՊԱՀԵՍՏԱՄԱՍ</h2>
+                        <img src="images/cat1.png" alt="" class="header__categories_el_img">
+                    </a>
+                    <a href="" class="header__categories_el black swiper-slide">
+                        <h2 class="header__categories_el_title">ԱՎՏՈՄԵՔԵՆԱ</h2>
+                        <img src="images/cat2.png" alt="" class="header__categories_el_img">
+                    </a>
+                    <a href="" class="header__categories_el blue swiper-slide">
+                        <h2 class="header__categories_el_title">ՍՊԱՍԱՐԿՈՒՄ</h2>
+                        <img src="images/cat3.png" alt="" class="header__categories_el_img">
+                    </a>
+                </div>
             </div>
             <div class="header__wrapper">
                 <div class="header__filter">
@@ -394,6 +433,33 @@
                     <a href="" class="brands__link">
                         <img src="images/brands.png" alt="" class="brands__link_img">
                     </a>
+                    <a href="" class="brands__link">
+                        <img src="images/brands.png" alt="" class="brands__link_img">
+                    </a>
+                    <a href="" class="brands__link">
+                        <img src="images/brands.png" alt="" class="brands__link_img">
+                    </a>
+                    <a href="" class="brands__link">
+                        <img src="images/brands.png" alt="" class="brands__link_img">
+                    </a>
+                    <a href="" class="brands__link">
+                        <img src="images/brands.png" alt="" class="brands__link_img">
+                    </a>
+                    <a href="" class="brands__link">
+                        <img src="images/brands.png" alt="" class="brands__link_img">
+                    </a>
+                    <a href="" class="brands__link">
+                        <img src="images/brands.png" alt="" class="brands__link_img">
+                    </a>
+                    <a href="" class="brands__link">
+                        <img src="images/brands.png" alt="" class="brands__link_img">
+                    </a>
+                    <a href="" class="brands__link">
+                        <img src="images/brands.png" alt="" class="brands__link_img">
+                    </a>
+                    <a href="" class="brands__link">
+                        <img src="images/brands.png" alt="" class="brands__link_img">
+                    </a>
                 </div>
                 <a href="" class="seeMore">
                     Տեսնել բոլորը
@@ -406,6 +472,54 @@
             <div class="spares__container">
                 <h2 class="spares__title">Փնտրի՛ր ցանկացած պահեստամաս քո՛ մեքենայի համար</h2>
                 <div class="spares__wrapper">
+                    <a href="" class="spares__link">
+                        <img src="images/spares.png" alt="" class="spares__link_img">
+                        <span class="spares__link_name">Անիվներ</span>
+                    </a>
+                    <a href="" class="spares__link">
+                        <img src="images/spares.png" alt="" class="spares__link_img">
+                        <span class="spares__link_name">Անիվներ</span>
+                    </a>
+                    <a href="" class="spares__link">
+                        <img src="images/spares.png" alt="" class="spares__link_img">
+                        <span class="spares__link_name">Անիվներ</span>
+                    </a>
+                    <a href="" class="spares__link">
+                        <img src="images/spares.png" alt="" class="spares__link_img">
+                        <span class="spares__link_name">Անիվներ</span>
+                    </a>
+                    <a href="" class="spares__link">
+                        <img src="images/spares.png" alt="" class="spares__link_img">
+                        <span class="spares__link_name">Անիվներ</span>
+                    </a>
+                    <a href="" class="spares__link">
+                        <img src="images/spares.png" alt="" class="spares__link_img">
+                        <span class="spares__link_name">Անիվներ</span>
+                    </a>
+                    <a href="" class="spares__link">
+                        <img src="images/spares.png" alt="" class="spares__link_img">
+                        <span class="spares__link_name">Անիվներ</span>
+                    </a>
+                    <a href="" class="spares__link">
+                        <img src="images/spares.png" alt="" class="spares__link_img">
+                        <span class="spares__link_name">Անիվներ</span>
+                    </a>
+                    <a href="" class="spares__link">
+                        <img src="images/spares.png" alt="" class="spares__link_img">
+                        <span class="spares__link_name">Անիվներ</span>
+                    </a>
+                    <a href="" class="spares__link">
+                        <img src="images/spares.png" alt="" class="spares__link_img">
+                        <span class="spares__link_name">Անիվներ</span>
+                    </a>
+                    <a href="" class="spares__link">
+                        <img src="images/spares.png" alt="" class="spares__link_img">
+                        <span class="spares__link_name">Անիվներ</span>
+                    </a>
+                    <a href="" class="spares__link">
+                        <img src="images/spares.png" alt="" class="spares__link_img">
+                        <span class="spares__link_name">Անիվներ</span>
+                    </a>
                     <a href="" class="spares__link">
                         <img src="images/spares.png" alt="" class="spares__link_img">
                         <span class="spares__link_name">Անիվներ</span>
