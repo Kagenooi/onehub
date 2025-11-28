@@ -162,6 +162,11 @@ input[type="search"]::-webkit-search-results-decoration {
     max-width: 244px;
     position: relative;
 
+    @media (max-width: 768px) {
+        max-width: 290px;
+        min-width: 290px;
+    }
+
     &__pic {
         width: 100%;
         height: 186px;
@@ -169,6 +174,13 @@ input[type="search"]::-webkit-search-results-decoration {
         background: #fff;
         border-radius: 6px 6px 0 0;
         overflow: hidden;
+
+        @media (max-width: 768px) {
+            height: 280px;
+            width: 290px;
+            border-radius: 36px;
+            overflow: hidden;
+        }
 
         &:hover &_img {
             transform: scale(1.1);
@@ -186,6 +198,13 @@ input[type="search"]::-webkit-search-results-decoration {
         right: 13px;
         width: 27px;
         height: 25px;
+
+        @media (max-width: 768px) {
+            top: 16px;
+            right: 32px;
+            width: 35px;
+            height: 32px;
+        }
 
         &_icon {
             position: absolute;
@@ -214,6 +233,12 @@ input[type="search"]::-webkit-search-results-decoration {
         background: #EFEFEF;
         height: 120px;
 
+        @media (max-width: 768px) {
+            background: none;
+            padding: 45px 25px 20px;
+            height: 185px;
+        }
+
         &_price {
             display: flex;
             align-items: center;
@@ -225,6 +250,11 @@ input[type="search"]::-webkit-search-results-decoration {
                 font-size: 22px;
                 font-weight: 600;
                 position: relative;
+
+                @media (max-width: 768px) {
+                    font-size: 24px;
+                    line-height: 30px;
+                }
 
                 &::before {
                     content: '';
@@ -250,6 +280,11 @@ input[type="search"]::-webkit-search-results-decoration {
                 font-size: 25px;
                 font-weight: 600;
 
+                @media (max-width: 768px) {
+                    font-size: 32px;
+                    line-height: 30px;
+                }
+
                 .currency {
                     font-weight: 600;
                     font-size: 16px;
@@ -272,11 +307,23 @@ input[type="search"]::-webkit-search-results-decoration {
         &_name {
             margin: 5px 0 8px;
             font-weight: 500;
+
+            @media (max-width: 768px) {
+                font-size: 20px;
+                line-height: 20px;
+                font-weight: 700;
+                margin: 8px 0;
+            }
         }
 
         &_txt {
             font-size: 14px;
             color: #8F8F8F;
+
+            @media (max-width: 768px) {
+                font-size: 18px;
+                line-height: 20px;
+            }
         }
     }
 
@@ -290,17 +337,35 @@ input[type="search"]::-webkit-search-results-decoration {
         border-radius: 2px;
         width: 100%;
 
+        @media (max-width: 768px) {
+            border-radius: 20px;
+            border: 2px solid #FFFBFB;
+            width: 77px;
+            height: 73px;
+            position: absolute;
+            top: 226px;
+            right: 10px;
+        }
+
         &:hover {
             background: #005fa8;
         }
 
         &_icon {
             width: 20px;
+
+            @media (max-width: 768px) {
+                width: 31px;
+            }
         }
 
         &_txt {
             color: #fff;
             font-weight: 400;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
     }
 }

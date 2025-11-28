@@ -102,6 +102,11 @@
         width: 100%;
         justify-content: space-between;
         padding: 34px 0 20px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 30px;
+        }
     }
 
     &__desc {

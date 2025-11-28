@@ -132,22 +132,30 @@
 
         <header class="header">
             <h1 class="header__title">ԲՈԼՈՐԸ ՄԵԿ ՎԱՅՐՈՒՄ</h1>
-            <div class="header__scroll swiper" id="headerCategories">
-                <div class="header__wrapper header__categories swiper-wrapper">
-                    <a href="" class="header__categories_el orange swiper-slide">
+            <div class="headerCategoriesSmall" id="headerCategoriesSmall">
+                <div class="headerCategoriesSmall__wrapper">
+                    <button type="button" class="headerCategoriesSmall__btn" data-transform="45">Պահեստամաս</button>
+                    <button type="button" class="headerCategoriesSmall__btn" data-transform="-445" id="defaultCategoriesBtn">Ավտոմեքենա</button>
+                    <button type="button" class="headerCategoriesSmall__btn" data-transform="-950">Սպասարկում</button>
+                </div>
+            </div>
+            <div class="header__scroll" id="headerCategories">
+                <div class="header__wrapper header__categories">
+                    <a href="" class="header__categories_el orange">
                         <h2 class="header__categories_el_title">ՊԱՀԵՍՏԱՄԱՍ</h2>
                         <img src="images/cat1.png" alt="" class="header__categories_el_img">
                     </a>
-                    <a href="" class="header__categories_el black swiper-slide">
+                    <a href="" class="header__categories_el black">
                         <h2 class="header__categories_el_title">ԱՎՏՈՄԵՔԵՆԱ</h2>
                         <img src="images/cat2.png" alt="" class="header__categories_el_img">
                     </a>
-                    <a href="" class="header__categories_el blue swiper-slide">
+                    <a href="" class="header__categories_el blue">
                         <h2 class="header__categories_el_title">ՍՊԱՍԱՐԿՈՒՄ</h2>
                         <img src="images/cat3.png" alt="" class="header__categories_el_img">
                     </a>
                 </div>
             </div>
+
             <div class="header__wrapper">
                 <div class="header__filter">
                     <form action="">

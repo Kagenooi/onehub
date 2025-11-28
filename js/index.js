@@ -45,12 +45,19 @@ const headerSwiper = new Swiper("#headerSlider", {
     }
 });
 
-const headerCategories = new Swiper("#headerCategories", {
-    slidesPerView: "auto",
-    centeredSlides: true,
-    spaceBetween: 10,
-    loop: true,
+const headerCategories = document.querySelector('.header__categories');
+const headerCategoriesBtns = document.querySelectorAll('.headerCategoriesSmall__btn');
+headerCategoriesBtns.forEach(element => {
+    element.addEventListener('click', () => {
+        const transformValue = element.getAttribute('data-transform');
+        headerCategories.style.left = `${transformValue}px`;
+        for (let i = 0; i < headerCategoriesBtns.length; i++) {
+            headerCategoriesBtns[i].classList.remove('active');
+        }
+        element.classList.add('active');
+    });
 });
+document.querySelector('#defaultCategoriesBtn').click();
 
 const productsSwiper = new Swiper("#productsSwiper", {
     cssMode: true,
