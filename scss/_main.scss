@@ -384,6 +384,11 @@ input[type="search"]::-webkit-search-results-decoration {
     color: #0B2543;
     border: 0.86px solid #0B2543;
 
+    @media (max-width: 768px) {
+        width: 100vw;
+        max-width: 540px;
+        padding: 22px;
+    }
     &:hover {
         border-color: #F62B02;
     }

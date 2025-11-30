@@ -10,13 +10,15 @@ import {
     toggleActive,
     toggleAcc,
     toggleWishlist,
-    showSubmenu
+    showSubmenu,
+    toggleSubmenu
 } from "./module.js";
 
 window.showSubmenu = showSubmenu;
 window.toggleActive = toggleActive;
 window.toggleAcc = toggleAcc;
 window.toggleWishlist = toggleWishlist;
+window.toggleSubmenu = toggleSubmenu;
 
 showSubmenu();
 

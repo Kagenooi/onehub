@@ -6,6 +6,10 @@ export function toggleWishlist(event) {
     event.classList.toggle('active');
 }
 
+export function toggleSubmenu(submenu) {
+    document.querySelector(`#${submenu}`).classList.toggle('active');
+}
+
 export function toggleAcc(event) {
     let acc = document.querySelector(`#${event.dataset.acc}`);
     let choose = event.querySelector('span');

@@ -13,6 +13,84 @@
     <div id="adaptive">
 
         <nav class="navbar">
+            <div class="navbarMobile">
+                <div class="navbarMobile__container">
+                    <a href="" class="navbarMobile__logo">
+                    <img src="images/mobileLogo.png" alt="" class="navbarMobile__logo_img">
+                    </a>
+                    <div class="navbarMobile__btns">
+                        <a href="" class="navbarMobile__btns_phone">
+                            <img src="images/phoneWhite.svg" alt="" class="navbarMobile__btns_phone_icon">
+                        </a>
+                        <a href="" class="navbarMobile__btns_sign">
+                            <img src="images/user.svg" alt="" class="navbarMobile__btns_sign_icon">
+                        </a>
+                        <button class="navbarMobile__btns_basket">
+                            <img src="images/basket.svg" alt="" class="navbarMobile__btns_basket_icon">
+                        </button>
+                        <button class="navbarMobile__btns_burger" onclick="toggleMobileMenu('#mobileBurger')">
+                            <img src="images/burger.svg" alt="" class="navbarMobile__btns_burger_icon">
+                        </button>
+                    </div>
+                </div>
+                <div class="mobileBurger innerHeight" id="mobileBurger">
+                    <div class="mobileBurger__search">
+                        <form action="">
+                            <label class="mobileBurger__search_lab">
+                                <input type="search" name="" class="mobileBurger__search_lab_inp" placeholder="Փնտրի’ր Ավտոմեքենա">
+                                <button class="mobileBurger__search_lab_btn">
+                                    <img src="images/loop.svg" alt="" class="mobileBurger__search_lab_btn_icon">
+                                </button>
+                                <label for="" class="mobileBurger__search_lab_photo">
+                                    <img src="images/photo.svg" alt="" class="mobileBurger__search_lab_photo_icon">
+                                    <input type="file" class="mobileBurger__search_lab_photo_inp">
+                                </label>
+                            </label>
+                        </form>
+                    </div>
+                    <div class="mobileBurger__container">
+                        <div class="mobileBurger__wrapper">
+                            <div class="mobileBurger__menu">
+                                <div class="mobileBurger__menu_btns">
+                                    <button type="button" class="mobileBurger__menu_btns_btn" onclick="toggleSubmenu('mobileBurgerItem')">
+                                        <img src="images/burgerProduct.svg" alt="" class="mobileBurger__menu_btns_btn_icon">
+                                        <span class="mobileBurger__menu_btns_btn_txt">Պահեստամասեր</span>
+                                        <img src="images/chevron.svg" alt="" class="mobileBurger__menu_btns_btn_arr">
+                                    </button>
+                                </div>
+                                <div class="mobileBurger__menu_list" id="mobileBurgerItem">
+                                    <h4 class="mobileBurger__menu_list_title">Պահեստամասեր</h4>
+                                    <button type="button" class="mobileBurger__menu_list_closeBtn" onclick="toggleSubmenu('mobileBurgerItem')">
+                                        <img src="images/close.png" alt="" class="mobileBurger__menu_list_closeBtn_icon">
+                                    </button>
+                                    <div class="mobileBurgerMenu">
+                                        <ul class="mobileBurgerMenu__list">
+                                            <li><a href="" class="mobileBurgerMenu__list_link">Պահեստամաս 1</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="mobileBurger__footer">
+                                <li>
+                                    <a href="" class="mobileBurger__footer_link">
+                                        <img src="images/locationNavTop.svg" alt="" class="mobileBurger__footer_link_icon">
+                                        <span class="mobileBurger__footer_link_txt">Ք. Երևան, Դավիթ Բեկի 21/3</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="mobileBurger__footer_link">
+                                        <img src="images/phoneNavTop.svg" alt="" class="mobileBurger__footer_link_icon">
+                                        <span class="mobileBurger__footer_link_txt">
+                                            +374 98 56 56 65 <br>
+                                            +374 98 56 56 65
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="navbar__container black">
                 <div class="navbar__wrapper">
                     <ul class="navbar__contacts">
@@ -890,6 +968,51 @@
                     </div>
                 </div>
             </form>
+        </section>
+
+        <section class="articles">
+            <h2 class="articles__title">Օգտակար Հոդվածներ և Տեխնիկական Խորհուրդներ</h2>
+            <p class="articles__pr">«Կարդացեք ավտոմեքենայի սպասարկման, պահեստամասերի ընտրության և ճիշտ շահագործման վերաբերյալ մասնագիտական նյութեր՝ պարզ և հասկանալի լեզվով»։</p>
+            <div class="articles__container">
+                <div class="articles__wrapper">
+                    <div class="articles__item">
+                        <img src="images/article.png" alt="" class="articles__item_img">
+                        <p class="articles__item_txt">Անվճար մանրամասն ուղեցույցներ և տեսանյութեր՝ ինքնուրույն մեքենաների վերանորոգման համար</p>
+                        <a href="" class="articles__item_link">
+                            <span class="articles__item_link_txt">ՏԵՍՆԵԼ ՀՈԴՎԱԾԸ</span>
+                            <img src="images/newsLinkIcon.svg" alt="" class="articles__item_link_icon">
+                        </a>
+                    </div>
+                    <div class="articles__item">
+                        <img src="images/article.png" alt="" class="articles__item_img">
+                        <p class="articles__item_txt">Անվճար մանրամասն ուղեցույցներ և տեսանյութեր՝ ինքնուրույն մեքենաների վերանորոգման համար</p>
+                        <a href="" class="articles__item_link">
+                            <span class="articles__item_link_txt">ՏԵՍՆԵԼ ՀՈԴՎԱԾԸ</span>
+                            <img src="images/newsLinkIcon.svg" alt="" class="articles__item_link_icon">
+                        </a>
+                    </div>
+                    <div class="articles__item">
+                        <img src="images/article.png" alt="" class="articles__item_img">
+                        <p class="articles__item_txt">Անվճար մանրամասն ուղեցույցներ և տեսանյութեր՝ ինքնուրույն մեքենաների վերանորոգման համար</p>
+                        <a href="" class="articles__item_link">
+                            <span class="articles__item_link_txt">ՏԵՍՆԵԼ ՀՈԴՎԱԾԸ</span>
+                            <img src="images/newsLinkIcon.svg" alt="" class="articles__item_link_icon">
+                        </a>
+                    </div>
+                    <div class="articles__item">
+                        <img src="images/article.png" alt="" class="articles__item_img">
+                        <p class="articles__item_txt">Անվճար մանրամասն ուղեցույցներ և տեսանյութեր՝ ինքնուրույն մեքենաների վերանորոգման համար</p>
+                        <a href="" class="articles__item_link">
+                            <span class="articles__item_link_txt">ՏԵՍՆԵԼ ՀՈԴՎԱԾԸ</span>
+                            <img src="images/newsLinkIcon.svg" alt="" class="articles__item_link_icon">
+                        </a>
+                    </div>
+                </div>
+                <a href="" class="seeMore">
+                    Տեսնել բոլորը
+                    <img src="images/seeMoreArrow.svg" alt="" class="seeMore__icon">
+                </a>
+            </div>
         </section>
 
         <section class="news">

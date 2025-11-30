@@ -1,0 +1,106 @@
+.articles {
+    padding: 60px 15px;
+    width: 100%;
+    max-width: 1660px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+        padding: 40px 0 20px;
+    }
+    &__container {
+        padding: 65px 40px 35px;
+        background: #E8E4E4;
+        border-radius: 12px;
+
+        @media (max-width: 768px) {
+            border-radius: 0;
+            overflow: hidden;
+            padding: 25px 0 40px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 25px;
+        font-weight: 500;
+        color: #0B2543;
+    }
+
+    &__pr {
+        margin: 25px auto 35px;
+        text-align: center;
+        max-width: 780px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #0B2543;
+    }
+
+    &__pr,
+    &__title {
+        @media (max-width: 768px) {
+            padding: 0 25px;
+            text-align: left;
+        }
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-bottom: 45px;
+
+        @media (max-width: 768px) {
+            overflow-x: auto;
+            padding: 0 50px 10px;
+            max-width: 590px;
+        }
+    }
+
+    &__item {
+
+        @media (max-width: 768px) {
+            min-width: 365px;
+        }
+        &_img {
+            width: 100%;
+            max-height: 230px;
+            object-fit: cover;
+        }
+
+        &_txt {
+            margin: 16px 0 20px;
+            font-size: 14px;
+            font-weight: 400;
+            color: #00305D;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; // ограничиваем до 3 строк
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        &_link {
+            display: flex;
+            gap: 45px;
+            align-items: center;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -4px;
+                left: 3px;
+                width: 80px;
+                height: 1px;
+                background: transparent;
+                border-top: 1px solid #0B2543
+            }
+
+            &_txt {
+                font-size: 14px;
+                font-weight: 400;
+                color: #0B2543;
+                text-transform: uppercase;
+            }
+        }
+
+    }
+}
