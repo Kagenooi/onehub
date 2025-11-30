@@ -10,6 +10,15 @@ export function toggleSubmenu(submenu) {
     document.querySelector(`#${submenu}`).classList.toggle('active');
 }
 
+export function toggleMobileMenu(burger, btn) {
+    btn.classList.toggle('active');
+    document.querySelector(`#${burger}`).classList.toggle('active');
+    let mobileBurger = document.querySelectorAll('.mobileBurger__menu_list');
+    for (let i = 0; i < mobileBurger.length; i++) {
+        mobileBurger[i].classList.remove('active');
+    }
+}
+
 export function toggleAcc(event) {
     let acc = document.querySelector(`#${event.dataset.acc}`);
     let choose = event.querySelector('span');

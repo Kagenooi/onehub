@@ -814,16 +814,29 @@ input[type=search]::-webkit-search-results-decoration {
     height: 28px;
   }
   .navbarMobile__btns_burger_icon {
+    display: block;
     width: 61px;
     height: 64px;
+  }
+  .navbarMobile__btns_burger_icon.active {
+    display: none;
+  }
+  .navbarMobile__btns_burger.active .navbarMobile__btns_burger_icon {
+    display: none;
+  }
+  .navbarMobile__btns_burger.active .navbarMobile__btns_burger_icon.active {
+    display: block;
   }
   .navbarMobile .mobileBurger {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -100%;
     z-index: 1190;
     background: #EFEFEF;
     width: 100%;
+  }
+  .navbarMobile .mobileBurger.active {
+    left: 0;
   }
   .navbarMobile .mobileBurger__search {
     padding: 20px 26px;

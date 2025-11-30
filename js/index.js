@@ -11,7 +11,8 @@ import {
     toggleAcc,
     toggleWishlist,
     showSubmenu,
-    toggleSubmenu
+    toggleSubmenu,
+    toggleMobileMenu
 } from "./module.js";
 
 window.showSubmenu = showSubmenu;
@@ -19,6 +20,7 @@ window.toggleActive = toggleActive;
 window.toggleAcc = toggleAcc;
 window.toggleWishlist = toggleWishlist;
 window.toggleSubmenu = toggleSubmenu;
+window.toggleMobileMenu = toggleMobileMenu; 
 
 showSubmenu();
 

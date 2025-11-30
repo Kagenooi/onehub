@@ -375,8 +375,21 @@
             &_burger {
 
                 &_icon {
+                    display: block;
                     width: 61px;
                     height: 64px;
+
+                    &.active {
+                        display: none;
+                    }
+                }
+
+                &.active &_icon {
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
                 }
             }
         }
@@ -384,11 +397,14 @@
         .mobileBurger {
             position: fixed;
             top: 0;
-            left: 0;
+            left: -100%;
             z-index: 1190;
             background: #EFEFEF;
             width: 100%;
 
+            &.active {
+                left: 0;
+            }
             &__search {
                 padding: 20px 26px;
 
