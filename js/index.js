@@ -66,8 +66,8 @@ document.querySelector('#defaultCategoriesBtn').click();
 const productsSwiper = new Swiper("#productsSwiper", {
     cssMode: true,
     loop: true,
-    slidesPerView: 5,
-    spaceBetween: 94,
+    slidesPerView: 2,
+    spaceBetween: 4,
     navigation: {
         nextEl: ".productsSlider__btns_btn.next",
         prevEl: ".productsSlider__btns_btn.prev",

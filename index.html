@@ -16,7 +16,7 @@
             <div class="navbarMobile">
                 <div class="navbarMobile__container">
                     <a href="" class="navbarMobile__logo">
-                    <img src="images/mobileLogo.png" alt="" class="navbarMobile__logo_img">
+                        <img src="images/mobileLogo.png" alt="" class="navbarMobile__logo_img">
                     </a>
                     <div class="navbarMobile__btns">
                         <a href="" class="navbarMobile__btns_phone">
@@ -38,7 +38,8 @@
                     <div class="mobileBurger__search">
                         <form action="">
                             <label class="mobileBurger__search_lab">
-                                <input type="search" name="" class="mobileBurger__search_lab_inp" placeholder="Փնտրի’ր Ավտոմեքենա">
+                                <input type="search" name="" class="mobileBurger__search_lab_inp"
+                                    placeholder="Փնտրի’ր Ավտոմեքենա">
                                 <button class="mobileBurger__search_lab_btn">
                                     <img src="images/loop.svg" alt="" class="mobileBurger__search_lab_btn_icon">
                                 </button>
@@ -53,16 +54,20 @@
                         <div class="mobileBurger__wrapper">
                             <div class="mobileBurger__menu">
                                 <div class="mobileBurger__menu_btns">
-                                    <button type="button" class="mobileBurger__menu_btns_btn" onclick="toggleSubmenu('mobileBurgerItem')">
-                                        <img src="images/burgerProduct.svg" alt="" class="mobileBurger__menu_btns_btn_icon">
+                                    <button type="button" class="mobileBurger__menu_btns_btn"
+                                        onclick="toggleSubmenu('mobileBurgerItem')">
+                                        <img src="images/burgerProduct.svg" alt=""
+                                            class="mobileBurger__menu_btns_btn_icon">
                                         <span class="mobileBurger__menu_btns_btn_txt">Պահեստամասեր</span>
                                         <img src="images/chevron.svg" alt="" class="mobileBurger__menu_btns_btn_arr">
                                     </button>
                                 </div>
                                 <div class="mobileBurger__menu_list" id="mobileBurgerItem">
                                     <h4 class="mobileBurger__menu_list_title">Պահեստամասեր</h4>
-                                    <button type="button" class="mobileBurger__menu_list_closeBtn" onclick="toggleSubmenu('mobileBurgerItem')">
-                                        <img src="images/close.png" alt="" class="mobileBurger__menu_list_closeBtn_icon">
+                                    <button type="button" class="mobileBurger__menu_list_closeBtn"
+                                        onclick="toggleSubmenu('mobileBurgerItem')">
+                                        <img src="images/close.png" alt=""
+                                            class="mobileBurger__menu_list_closeBtn_icon">
                                     </button>
                                     <div class="mobileBurgerMenu">
                                         <ul class="mobileBurgerMenu__list">
@@ -74,7 +79,8 @@
                             <ul class="mobileBurger__footer">
                                 <li>
                                     <a href="" class="mobileBurger__footer_link">
-                                        <img src="images/locationNavTop.svg" alt="" class="mobileBurger__footer_link_icon">
+                                        <img src="images/locationNavTop.svg" alt=""
+                                            class="mobileBurger__footer_link_icon">
                                         <span class="mobileBurger__footer_link_txt">Ք. Երևան, Դավիթ Բեկի 21/3</span>
                                     </a>
                                 </li>
@@ -214,7 +220,8 @@
             <div class="headerCategoriesSmall" id="headerCategoriesSmall">
                 <div class="headerCategoriesSmall__wrapper">
                     <button type="button" class="headerCategoriesSmall__btn" data-transform="45">Պահեստամաս</button>
-                    <button type="button" class="headerCategoriesSmall__btn" data-transform="-445" id="defaultCategoriesBtn">Ավտոմեքենա</button>
+                    <button type="button" class="headerCategoriesSmall__btn" data-transform="-445"
+                        id="defaultCategoriesBtn">Ավտոմեքենա</button>
                     <button type="button" class="headerCategoriesSmall__btn" data-transform="-950">Սպասարկում</button>
                 </div>
             </div>
@@ -908,6 +915,10 @@
                         <img src="images/oil.png" alt="" class="oil__link_img">
                     </a>
                 </div>
+                <a href="" class="seeMore">
+                    Տեսնել բոլորը
+                    <img src="images/seeMoreArrow.svg" alt="" class="seeMore__icon">
+                </a>
             </div>
         </section>
 
@@ -930,7 +941,7 @@
             </div>
         </section>
 
-        <section class="contactUs">
+        <!-- <section class="contactUs">
             <form action="">
                 <div class="contactUs__container">
                     <h2 class="contactUs__title">Ձեր Մեքենան ունի խնդիր, իսկ դուք չունեք ժամանակ</h2>
@@ -953,7 +964,6 @@
                         <div class="contactUs__el file">
                             <div class="contactUs__file">
                                 <div class="contactUs__file_inner" id="files">
-                                    <!-- there is attached files -->
                                     <img src="images/attachDecor.png" alt="" class="contactUs__file_inner_decor">
                                 </div>
                                 <label for="fileAttach" class="contactUs__file_lab">
@@ -969,16 +979,60 @@
                     </div>
                 </div>
             </form>
+        </section> -->
+
+        <section class="contactUs">
+            <form action="">
+                <div class="contactUs__container">
+                    <h2 class="contactUs__title">Ձեր Մեքենան ունի խնդիր, իսկ դուք չունեք ժամանակ</h2>
+                    <div class="contactUs__wrapper">
+                        <div class="contactUs__el">
+                            <input type="text" name="" id="" class="contactUs__inp" placeholder="Անուն">
+                            <input type="phone" name="" id="" class="contactUs__inp" placeholder="Հեռախոսահամար">
+                            <textarea name="" id="" class="contactUs__textarea"
+                                placeholder="Նկարագրել ձեր մեքենայի խնդիրը կամ խնդիրները"></textarea>
+                        </div>
+                        <div class="contactUs__el file">
+                            <div class="contactUs__file">
+                                <div class="contactUs__file_inner" id="files">
+                                    <img src="images/attachDecor.png" alt="" class="contactUs__file_inner_decor">
+                                </div>
+                                <label for="fileAttach" class="contactUs__file_lab">
+                                    <input type="file" name="" id="fileAttach" class="contactUs__file_lab_inp" multiple>
+                                    <img src="images/attach.svg" alt="" class="contactUs__file_lab_icon">
+                                    <img src="images/attachHover.svg" alt="" class="contactUs__file_lab_icon hover">
+                                    <span class="contactUs__file_lab_txt">կցել խնդրի կամ վթարված մասի լուսանկար կամ
+                                        վիդեո</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="contactUs__footer">
+                            <label for="agreement" class="contactUs__agree">
+                                <input type="checkbox" name="" id="agreement" class="contactUs__agree_inp">
+                                <span class="contactUs__agree_checkbox">
+                                    <img src="images/checked.svg" alt="">
+                                </span>
+                                <span class="contactUs__agree_txt">Ես համաձայն եմ, բոլոր դրույթներին</span>
+                            </label>
+                            <p class="contactUs__txt">Մեր մասնագետները կվերլուծեն ձեր մեքենայի խնդիրը և կկապնվեն ձեր հետ
+                            </p>
+                            <button type="submit" class="contactUs__submit">ՈՒՂԱՐԿԵԼ</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </section>
 
         <section class="articles">
             <h2 class="articles__title">Օգտակար Հոդվածներ և Տեխնիկական Խորհուրդներ</h2>
-            <p class="articles__pr">«Կարդացեք ավտոմեքենայի սպասարկման, պահեստամասերի ընտրության և ճիշտ շահագործման վերաբերյալ մասնագիտական նյութեր՝ պարզ և հասկանալի լեզվով»։</p>
+            <p class="articles__pr">«Կարդացեք ավտոմեքենայի սպասարկման, պահեստամասերի ընտրության և ճիշտ շահագործման
+                վերաբերյալ մասնագիտական նյութեր՝ պարզ և հասկանալի լեզվով»։</p>
             <div class="articles__container">
                 <div class="articles__wrapper">
                     <div class="articles__item">
                         <img src="images/article.png" alt="" class="articles__item_img">
-                        <p class="articles__item_txt">Անվճար մանրամասն ուղեցույցներ և տեսանյութեր՝ ինքնուրույն մեքենաների վերանորոգման համար</p>
+                        <p class="articles__item_txt">Անվճար մանրամասն ուղեցույցներ և տեսանյութեր՝ ինքնուրույն
+                            մեքենաների վերանորոգման համար</p>
                         <a href="" class="articles__item_link">
                             <span class="articles__item_link_txt">ՏԵՍՆԵԼ ՀՈԴՎԱԾԸ</span>
                             <img src="images/newsLinkIcon.svg" alt="" class="articles__item_link_icon">
@@ -986,7 +1040,8 @@
                     </div>
                     <div class="articles__item">
                         <img src="images/article.png" alt="" class="articles__item_img">
-                        <p class="articles__item_txt">Անվճար մանրամասն ուղեցույցներ և տեսանյութեր՝ ինքնուրույն մեքենաների վերանորոգման համար</p>
+                        <p class="articles__item_txt">Անվճար մանրամասն ուղեցույցներ և տեսանյութեր՝ ինքնուրույն
+                            մեքենաների վերանորոգման համար</p>
                         <a href="" class="articles__item_link">
                             <span class="articles__item_link_txt">ՏԵՍՆԵԼ ՀՈԴՎԱԾԸ</span>
                             <img src="images/newsLinkIcon.svg" alt="" class="articles__item_link_icon">
@@ -994,7 +1049,8 @@
                     </div>
                     <div class="articles__item">
                         <img src="images/article.png" alt="" class="articles__item_img">
-                        <p class="articles__item_txt">Անվճար մանրամասն ուղեցույցներ և տեսանյութեր՝ ինքնուրույն մեքենաների վերանորոգման համար</p>
+                        <p class="articles__item_txt">Անվճար մանրամասն ուղեցույցներ և տեսանյութեր՝ ինքնուրույն
+                            մեքենաների վերանորոգման համար</p>
                         <a href="" class="articles__item_link">
                             <span class="articles__item_link_txt">ՏԵՍՆԵԼ ՀՈԴՎԱԾԸ</span>
                             <img src="images/newsLinkIcon.svg" alt="" class="articles__item_link_icon">
@@ -1002,7 +1058,8 @@
                     </div>
                     <div class="articles__item">
                         <img src="images/article.png" alt="" class="articles__item_img">
-                        <p class="articles__item_txt">Անվճար մանրամասն ուղեցույցներ և տեսանյութեր՝ ինքնուրույն մեքենաների վերանորոգման համար</p>
+                        <p class="articles__item_txt">Անվճար մանրամասն ուղեցույցներ և տեսանյութեր՝ ինքնուրույն
+                            մեքենաների վերանորոգման համար</p>
                         <a href="" class="articles__item_link">
                             <span class="articles__item_link_txt">ՏԵՍՆԵԼ ՀՈԴՎԱԾԸ</span>
                             <img src="images/newsLinkIcon.svg" alt="" class="articles__item_link_icon">
