@@ -109,6 +109,28 @@
         margin-top: 130px;
     }
 
+    .seeMore {
+        display: none;
+
+        @media (max-width: 768px) {
+            display: flex;
+            min-width: 540px;
+            margin-top: 24px;
+        }
+    }
+
+    .seeMoreDesktop {
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+        color: #0080E5;
+        margin-top: 18px;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
     &__wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -271,6 +293,14 @@
             margin: 20px 26px 50px;
             padding: 30px 25px;
         }
+
+        .someLink {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            color: #0080E5;
+            margin-top: 18px;
+        }
     }
 
     &__slider {
@@ -350,7 +380,7 @@
             align-items: center;
             gap: 12px;
             font-weight: 500;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
 
             @media (max-width: 768px) {
                 font-size: 20px;

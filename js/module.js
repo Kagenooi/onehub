@@ -37,7 +37,7 @@ export function toggleAcc(event) {
 
 export function showSubmenu() {
     let links = document.querySelectorAll('.burger__menu_list_link');
-    
+
     links.forEach(element => {
         element.addEventListener('mouseover', function () {
             let submenu = document.querySelector(`#${this.dataset.submenu}`);
@@ -55,5 +55,22 @@ export function showSubmenu() {
             submenu.classList.remove('active');
             element.classList.remove('active');
         });
+    });
+}
+
+
+export function footerAcc() {
+    let btns = document.querySelectorAll('.footer__menu_el_title');
+    btns.forEach(element => {
+        element.addEventListener('click', function () {
+            let acc = element.nextElementSibling;
+            if (acc.style.maxHeight) {
+                acc.style.maxHeight = null;
+                element.classList.remove('active');
+            } else {
+                acc.style.maxHeight = acc.style.maxHeight + acc.scrollHeight + 'px';
+                element.classList.add('active');
+            }
+        })
     });
 }

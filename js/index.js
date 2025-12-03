@@ -12,7 +12,8 @@ import {
     toggleWishlist,
     showSubmenu,
     toggleSubmenu,
-    toggleMobileMenu
+    toggleMobileMenu,
+    footerAcc
 } from "./module.js";
 
 window.showSubmenu = showSubmenu;
@@ -21,7 +22,9 @@ window.toggleAcc = toggleAcc;
 window.toggleWishlist = toggleWishlist;
 window.toggleSubmenu = toggleSubmenu;
 window.toggleMobileMenu = toggleMobileMenu; 
+window.footerAcc = footerAcc;
 
+footerAcc();
 showSubmenu();
 
 const headerSwiper = new Swiper("#headerSlider", {
@@ -87,6 +90,16 @@ const productsSwiper = new Swiper("#productsSwiper", {
         }
     }
 });
+
+const langWrapper = document.getElementById('langWrapper');
+
+document.addEventListener('click', (event) => {
+  // если клик произошёл НЕ внутри .navbar__lang
+  if (!event.target.closest('.navbar__lang')) {
+    langWrapper.classList.remove('active');
+  }
+});
+
 
 
 document.addEventListener('click', (event) => {
