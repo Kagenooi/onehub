@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="scss/categories/categories.css">
+</head>
+
+<body>
+    <div id="adaptive">
+
+        <nav class="navbar">
+            <div class="navbarMobile">
+                <div class="navbarMobile__container">
+                    <a href="" class="navbarMobile__logo">
+                        <img src="images/mobileLogo.png" alt="" class="navbarMobile__logo_img">
+                    </a>
+                    <div class="navbarMobile__btns">
+                        <a href="" class="navbarMobile__btns_phone">
+                            <img src="images/phoneWhite.svg" alt="" class="navbarMobile__btns_phone_icon">
+                        </a>
+                        <a href="" class="navbarMobile__btns_sign">
+                            <img src="images/user.svg" alt="" class="navbarMobile__btns_sign_icon">
+                        </a>
+                        <button class="navbarMobile__btns_basket">
+                            <img src="images/basket.svg" alt="" class="navbarMobile__btns_basket_icon">
+                        </button>
+                        <button class="navbarMobile__btns_burger" onclick="toggleMobileMenu('mobileBurger', this)">
+                            <img src="images/burger.svg" alt="" class="navbarMobile__btns_burger_icon">
+                            <img src="images/closeBurger.svg" alt="" class="navbarMobile__btns_burger_icon active">
+                        </button>
+                    </div>
+                </div>
+                <div class="mobileBurger innerHeight" id="mobileBurger">
+                    <div class="mobileBurger__search">
+                        <form action="">
+                            <label class="mobileBurger__search_lab">
+                                <input type="search" name="" class="mobileBurger__search_lab_inp"
+                                    placeholder="Փնտրի’ր Ավտոմեքենա">
+                                <button class="mobileBurger__search_lab_btn">
+                                    <img src="images/loop.svg" alt="" class="mobileBurger__search_lab_btn_icon">
+                                </button>
+                                <label for="" class="mobileBurger__search_lab_photo">
+                                    <img src="images/photo.svg" alt="" class="mobileBurger__search_lab_photo_icon">
+                                    <input type="file" class="mobileBurger__search_lab_photo_inp">
+                                </label>
+                            </label>
+                        </form>
+                    </div>
+                    <div class="mobileBurger__container">
+                        <div class="mobileBurger__wrapper">
+                            <div class="mobileBurger__menu">
+                                <div class="mobileBurger__menu_btns">
+                                    <button type="button" class="mobileBurger__menu_btns_btn"
+                                        onclick="toggleSubmenu('mobileBurgerItem')">
+                                        <img src="images/burgerProduct.svg" alt=""
+                                            class="mobileBurger__menu_btns_btn_icon">
+                                        <span class="mobileBurger__menu_btns_btn_txt">Պահեստամասեր</span>
+                                        <img src="images/chevron.svg" alt="" class="mobileBurger__menu_btns_btn_arr">
+                                    </button>
+                                </div>
+                                <div class="mobileBurger__menu_list" id="mobileBurgerItem">
+                                    <h4 class="mobileBurger__menu_list_title">Պահեստամասեր</h4>
+                                    <button type="button" class="mobileBurger__menu_list_closeBtn"
+                                        onclick="toggleSubmenu('mobileBurgerItem')">
+                                        <img src="images/close.png" alt=""
+                                            class="mobileBurger__menu_list_closeBtn_icon">
+                                    </button>
+                                    <div class="mobileBurgerMenu">
+                                        <ul class="mobileBurgerMenu__list">
+                                            <li><a href="" class="mobileBurgerMenu__list_link">Պահեստամաս 1</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="mobileBurger__footer">
+                                <li>
+                                    <a href="" class="mobileBurger__footer_link">
+                                        <img src="images/locationNavTop.svg" alt=""
+                                            class="mobileBurger__footer_link_icon">
+                                        <span class="mobileBurger__footer_link_txt">Ք. Երևան, Դավիթ Բեկի 21/3</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="mobileBurger__footer_link">
+                                        <img src="images/phoneNavTop.svg" alt="" class="mobileBurger__footer_link_icon">
+                                        <span class="mobileBurger__footer_link_txt">
+                                            +374 98 56 56 65 <br>
+                                            +374 98 56 56 65
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar__container black">
+                <div class="navbar__wrapper">
+                    <ul class="navbar__contacts">
+                        <li class="navbar__contacts_el">
+                            <img src="images/phoneNavTop.svg" alt="" class="navbar__contacts_el_icon">
+                            <a href="tel:+37496949466" class="navbar__contacts_el_link">+374-96-94-94-66</a>
+                            <a href="tel:+37496949466" class="navbar__contacts_el_link">+374-96-94-94-66</a>
+                        </li>
+                        <li class="navbar__contacts_el">
+                            <img src="images/locationNavTop.svg" alt="" class="navbar__contacts_el_icon">
+                            <a href="" class="navbar__contacts_el_link">Ք. Երևան, Դավիթ Բեկի 11/8</a>
+                        </li>
+                    </ul>
+                    <div class="navbar__lang">
+                        <button type="button" class="navbar__lang_btn" onclick="toggleActive(this, 'langWrapper')">
+                            <img src="images/flag.png" alt="" class="navbar__lang_btn_flag">
+                            <span class="navbar__lang_btn_txt">ARM</span>
+                        </button>
+                        <div class="navbar__lang_wrapper" id="langWrapper">
+                            <p class="navbar__lang_title">Լեզու</p>
+                            <ul class="navbar__lang_list">
+                                <li>
+                                    <a href="" class="navbar__lang_list_link">
+                                        <img src="images/flag.png" alt="" class="navbar__lang_list_link_flag">
+                                        <span class="navbar__lang_list_link_txten">ARM</span>
+                                        <span class="navbar__lang_list_link_txt">Հայերեն</span>
+                                        <!-- if language is active, "navbar__lang_list_link_checked" element have a active class -->
+                                        <img src="images/langchecked.svg" alt="" class="navbar__lang_list_link_checked">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar__container">
+                <div class="navbar__wrapper bottom">
+                    <a href="" class="navbar__logo">
+                        <img src="images/mobileLogo.png" alt="" class="navbar__logo_img">
+                    </a>
+                    <div class="navbar__burger">
+                        <button type="button" class="navbar__burger_btn">
+                            <img src="images/burger.svg" alt="" class="navbar__burger_btn_icon">
+                        </button>
+                        <div class="navbar__burger_wrapper innerHeight" id="burger">
+                            <div class="burger">
+                                <div class="burger__menu firstItem toggle">
+                                    <ul class="burger__menu_list">
+                                        <li>
+                                            <a href="" class="burger__menu_list_link" data-submenu="first">
+                                                <img src="images/menuLink.png" alt=""
+                                                    class="burger__menu_list_link_icon">
+                                                <span class="burger__menu_list_link_txt">Պահեստամասեր</span>
+                                                <img src="images/chevron.svg" alt="" class="burger__menu_list_link_arr">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="burger__menu_list_link" data-submenu="second">
+                                                <img src="images/menuLink.png" alt=""
+                                                    class="burger__menu_list_link_icon">
+                                                <span class="burger__menu_list_link_txt">Պահեստամասեր 2</span>
+                                                <img src="images/chevron.svg" alt="" class="burger__menu_list_link_arr">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="burger__submenu toggle" id="first">
+                                    <h3 class="burger__submenu_title">Պահեստամասեր</h3>
+                                    <ul class="burger__submenu_list">
+                                        <li>
+                                            <a href="" class="burger__submenu_list_link">Պահեստամասեր</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="burger__submenu toggle" id="second">
+                                    <h3 class="burger__submenu_title">Պահեստամասեր 2</h3>
+                                    <ul class="burger__submenu_list">
+                                        <li>
+                                            <a href="" class="burger__submenu_list_link">Պահեստամասեր 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar__search">
+                        <form action="">
+                            <div class="navbar__search_wrapper">
+                                <input type="search" class="navbar__search_inp"
+                                    placeholder="Գտի՛ր ցանկացած պահեստամաս ONE HUB-ում">
+                                <button type="button" class="navbar__search_photo">
+                                    <img src="images/photo.svg" alt="" class="navbar__search_photo_icon">
+                                </button>
+                                <button type="button" class="navbar__search_loop">
+                                    <img src="images/loop.svg" alt="" class="navbar__search_loop_icon">
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="navbar__controls">
+                        <button type="button" class="navbar__controls_btn">
+                            <img src="images/location.svg" alt="" class="navbar__controls_btn_icon">
+                            <span class="navbar__controls_btn_txt">Հասցե</span>
+                        </button>
+                        <button type="button" class="navbar__controls_btn">
+                            <img src="images/user.svg" alt="" class="navbar__controls_btn_icon">
+                            <span class="navbar__controls_btn_txt">Մուտք</span>
+                        </button>
+                        <button type="button" class="navbar__controls_btn">
+                            <img src="images/basket.svg" alt="" class="navbar__controls_btn_icon">
+                            <span class="navbar__controls_btn_txt">Զամբյուղ</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="header">
+            <div class="crumbs">
+                <ul class="crumbs__list">
+                    <li>
+                        <a href="" class="crumbs__list_link">
+                            Գլխավոր
+                            <img src="images/crumbs.svg" alt="" class="crumbs__list_link_icon">
+                        </a>
+                    </li>
+                    <li><a href="" class="crumbs__list_link">Ավտոմեքենաներ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <button type="button" class="filterToggleBtn" onclick="toggleFilter('filter')">
+                <img src="images/filter.svg" alt="" class="filterToggleBtn__icon">
+            </button>
+            <div class="aside">
+                <div class="filter">
+                    <h3 class="filter__title">
+                        <img src="images/filterLoop.svg" alt="" class="filter__title_icon">
+                        Փնտրի՛ր մեքենադ
+                    </h3>
+                    <div class="filter__wrapper">
+                        <form action="">
+                            <div class="filter__form">
+                                <div class="select gc-2">
+                                    <button type="button" class="select__btn" data-acc="carBrands"
+                                        onclick="toggleAcc(this)">
+                                        <span class="select__btn_txt">Ընտրել մակնիշը</span>
+                                        <img src="images/filterArrow.svg" alt="" class="select__btn_arr">
+                                    </button>
+                                    <div class="select__options" id="carBrands">
+                                        <p class="select__options_title">Հայտնի մակնիշներ</p>
+                                        <div class="select__options_wrapper">
+                                            <button type="button" class="select__options_el">Mercedes-Benz</button>
+                                            <button type="button" class="select__options_el">Toyota</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="select gc-2">
+                                    <button type="button" class="select__btn" data-acc="carBrands"
+                                        onclick="toggleAcc(this)">
+                                        <span class="select__btn_txt">Ընտրել մակնիշը</span>
+                                        <img src="images/filterArrow.svg" alt="" class="select__btn_arr">
+                                    </button>
+                                    <div class="select__options" id="carBrands">
+                                        <p class="select__options_title">Հայտնի մակնիշներ</p>
+                                        <div class="select__options_wrapper">
+                                            <button type="button" class="select__options_el">Mercedes-Benz</button>
+                                            <button type="button" class="select__options_el">Toyota</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="select">
+                                    <button type="button" class="select__btn" data-acc="carBrands"
+                                        onclick="toggleAcc(this)">
+                                        <span class="select__btn_txt">Ընտրել մակնիշը</span>
+                                        <img src="images/filterArrow.svg" alt="" class="select__btn_arr">
+                                    </button>
+                                    <div class="select__options" id="carBrands">
+                                        <p class="select__options_title">Հայտնի մակնիշներ</p>
+                                        <div class="select__options_wrapper">
+                                            <button type="button" class="select__options_el">Mercedes-Benz</button>
+                                            <button type="button" class="select__options_el">Toyota</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="select">
+                                    <button type="button" class="select__btn" data-acc="carBrands2"
+                                        onclick="toggleAcc(this)">
+                                        <span class="select__btn_txt">Ընտրել մակնիշը</span>
+                                        <img src="images/filterArrow.svg" alt="" class="select__btn_arr">
+                                    </button>
+                                    <div class="select__options" id="carBrands2">
+                                        <p class="select__options_title">Հայտնի մակնիշներ</p>
+                                        <div class="select__options_wrapper">
+                                            <button type="button" class="select__options_el">Mercedes-Benz</button>
+                                            <button type="button" class="select__options_el">Toyota</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="select gc-2">
+                                    <button type="button" class="select__btn" data-acc="carBrands"
+                                        onclick="toggleAcc(this)">
+                                        <span class="select__btn_txt">Ընտրել մակնիշը</span>
+                                        <img src="images/filterArrow.svg" alt="" class="select__btn_arr">
+                                    </button>
+                                    <div class="select__options" id="carBrands">
+                                        <p class="select__options_title">Հայտնի մակնիշներ</p>
+                                        <div class="select__options_wrapper">
+                                            <button type="button" class="select__options_el">Mercedes-Benz</button>
+                                            <button type="button" class="select__options_el">Toyota</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="select gc-2">
+                                    <button type="button" class="select__btn" data-acc="carBrands"
+                                        onclick="toggleAcc(this)">
+                                        <span class="select__btn_txt">Ընտրել մակնիշը</span>
+                                        <img src="images/filterArrow.svg" alt="" class="select__btn_arr">
+                                    </button>
+                                    <div class="select__options" id="carBrands">
+                                        <p class="select__options_title">Հայտնի մակնիշներ</p>
+                                        <div class="select__options_wrapper">
+                                            <button type="button" class="select__options_el">Mercedes-Benz</button>
+                                            <button type="button" class="select__options_el">Toyota</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter__footer">
+                                <button type="submit" class="filter__footer_submit">ՓՆՏՐԵԼ</button>
+                                <button type="button" class="filter__footer_clear" onclick="toggleFilter('filter')">
+                                    <img src="images/clear.svg" alt="" class="filter__footer_clear_icon">
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="attach">
+                    <section class="contactUs">
+                        <form action="">
+                            <div class="contactUs__container">
+                                <h2 class="contactUs__title">Ձեր Մեքենան ունի խնդիր, իսկ դուք չունեք ժամանակ</h2>
+                                <div class="contactUs__wrapper">
+                                    <div class="contactUs__el">
+                                        <input type="text" name="" id="" class="contactUs__inp" placeholder="Անուն">
+                                        <input type="phone" name="" id="" class="contactUs__inp"
+                                            placeholder="Հեռախոսահամար">
+                                        <textarea name="" id="" class="contactUs__textarea"
+                                            placeholder="Նկարագրել ձեր մեքենայի խնդիրը կամ խնդիրները"></textarea>
+                                    </div>
+                                    <div class="contactUs__el file">
+                                        <div class="contactUs__file">
+                                            <div class="contactUs__file_inner" id="files">
+                                                <img src="images/attachDecor.png" alt=""
+                                                    class="contactUs__file_inner_decor">
+                                            </div>
+                                            <label for="fileAttach" class="contactUs__file_lab">
+                                                <input type="file" name="" id="fileAttach"
+                                                    class="contactUs__file_lab_inp" multiple>
+                                                <img src="images/attach.svg" alt="" class="contactUs__file_lab_icon">
+                                                <img src="images/attachHover.svg" alt=""
+                                                    class="contactUs__file_lab_icon hover">
+                                                <span class="contactUs__file_lab_txt">կցել խնդրի կամ վթարված մասի
+                                                    լուսանկար կամ
+                                                    վիդեո</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="contactUs__footer">
+                                        <label for="agreement" class="contactUs__agree">
+                                            <input type="checkbox" name="" id="agreement" class="contactUs__agree_inp">
+                                            <span class="contactUs__agree_checkbox">
+                                                <img src="images/checked.svg" alt="">
+                                            </span>
+                                            <span class="contactUs__agree_txt">Ես համաձայն եմ, բոլոր դրույթներին</span>
+                                        </label>
+                                        <p class="contactUs__txt">Մեր մասնագետները կվերլուծեն ձեր մեքենայի խնդիրը և
+                                            կկապնվեն ձեր հետ
+                                        </p>
+                                        <button type="submit" class="contactUs__submit">ՈՒՂԱՐԿԵԼ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+
+            <div class="categorie">
+                <div class="categorie__header">
+                    <div class="categorie__header_links">
+                        <a href="" class="categorie__header_links_link">ԱՌԿԱ</a>
+                        <a href="" class="categorie__header_links_link">ՊԱՏՎԵՐՈՎ</a>
+                    </div>
+                    <div class="categorie__header_btns">
+                        <button type="button" class="categorie__header_btns_btn" data-size="small">
+                            <img src="images/small.svg" alt="" class="categorie__header_btns_btn_icon">
+                            <img src="images/smallActive.svg" alt="" class="categorie__header_btns_btn_icon active">
+                        </button>
+                        <button type="button" class="categorie__header_btns_btn" data-size="medium">
+                            <img src="images/medium.svg" alt="" class="categorie__header_btns_btn_icon">
+                            <img src="images/mediumActive.svg" alt="" class="categorie__header_btns_btn_icon active">
+                        </button>
+                        <button type="button" class="categorie__header_btns_btn" data-size="big">
+                            <img src="images/big.svg" alt="" class="categorie__header_btns_btn_icon">
+                            <img src="images/bigActive.svg" alt="" class="categorie__header_btns_btn_icon active">
+                        </button>
+                    </div>
+                </div>
+                <div class="categorie__wrapper" id="categories">
+                    <div class="product">
+                        <span class="product__offer" style="background: #FF285A;">Թեժ առաջարկ</span>
+                        <div class="product__pic">
+                            <img src="images/product.png" alt="" class="product__pic_img">
+                        </div>
+                        <button class="product__wishlist" onclick="toggleWishlist(this)">
+                            <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                            <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
+                        </button>
+                        <div class="product__wrapper">
+                            <div class="product__desc">
+                                <p class="product__desc_time">2025</p>
+                                <p class="product__desc_price">
+                                    <!-- if we have discount(скидка) product__desc_price_static is in here else delete element -->
+                                    <span class="product__desc_price_new">
+                                        2.600
+                                        <span class="currency">֏</span>
+                                    </span>
+                                    <span class="product__desc_price_static">
+                                        3.600
+                                        <span class="currency">֏</span>
+                                    </span>
+                                </p>
+                                <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                                <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                            </div>
+                            <a href="" class="product__btn">
+                                <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                                <span class="product__btn_txt">Այսօր</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <span class="product__offer" style="background: #FF285A;">Թեժ առաջարկ</span>
+                        <div class="product__pic">
+                            <img src="images/product.png" alt="" class="product__pic_img">
+                        </div>
+                        <button class="product__wishlist" onclick="toggleWishlist(this)">
+                            <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                            <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
+                        </button>
+                        <div class="product__wrapper">
+                            <div class="product__desc">
+                                <p class="product__desc_time">2025</p>
+                                <p class="product__desc_price">
+                                    <!-- if we have discount(скидка) product__desc_price_static is in here else delete element -->
+                                    <span class="product__desc_price_new">
+                                        2.600
+                                        <span class="currency">֏</span>
+                                    </span>
+                                    <span class="product__desc_price_static">
+                                        3.600
+                                        <span class="currency">֏</span>
+                                    </span>
+                                </p>
+                                <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                                <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                            </div>
+                            <a href="" class="product__btn">
+                                <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                                <span class="product__btn_txt">Այսօր</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="productsSlider">
+            <div class="productsSlider__container">
+                <h2 class="productsSlider__title">Յուղերի պաշտոնական ապրանքանիշեր</h2>
+                <div class="productsSlider__wrapper swiper" id="productsSwiper">
+                    <div class="productsSlider__btns">
+                        <button type="button" class="productsSlider__btns_btn prev">
+                            <img src="images/sliderChervon.svg" alt="" class="productsSlider__btns_btn_icon">
+                        </button>
+                        <button type="button" class="productsSlider__btns_btn next">
+                            <img src="images/sliderChervon.svg" alt="" class="productsSlider__btns_btn_icon">
+                        </button>
+                    </div>
+                    <div class="swiper-wrapper">
+                        <div class="productsSlider__el swiper-slide">
+                            <div class="product">
+                                <div class="product__pic">
+                                    <img src="images/product.png" alt="" class="product__pic_img">
+                                </div>
+                                <button class="product__wishlist">
+                                    <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                                    <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
+                                </button>
+                                <div class="product__desc">
+                                    <p class="product__desc_price">
+                                        <span class="product__desc_price_static">3.600֏</span>
+                                        <span class="product__desc_price_new">2.600֏</span>
+                                    </p>
+                                    <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                                    <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                                </div>
+                                <button type="button" class="product__btn">
+                                    <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                                    <span class="product__btn_txt">Այսօր</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="productsSlider__el swiper-slide">
+                            <div class="product">
+                                <div class="product__pic">
+                                    <img src="images/product.png" alt="" class="product__pic_img">
+                                </div>
+                                <button class="product__wishlist">
+                                    <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                                    <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
+                                </button>
+                                <div class="product__desc">
+                                    <p class="product__desc_price">
+                                        <span class="product__desc_price_static">3.600֏</span>
+                                        <span class="product__desc_price_new">2.600֏</span>
+                                    </p>
+                                    <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                                    <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                                </div>
+                                <button type="button" class="product__btn">
+                                    <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                                    <span class="product__btn_txt">Այսօր</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="productsSlider__el swiper-slide">
+                            <div class="product">
+                                <div class="product__pic">
+                                    <img src="images/product.png" alt="" class="product__pic_img">
+                                </div>
+                                <button class="product__wishlist">
+                                    <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                                    <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
+                                </button>
+                                <div class="product__desc">
+                                    <p class="product__desc_price">
+                                        <span class="product__desc_price_static">3.600֏</span>
+                                        <span class="product__desc_price_new">2.600֏</span>
+                                    </p>
+                                    <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                                    <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                                </div>
+                                <button type="button" class="product__btn">
+                                    <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                                    <span class="product__btn_txt">Այսօր</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="productsSlider__el swiper-slide">
+                            <div class="product">
+                                <div class="product__pic">
+                                    <img src="images/product.png" alt="" class="product__pic_img">
+                                </div>
+                                <button class="product__wishlist">
+                                    <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                                    <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
+                                </button>
+                                <div class="product__desc">
+                                    <p class="product__desc_price">
+                                        <span class="product__desc_price_static">3.600֏</span>
+                                        <span class="product__desc_price_new">2.600֏</span>
+                                    </p>
+                                    <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                                    <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                                </div>
+                                <button type="button" class="product__btn">
+                                    <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                                    <span class="product__btn_txt">Այսօր</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="productsSlider__el swiper-slide">
+                            <div class="product">
+                                <div class="product__pic">
+                                    <img src="images/product.png" alt="" class="product__pic_img">
+                                </div>
+                                <button class="product__wishlist">
+                                    <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                                    <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
+                                </button>
+                                <div class="product__desc">
+                                    <p class="product__desc_price">
+                                        <span class="product__desc_price_static">3.600֏</span>
+                                        <span class="product__desc_price_new">2.600֏</span>
+                                    </p>
+                                    <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                                    <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                                </div>
+                                <button type="button" class="product__btn">
+                                    <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                                    <span class="product__btn_txt">Այսօր</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="productsSlider__el swiper-slide">
+                            <div class="product">
+                                <div class="product__pic">
+                                    <img src="images/product.png" alt="" class="product__pic_img">
+                                </div>
+                                <button class="product__wishlist">
+                                    <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
+                                    <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
+                                </button>
+                                <div class="product__desc">
+                                    <p class="product__desc_price">
+                                        <span class="product__desc_price_static">3.600֏</span>
+                                        <span class="product__desc_price_new">2.600֏</span>
+                                    </p>
+                                    <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
+                                    <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
+                                </div>
+                                <button type="button" class="product__btn">
+                                    <img src="images/productBasket.svg" alt="" class="product__btn_icon">
+                                    <span class="product__btn_txt">Այսօր</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer__container gray">
+                <div class="footer__wrapper top">
+                    <div class="footer__menu">
+                        <div class="footer__menu_el">
+                            <h3 class="footer__menu_el_title">
+                                ONE HUB-ի ՄԱՍԻՆ
+                                <img src="images/footerArr.svg" alt="">
+                            </h3>
+                            <ul class="footer__menu_el_list">
+                                <li>
+                                    <a href="" class="footer__menu_el_list_link">Մեր մասին</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu_el">
+                            <h3 class="footer__menu_el_title">
+                                ՕԳՆՈՒԹՅՈՒՆ ԵՎ ԱՋԱԿՑՈՒԹՅՈՒՆ
+                                <img src="images/footerArr.svg" alt="">
+                            </h3>
+                            <ul class="footer__menu_el_list">
+                                <li>
+                                    <a href="" class="footer__menu_el_list_link">Մեր մասին</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu_el">
+                            <h3 class="footer__menu_el_title">
+                                ONE HUB-ի ՄԱՍԻՆ
+                                <img src="images/footerArr.svg" alt="">
+                            </h3>
+                            <ul class="footer__menu_el_list">
+                                <li>
+                                    <a href="" class="footer__menu_el_list_link">Մեր մասին</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu_el">
+                            <h3 class="footer__menu_el_title">
+                                ONE HUB-ի ՄԱՍԻՆ
+                                <img src="images/footerArr.svg" alt="">
+                            </h3>
+                            <ul class="footer__menu_el_list">
+                                <li>
+                                    <a href="" class="footer__menu_el_list_link">Մեր մասին</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__container black">
+                <div class="footer__wrapper bottom">
+                    <ul class="footer__bankList">
+                        <li>
+                            <a href="" class="footer__bankList_link">
+                                <img src="images/bank.png" alt="" class="footer__bankList_link_img">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__bankList_link">
+                                <img src="images/bank.png" alt="" class="footer__bankList_link_img">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__bankList_link">
+                                <img src="images/bank.png" alt="" class="footer__bankList_link_img">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__bankList_link">
+                                <img src="images/bank.png" alt="" class="footer__bankList_link_img">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__bankList_link">
+                                <img src="images/bank.png" alt="" class="footer__bankList_link_img">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__bankList_link">
+                                <img src="images/bank.png" alt="" class="footer__bankList_link_img">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer__content bottom">
+                        <div class="footer__desc big">
+                            <h3 class="footer__desc_title">Ուշադրություն</h3>
+                            <p class="footer__desc_txt">
+                                Այստեղ ցուցադրված տվյալները, մասնավորապես ամբողջ
+                                տվյալների բազան, չեն կարող պատճենվել: Տվյալների և տվյալների բազայի վերարտադրումն ու
+                                տարածումը առանց ONEHUB-ի նախնական համաձայնության և/կամ երրորդ կողմերին նման
+                                գործողություններում ներգրավելը խստիվ արգելվում է: Բովանդակության ցանկացած չարտոնված
+                                օգտագործում համարվում է հեղինակային իրավունքի խախտում և կհանգեցնի իրավական հետևանքների:
+                            </p>
+                        </div>
+                        <div class="footer__desc">
+                            <h3 class="footer__desc_title">
+                                Հաճախորդների սպասարկման <br>
+                                ժամերը հայաստանում
+                            </h3>
+                            <p class="footer__desc_txt">
+                                Երկուշաբթի-Ուրբաթ 7:00-20:00 <br>
+                                Շաբաթ 7:00-16:00 <br>
+                                Կիրակի՝ փակ է <br>
+                            </p>
+                        </div>
+                        <div class="footer__desc_social">
+                            <ul class="footer__desc_social_list">
+                                <li>
+                                    <a href="" class="footer__desc_social_link">
+                                        <img src="images/social.svg" alt="" class="footer__desc_social_link_icon">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer__desc_social_link">
+                                        <img src="images/social.svg" alt="" class="footer__desc_social_link_icon">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer__desc_social_link">
+                                        <img src="images/social.svg" alt="" class="footer__desc_social_link_icon">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer__desc_social_link">
+                                        <img src="images/social.svg" alt="" class="footer__desc_social_link_icon">
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="mailto:info@onehub.am" class="footer__desc_social_link">info@onehub.am</a>
+                            <p class="footer__desc_social_txt">Davit Bek 21/80, Yerevan</p>
+                            <a href="tel:+37496949466" class="footer__desc_social_link bold">+374-96-94-94-66</a>
+                        </div>
+                        <div class="footer__pic">
+                            <img src="images/footerLogo.png" alt="" class="footer__pic_img">
+                            <p class="footer__pic_txt">Բոլոր իրավունքները պաշտպանված են</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__wrapper">
+                    <div class="footer__lang">
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="js/categories.js"></script>
+</body>
+
+</html>

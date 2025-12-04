@@ -74,3 +74,17 @@ export function footerAcc() {
         })
     });
 }
+
+
+export function carsAcc(btn, acc) {
+    const allAccs = document.querySelectorAll('.problemFix__accs_item');
+    allAccs.forEach(element => {
+        element.classList.remove('active');
+    });
+    document.querySelector(`#${acc}`).classList.add('active');
+    const allBtns = document.querySelectorAll('.problemFix__accs_btns_btn');
+    allBtns.forEach(element => {
+        element.classList.remove('active');
+    });
+    btn.classList.add('active');
+}

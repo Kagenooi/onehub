@@ -1,0 +1,16 @@
+.crumbs {
+    padding: 24px 26px;
+
+    &__list {
+        display: flex;
+        gap: 25px;
+
+        &_link {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            font-size: 22px;
+            color: #747474;
+        }
+    }
+}

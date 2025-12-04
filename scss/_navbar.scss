@@ -30,8 +30,7 @@
         margin: 0 auto;
 
         &.bottom {
-            padding-top: 24px;
-            padding-bottom: 24px;
+            padding: 13px 15px;
         }
     }
 
@@ -366,6 +365,8 @@
     &__logo {
 
         &_img {
+            width: 132px;
+            
             @media (max-width: 1296px) {
                 width: 100px;
             }
@@ -520,7 +521,7 @@
             &__footer {
                 display: grid;
                 gap: 35px;
-                padding: 130px 40px 30px;
+                padding: 13% 40px 30px;
 
                 &_link {
                     display: flex;

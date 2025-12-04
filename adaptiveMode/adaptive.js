@@ -30,5 +30,5 @@ export function adaptive() {
     const mobileBurgerSearch = document.querySelector('.mobileBurger__search');
     const mobileBurgerContainer = document.querySelector('.mobileBurger__container');
     const mobileBurgerContainerHeight  = mobileBurgerSearch ? mobileBurgerSearch.offsetHeight : 0;
-    mobileBurgerContainer.style.height = viewportHeight - navbarHeight - mobileBurgerContainerHeight + 'px';
+    mobileBurgerContainer.style.height = viewportHeight - mobileBurgerContainerHeight + 'px';
 }

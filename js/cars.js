@@ -13,7 +13,8 @@ import {
     showSubmenu,
     toggleSubmenu,
     toggleMobileMenu,
-    footerAcc
+    footerAcc,
+    carsAcc
 } from "./module.js";
 
 window.showSubmenu = showSubmenu;
@@ -21,14 +22,16 @@ window.toggleActive = toggleActive;
 window.toggleAcc = toggleAcc;
 window.toggleWishlist = toggleWishlist;
 window.toggleSubmenu = toggleSubmenu;
-window.toggleMobileMenu = toggleMobileMenu; 
+window.toggleMobileMenu = toggleMobileMenu;
 window.footerAcc = footerAcc;
+window.carsAcc = carsAcc;
+
+document.querySelector('#defaultAcc').click();
 
 footerAcc();
 showSubmenu();
 
 const headerSwiper = new Swiper("#headerSlider", {
-    cssMode: true,
     loop: true,
     slidesPerView: 2,
     spaceBetween: 4,
@@ -36,8 +39,6 @@ const headerSwiper = new Swiper("#headerSlider", {
         nextEl: ".header__slider_btns_btn.next",
         prevEl: ".header__slider_btns_btn.prev",
     },
-    mousewheel: true,
-    keyboard: true,
     breakpoints: {
         // when window width is >=
         769: {
@@ -52,8 +53,42 @@ const headerSwiper = new Swiper("#headerSlider", {
     }
 });
 
+
+const headerBrands = new Swiper("#headerBrands", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 40,
+    navigation: {
+        nextEl: ".header__brands_slider_btns_btn.next",
+        prevEl: ".header__brands_slider_btns_btn.prev",
+    },
+});
+
+
+const accSliderEl = new Swiper('.problemFixSlider', {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 16,
+    navigation: {
+        nextEl: ".problemFixSlider__btns_btn.next",
+        prevEl: ".problemFixSlider__btns_btn.prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        // when window width is >=
+        769: {
+            slidesPerView: 5,
+            spaceBetween: 26
+        }
+    }
+});
+
+
+
 const productsSwiper = new Swiper("#productsSwiper", {
-    cssMode: true,
     loop: true,
     slidesPerView: 2,
     spaceBetween: 4,
@@ -61,8 +96,6 @@ const productsSwiper = new Swiper("#productsSwiper", {
         nextEl: ".productsSlider__btns_btn.next",
         prevEl: ".productsSlider__btns_btn.prev",
     },
-    mousewheel: true,
-    keyboard: true,
     breakpoints: {
         // when window width is >= 
         769: {
@@ -80,10 +113,10 @@ const productsSwiper = new Swiper("#productsSwiper", {
 const langWrapper = document.getElementById('langWrapper');
 
 document.addEventListener('click', (event) => {
-  // если клик произошёл НЕ внутри .navbar__lang
-  if (!event.target.closest('.navbar__lang')) {
-    langWrapper.classList.remove('active');
-  }
+    // если клик произошёл НЕ внутри .navbar__lang
+    if (!event.target.closest('.navbar__lang')) {
+        langWrapper.classList.remove('active');
+    }
 });
 
 
@@ -199,18 +232,3 @@ function updateDecorState() {
         fileDecor.classList.remove('inactive');
     }
 }
-
-
-const headerCategories = document.querySelector('.header__categories');
-const headerCategoriesBtns = document.querySelectorAll('.headerCategoriesSmall__btn');
-headerCategoriesBtns.forEach(element => {
-    element.addEventListener('click', () => {
-        const transformValue = element.getAttribute('data-transform');
-        headerCategories.style.left = `${transformValue}px`;
-        for (let i = 0; i < headerCategoriesBtns.length; i++) {
-            headerCategoriesBtns[i].classList.remove('active');
-        }
-        element.classList.add('active');
-    });
-});
-document.querySelector('#defaultCategoriesBtn').click();

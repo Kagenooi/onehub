@@ -161,10 +161,32 @@ input[type="search"]::-webkit-search-results-decoration {
     width: 100%;
     max-width: 244px;
     position: relative;
+    background: #F9F5F5;
+    border-radius: 5px;
 
     @media (max-width: 768px) {
         max-width: 290px;
         min-width: 290px;
+        background: transparent;
+    }
+
+    &__offer {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: 6px 12px;
+        display: block;
+        width: fit-content;
+        font-size: 11px;
+        color: #fff;
+        font-weight: 500;
+        z-index: 1020;
+        border-radius: 3px;
+
+        @media (max-width: 768px) {
+            top: 15px;
+            left: 20px;
+        }
     }
 
     &__pic {
@@ -174,6 +196,8 @@ input[type="search"]::-webkit-search-results-decoration {
         background: #fff;
         border-radius: 6px 6px 0 0;
         overflow: hidden;
+        position: relative;
+        z-index: 1010;
 
         @media (max-width: 768px) {
             height: 280px;
@@ -198,6 +222,7 @@ input[type="search"]::-webkit-search-results-decoration {
         right: 13px;
         width: 27px;
         height: 25px;
+        z-index: 1030;
 
         @media (max-width: 768px) {
             top: 16px;
@@ -230,13 +255,16 @@ input[type="search"]::-webkit-search-results-decoration {
 
     &__desc {
         padding: 10px;
-        background: #EFEFEF;
         height: 120px;
 
         @media (max-width: 768px) {
             background: none;
             padding: 45px 25px 20px;
-            height: 185px;
+            height: 200px;
+        }
+
+        &_time {
+            display: none;
         }
 
         &_price {
@@ -336,6 +364,8 @@ input[type="search"]::-webkit-search-results-decoration {
         padding: 12px;
         border-radius: 2px;
         width: 100%;
+        position: relative;
+        z-index: 1030;
 
         @media (max-width: 768px) {
             border-radius: 20px;
@@ -389,6 +419,7 @@ input[type="search"]::-webkit-search-results-decoration {
         max-width: 540px;
         padding: 22px;
     }
+
     &:hover {
         border-color: #F62B02;
     }

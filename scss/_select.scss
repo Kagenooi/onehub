@@ -1,0 +1,95 @@
+.select {
+    margin-bottom: 16px;
+    position: relative;
+
+    &__btn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background: #F3F3F3;
+        border: 1px solid #00000040;
+        justify-content: space-between;
+        padding: 17px 20px;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 17px;
+            border-right: 1px solid #00000080;
+            position: absolute;
+            top: 18px;
+            right: 50px;
+        }
+
+        &:hover,
+        &.active {
+            border-color: #F73004;
+        }
+    }
+
+    &__options {
+        background: #E8E4E4;
+        position: absolute;
+        width: 100%;
+        top: 55px;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 1020;
+
+        &.active {
+            border: 0.5px solid #F62B02;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        &_wrapper {
+            max-height: 390px;
+            overflow-y: auto;
+            background: #fff;
+
+            &::-webkit-scrollbar {
+                background: #E8E4E4;
+                width: 19px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #AAAAAA;
+                border-radius: 12px;
+                border: 5px solid transparent;
+                background-clip: padding-box;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 48px;
+                border-radius: 2px;
+                right: 2px; // подгони под центр твоего "узкого" thumb
+                border-style: solid;
+                border-width: 0 8px 10px 8px; // ширина треугольника
+                border-color: transparent transparent #AAAAAA transparent;
+                pointer-events: none;
+                z-index: 1;
+            }
+        }
+
+        &_title {
+            font-weight: 600;
+            padding: 21px 31px;
+        }
+
+        &_el {
+            border: 0.82px solid #C3C3C380;
+            width: 100%;
+            padding: 20px 31px;
+            background: #fff;
+            text-align: left;
+
+            &:hover {
+                background: #F73004;
+                color: #fff;
+            }
+        }
+    }
+}

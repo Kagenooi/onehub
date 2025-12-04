@@ -112,9 +112,6 @@ document.addEventListener('click', (event) => {
 });
 
 
-
-
-
 const fileAttach = document.querySelector('#fileAttach');
 const inner = document.querySelector('#files');
 const fileDecor = inner.querySelector('.contactUs__file_inner_decor');
@@ -201,16 +198,64 @@ function updateDecorState() {
 }
 
 
-const headerCategories = document.querySelector('.header__categories');
-const headerCategoriesBtns = document.querySelectorAll('.headerCategoriesSmall__btn');
-headerCategoriesBtns.forEach(element => {
-    element.addEventListener('click', () => {
-        const transformValue = element.getAttribute('data-transform');
-        headerCategories.style.left = `${transformValue}px`;
-        for (let i = 0; i < headerCategoriesBtns.length; i++) {
-            headerCategoriesBtns[i].classList.remove('active');
-        }
-        element.classList.add('active');
+
+const catBtn = document.querySelectorAll('.categorie__header_btns_btn');
+const categories = document.querySelector('#categories');
+const products = categories.querySelectorAll('.product');
+
+const LS_SIZE_KEY = 'productSize';
+const LS_CAT_KEY  = 'categoriesClass';
+
+// единая функция применения выбранного размера
+function applySize(size) {
+    // активная кнопка
+    catBtn.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.size === size);
+    });
+
+    // классы продуктов
+    products.forEach(prod => {
+        prod.className = 'product'; // сбрасываем всё, оставляем базовый
+        prod.classList.add(size);
+    });
+
+    // классы для categories
+    categories.className = 'categorie__wrapper';
+    categories.classList.add(size);
+
+    // сохраняем в localStorage
+    localStorage.setItem(LS_SIZE_KEY, size);
+    localStorage.setItem(LS_CAT_KEY, categories.className);
+}
+
+// клики по кнопкам
+catBtn.forEach(element => {
+    element.addEventListener('click', function () {
+        const size = element.dataset.size;
+        applySize(size);
     });
 });
-document.querySelector('#defaultCategoriesBtn').click();
+
+// инициализация при загрузке
+(function initFromStorage() {
+    const savedSize = localStorage.getItem(LS_SIZE_KEY);
+    const savedCatClass = localStorage.getItem(LS_CAT_KEY);
+
+    if (savedSize) {
+        // нормальная ветка — восстанавливаем по размеру
+        applySize(savedSize);
+        return;
+    }
+
+    // fallback: если ничего не сохранено
+    if (catBtn[0]) {
+        applySize(catBtn[0].dataset.size);
+    }
+})();
+
+
+
+function toggleFilter(elem) {
+    document.querySelector(`.${elem}`).classList.toggle('active');
+}
+window.toggleFilter = toggleFilter;
