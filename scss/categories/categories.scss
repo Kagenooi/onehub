@@ -104,9 +104,13 @@
 .aside {
 
     .filter {
-        padding: 22px 22px 33px;
         background: #E8E4E4;
         border-radius: 12px;
+
+        @media (min-width: 768px) {
+            height: auto !important;
+            padding: 22px 22px 33px !important;
+        }
 
         @media (max-width: 768px) {
             position: fixed;

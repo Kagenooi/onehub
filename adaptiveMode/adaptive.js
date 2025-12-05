@@ -24,6 +24,7 @@ export function adaptive() {
     // чтобы блок «под зумом» занимал 100% высоты экрана:
     innerHeightBlocks.forEach((block) => {
         block.style.height = (viewportHeight / zoom) + 'px';
+        block.style.minHeight = (viewportHeight / zoom) + 'px';
         block.style.paddingTop = navbarHeight + 'px';
     });
 
@@ -33,5 +34,7 @@ export function adaptive() {
     const mobileFooter = document.querySelector('.mobileBurger__footer');
     const mobileBurgerMenu = document.querySelector('.mobileBurger__menu');
     mobileBurgerMenu.style.height = (viewportHeight - mobileBurgerContainerHeight - navbarHeight - mobileFooter.offsetHeight - 25) + 'px';
+    mobileBurgerMenu.style.minHeight = (viewportHeight - mobileBurgerContainerHeight - navbarHeight - mobileFooter.offsetHeight - 25) + 'px';
+    mobileBurgerContainer.style.minHeight = (viewportHeight - mobileBurgerContainerHeight - navbarHeight) + 'px';
     mobileBurgerContainer.style.height = (viewportHeight - mobileBurgerContainerHeight - navbarHeight) + 'px';
 }

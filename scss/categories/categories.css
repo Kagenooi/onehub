@@ -1769,9 +1769,14 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .aside .filter {
-  padding: 22px 22px 33px;
   background: #E8E4E4;
   border-radius: 12px;
+}
+@media (min-width: 768px) {
+  .aside .filter {
+    height: auto !important;
+    padding: 22px 22px 33px !important;
+  }
 }
 @media (max-width: 768px) {
   .aside .filter {
