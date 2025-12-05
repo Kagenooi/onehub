@@ -318,6 +318,7 @@
         z-index: 1200;
         position: fixed;
         width: 100%;
+        height: fit-content;
         
         @media (min-width: 768px) {
             top: -50px;

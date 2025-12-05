@@ -1689,6 +1689,8 @@ input[type=search]::-webkit-search-results-decoration {
   z-index: 1200;
   position: fixed;
   width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 @media (min-width: 768px) {
   .singleProduct__fixed {
