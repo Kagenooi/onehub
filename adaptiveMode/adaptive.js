@@ -31,10 +31,9 @@ export function adaptive() {
     const mobileBurgerSearch = document.querySelector('.mobileBurger__search');
     const mobileBurgerContainer = document.querySelector('.mobileBurger__container');
     const mobileBurgerContainerHeight  = mobileBurgerSearch ? mobileBurgerSearch.offsetHeight : 0;
-    const mobileFooter = document.querySelector('.mobileBurger__footer');
     const mobileBurgerMenu = document.querySelector('.mobileBurger__menu');
-    mobileBurgerMenu.style.height = (viewportHeight - mobileBurgerContainerHeight - navbarHeight - mobileFooter.offsetHeight - 25) + 'px';
-    mobileBurgerMenu.style.minHeight = (viewportHeight - mobileBurgerContainerHeight - navbarHeight - mobileFooter.offsetHeight - 25) + 'px';
-    mobileBurgerContainer.style.minHeight = (viewportHeight - mobileBurgerContainerHeight - navbarHeight) + 'px';
-    mobileBurgerContainer.style.height = (viewportHeight - mobileBurgerContainerHeight - navbarHeight) + 'px';
+    mobileBurgerMenu.style.height = ((viewportHeight / zoom) - 440) + 'px';
+    mobileBurgerMenu.style.minHeight = ((viewportHeight / zoom) - 440) + 'px';
+    mobileBurgerContainer.style.minHeight = ((viewportHeight / zoom) - 210) + 'px';
+    mobileBurgerContainer.style.height = ((viewportHeight / zoom) - 210) + 'px';
 }

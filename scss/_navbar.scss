@@ -181,10 +181,20 @@
     &__lang {
         position: relative;
 
+        @media (max-width: 768px) {
+            background: #333;
+            border-radius: 6px;
+            width: fit-content;
+        }
+
         &_title {
             margin-bottom: 18px;
             font-size: 15px;
             font-weight: 500;
+
+            @media (max-width: 768px) {
+                font-size: 22px;
+            }
         }
 
         &_list {
@@ -195,6 +205,10 @@
                 gap: 12px;
                 padding: 6px 10px 6px 3px;
                 border-radius: 8px;
+
+                @media (max-width: 768px) {
+                    padding: 8px 0;
+                }
 
                 &:hover {
                     background: #E8E4E4;
@@ -214,6 +228,11 @@
                     height: 23px;
                     border-radius: 50%;
                     object-fit: cover;
+
+                    @media (max-width: 768px) {
+                        width: 32px;
+                        height: 32px;
+                    }
                 }
 
                 &_txten {
@@ -221,6 +240,10 @@
                     font-size: 15px;
                     font-weight: 500;
                     text-transform: uppercase;
+
+                    @media (max-width: 768px) {
+                        font-size: 22px;
+                    }
                 }
 
                 &_txt {
@@ -239,14 +262,31 @@
             border-radius: 6px;
             gap: 6px;
 
-            &:hover {
-                background: #fff;
+            @media (max-width: 768px) {
+                background: #333;
+                padding: 12px;
+            }
+
+            @media (min-width: 768px) {
+                &:hover {
+                    background: #fff;
+                }
+
+                &:hover &_txt {
+                    color: #000;
+                }
             }
 
             &_flag {
                 width: 17px;
                 height: 17px;
                 border-radius: 50%;
+                object-fit: cover;
+
+                @media (max-width: 768px) {
+                    width: 32px;
+                    height: 32px;
+                }
             }
 
             &_txt {
@@ -254,10 +294,10 @@
                 font-size: 11px;
                 font-weight: 500;
                 color: #FFFFFF;
-            }
 
-            &:hover &_txt {
-                color: #000;
+                @media (max-width: 768px) {
+                    font-size: 22px;
+                }
             }
         }
 
@@ -271,6 +311,13 @@
             top: 35px;
             right: 0;
             width: 280px;
+            z-index: 102000;
+            box-shadow: 0 0 10px 1px #00000070;
+
+            @media (max-width: 768px) {
+                padding: 12px;
+                top: 70px;
+            }
 
             &.active {
                 visibility: visible;
@@ -293,6 +340,11 @@
             position: absolute;
             top: 50%;
             transform: translate(0, -50%);
+            cursor: pointer;
+
+            input {
+                display: none;
+            }
 
             &:hover &_icon {
                 transform: scale(1.1);
@@ -459,6 +511,13 @@
 
             &__search {
                 padding: 20px 26px;
+                display: flex;
+                gap: 12px;
+                align-items: center;
+
+                form {
+                    width: 100%;
+                }
 
                 &_lab {
                     position: relative;
@@ -496,6 +555,7 @@
                         top: 50%;
                         right: 20px;
                         transform: translate(0, -50%);
+                        cursor: pointer;
 
                         &_icon {
                             width: 40px;
@@ -545,7 +605,7 @@
             &__footer {
                 display: grid;
                 gap: 35px;
-                padding: 13% 40px 30px;
+                padding: 30px 40px;
 
                 &_link {
                     display: flex;

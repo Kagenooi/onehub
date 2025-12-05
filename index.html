@@ -43,12 +43,33 @@
                                 <button class="mobileBurger__search_lab_btn">
                                     <img src="images/loop.svg" alt="" class="mobileBurger__search_lab_btn_icon">
                                 </button>
-                                <label for="" class="mobileBurger__search_lab_photo">
+                                <label for="photo" class="mobileBurger__search_lab_photo">
                                     <img src="images/photo.svg" alt="" class="mobileBurger__search_lab_photo_icon">
-                                    <input type="file" class="mobileBurger__search_lab_photo_inp">
+                                    <input type="file" class="mobileBurger__search_lab_photo_inp" id="photo">
                                 </label>
                             </label>
                         </form>
+                        <div class="navbar__lang">
+                            <button type="button" class="navbar__lang_btn" onclick="toggleActive(this, 'langWrapper')">
+                                <img src="images/flag.png" alt="" class="navbar__lang_btn_flag">
+                                <span class="navbar__lang_btn_txt">ARM</span>
+                            </button>
+                            <div class="navbar__lang_wrapper" id="langWrapper">
+                                <p class="navbar__lang_title">Լեզու</p>
+                                <ul class="navbar__lang_list">
+                                    <li>
+                                        <a href="" class="navbar__lang_list_link">
+                                            <img src="images/flag.png" alt="" class="navbar__lang_list_link_flag">
+                                            <span class="navbar__lang_list_link_txten">ARM</span>
+                                            <span class="navbar__lang_list_link_txt">Հայերեն</span>
+                                            <!-- if language is active, "navbar__lang_list_link_checked" element have a active class -->
+                                            <img src="images/langchecked.svg" alt=""
+                                                class="navbar__lang_list_link_checked">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="mobileBurger__container">
                         <div class="mobileBurger__wrapper">
@@ -188,9 +209,10 @@
                             <div class="navbar__search_wrapper">
                                 <input type="search" class="navbar__search_inp"
                                     placeholder="Գտի՛ր ցանկացած պահեստամաս ONE HUB-ում">
-                                <button type="button" class="navbar__search_photo">
+                                <label for="photo" class="navbar__search_photo">
+                                    <input type="file" id="photo">
                                     <img src="images/photo.svg" alt="" class="navbar__search_photo_icon">
-                                </button>
+                                </label>
                                 <button type="button" class="navbar__search_loop">
                                     <img src="images/loop.svg" alt="" class="navbar__search_loop_icon">
                                 </button>
@@ -267,20 +289,13 @@
                                     <div class="select__options" id="carBrands">
                                         <p class="select__options_title">Հայտնի մակնիշներ</p>
                                         <div class="select__options_wrapper">
-                                            <button type="button"
-                                                class="select__options_el">Mercedes-Benz</button>
-                                            <button type="button"
-                                                class="select__options_el">Toyota</button>
-                                            <button type="button"
-                                                class="select__options_el">Honda</button>
-                                            <button type="button"
-                                                class="select__options_el">Honda</button>
-                                            <button type="button"
-                                                class="select__options_el">Honda</button>
-                                            <button type="button"
-                                                class="select__options_el">Honda</button>
-                                            <button type="button"
-                                                class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Mercedes-Benz</button>
+                                            <button type="button" class="select__options_el">Toyota</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
                                         </div>
                                     </div>
                                 </div>
@@ -1196,7 +1211,15 @@
                 </div>
                 <div class="footer__wrapper">
                     <div class="footer__lang">
-                        
+                        <button type="button" class="footer__lang_btn">
+                            <img src="images/globus.svg" alt="" class="footer__lang_btn_globus">
+                            <span class="footer__lang_btn_txt">Armenia</span>
+                            <img src="images/chevronRight.svg" alt="" class="footer__lang_btn_icon">
+                        </button>
+                        <div class="footer__lang_btns">
+                            <button type="button" class="footer__lang_btns_btn">Russian</button>
+                            <button type="button" class="footer__lang_btns_btn">English</button>
+                        </div>
                     </div>
                 </div>
             </div>

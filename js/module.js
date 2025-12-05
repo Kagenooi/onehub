@@ -19,21 +19,78 @@ export function toggleMobileMenu(burger, btn) {
     }
 }
 
-export function toggleAcc(event) {
-    let acc = document.querySelector(`#${event.dataset.acc}`);
-    let choose = event.querySelector('span');
-    event.classList.toggle('active');
-    acc.classList.toggle('active');
+// export function toggleAcc(event) {
+//     let acc = document.querySelector(`#${event.dataset.acc}`);
+//     let choose = event.querySelector('span');
+//     event.classList.toggle('active');
+//     acc.classList.toggle('active');
 
-    let accBtns = acc.querySelectorAll('button');
-    accBtns.forEach(element => {
-        element.addEventListener('click', function () {
-            choose.innerHTML = element.innerHTML;
-            event.classList.remove('active');
-            acc.classList.remove('active');
-        })
+//     let accBtns = acc.querySelectorAll('button');
+//     accBtns.forEach(element => {
+//         element.addEventListener('click', function () {
+//             choose.innerHTML = element.innerHTML;
+//             event.classList.remove('active');
+//             acc.classList.remove('active');
+//         })
+//     });
+// }
+
+// одна публичная функция
+export function toggleAcc(btn) {
+    const allBtns = document.querySelectorAll('.select__btn');
+    const allOptions = document.querySelectorAll('.select__options');
+
+    // если вызвали без аргумента -> просто закрыть всё
+    if (!btn) {
+        allBtns.forEach(b => b.classList.remove('active'));
+        allOptions.forEach(o => {
+            o.classList.remove('active');
+            o.style.maxHeight = null;
+        });
+        return;
+    }
+
+    const accId = btn.dataset.acc;
+    const acc = document.getElementById(accId);
+    if (!acc) return;
+
+    const wasActive = btn.classList.contains('active');
+
+    // 1. Сначала закрываем все селекты
+    allBtns.forEach(b => b.classList.remove('active'));
+    allOptions.forEach(o => {
+        o.classList.remove('active');
+        o.style.maxHeight = null;
+    });
+
+    // 2. Если по кнопке кликнули, когда она была активна → просто закрыли всё и выходим
+    if (wasActive) {
+        return;
+    }
+
+    // 3. Открываем текущий селект
+    btn.classList.add('active');
+    acc.classList.add('active');
+    acc.style.maxHeight = acc.scrollHeight + 'px';
+
+    // 4. Логика выбора пункта
+    const textSpan = btn.querySelector('.select__btn_txt');
+    const optionBtns = acc.querySelectorAll('.select__options_el');
+
+    optionBtns.forEach(optionBtn => {
+        optionBtn.onclick = () => {
+            if (textSpan) {
+                textSpan.textContent = optionBtn.textContent;
+            }
+            // после выбора закрываем всё
+            toggleAcc(); // вызов без аргументов -> close all
+        };
     });
 }
+
+// клик ВНЕ .select → закрываем всё
+
+
 
 export function showSubmenu() {
     let links = document.querySelectorAll('.burger__menu_list_link');

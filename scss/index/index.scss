@@ -14,6 +14,11 @@
 
 
 
+#headerCategories {
+    touch-action: pan-y; /* вертикальный скролл даём, горизонтальный забираем под свайп */
+}
+
+
 
 .header {
     margin-top: 180px;

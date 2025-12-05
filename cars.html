@@ -43,9 +43,9 @@
                                 <button class="mobileBurger__search_lab_btn">
                                     <img src="images/loop.svg" alt="" class="mobileBurger__search_lab_btn_icon">
                                 </button>
-                                <label for="" class="mobileBurger__search_lab_photo">
+                                <label for="photo" class="mobileBurger__search_lab_photo">
                                     <img src="images/photo.svg" alt="" class="mobileBurger__search_lab_photo_icon">
-                                    <input type="file" class="mobileBurger__search_lab_photo_inp">
+                                    <input type="file" class="mobileBurger__search_lab_photo_inp" id="photo">
                                 </label>
                             </label>
                         </form>
@@ -188,9 +188,10 @@
                             <div class="navbar__search_wrapper">
                                 <input type="search" class="navbar__search_inp"
                                     placeholder="Գտի՛ր ցանկացած պահեստամաս ONE HUB-ում">
-                                <button type="button" class="navbar__search_photo">
+                                <label for="photo" class="navbar__search_photo">
+                                    <input type="file" id="photo">
                                     <img src="images/photo.svg" alt="" class="navbar__search_photo_icon">
-                                </button>
+                                </label>
                                 <button type="button" class="navbar__search_loop">
                                     <img src="images/loop.svg" alt="" class="navbar__search_loop_icon">
                                 </button>
@@ -216,18 +217,19 @@
         </nav>
 
         <header class="header">
-            <div class="crumbs">
-                <ul class="crumbs__list">
-                    <li>
-                        <a href="" class="crumbs__list_link">
-                            Գլխավոր
-                            <img src="images/crumbs.svg" alt="" class="crumbs__list_link_icon">
-                        </a>
-                    </li>
-                    <li><a href="" class="crumbs__list_link">Ավտոմեքենաներ</a></li>
-                </ul>
-            </div>
+            
             <div class="header__brands">
+                <div class="crumbs">
+                    <ul class="crumbs__list">
+                        <li>
+                            <a href="" class="crumbs__list_link">
+                                Գլխավոր
+                                <img src="images/crumbs.svg" alt="" class="crumbs__list_link_icon">
+                            </a>
+                        </li>
+                        <li><a href="" class="crumbs__list_link">Ավտոմեքենաներ</a></li>
+                    </ul>
+                </div>
                 <div class="header__brands_top">
                     <div class="header__brands_top_wrapper">
                         <h1 class="header__brands_top_title">ԱՎՏՈՄԵՔԵՆԱՆԵՐ</h1>
@@ -659,83 +661,6 @@
                         </div>
                         <div class="problemFix__accs_wrapper">
                             <div class="problemFix__accs_item" id="problemFixAcc1">
-                                <div class="problemFixSlider__btns">
-                                    <button type="button" class="problemFixSlider__btns_btn prev">
-                                        <img src="images/sliderChervon.svg" alt=""
-                                            class="problemFixSlider__btns_btn_icon">
-                                    </button>
-                                    <button type="button" class="problemFixSlider__btns_btn next">
-                                        <img src="images/sliderChervon.svg" alt=""
-                                            class="problemFixSlider__btns_btn_icon">
-                                    </button>
-                                </div>
-                                <div class="problemFixSlider swiper">
-                                    <div class="swiper-pagination"></div>
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <a href="" class="problemFixSlider__el">
-                                                <img src="images/problem.png" alt="" class="problemFixSlider__el_img">
-                                                <h3 class="problemFixSlider__el_title">Տեսակը</h3>
-                                            </a>
-                                            <a href="" class="problemFixSlider__el">
-                                                <img src="images/problem.png" alt="" class="problemFixSlider__el_img">
-                                                <h3 class="problemFixSlider__el_title">Տեսակը</h3>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="" class="problemFixSlider__el">
-                                                <img src="images/problem.png" alt="" class="problemFixSlider__el_img">
-                                                <h3 class="problemFixSlider__el_title">Տեսակը</h3>
-                                            </a>
-                                            <a href="" class="problemFixSlider__el">
-                                                <img src="images/problem.png" alt="" class="problemFixSlider__el_img">
-                                                <h3 class="problemFixSlider__el_title">Տեսակը</h3>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="" class="problemFixSlider__el">
-                                                <img src="images/problem.png" alt="" class="problemFixSlider__el_img">
-                                                <h3 class="problemFixSlider__el_title">Տեսակը</h3>
-                                            </a>
-                                            <a href="" class="problemFixSlider__el">
-                                                <img src="images/problem.png" alt="" class="problemFixSlider__el_img">
-                                                <h3 class="problemFixSlider__el_title">Տեսակը</h3>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="" class="problemFixSlider__el">
-                                                <img src="images/problem.png" alt="" class="problemFixSlider__el_img">
-                                                <h3 class="problemFixSlider__el_title">Տեսակը</h3>
-                                            </a>
-                                            <a href="" class="problemFixSlider__el">
-                                                <img src="images/problem.png" alt="" class="problemFixSlider__el_img">
-                                                <h3 class="problemFixSlider__el_title">Տեսակը</h3>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="" class="problemFixSlider__el">
-                                                <img src="images/problem.png" alt="" class="problemFixSlider__el_img">
-                                                <h3 class="problemFixSlider__el_title">Տեսակը</h3>
-                                            </a>
-                                            <a href="" class="problemFixSlider__el">
-                                                <img src="images/problem.png" alt="" class="problemFixSlider__el_img">
-                                                <h3 class="problemFixSlider__el_title">Տեսակը</h3>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="" class="problemFixSlider__el">
-                                                <img src="images/problem.png" alt="" class="problemFixSlider__el_img">
-                                                <h3 class="problemFixSlider__el_title">Տեսակը</h3>
-                                            </a>
-                                            <a href="" class="problemFixSlider__el">
-                                                <img src="images/problem.png" alt="" class="problemFixSlider__el_img">
-                                                <h3 class="problemFixSlider__el_title">Տեսակը</h3>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="problemFix__accs_item" id="problemFixAcc2">
                                 <div class="problemFixSlider__btns">
                                     <button type="button" class="problemFixSlider__btns_btn prev">
                                         <img src="images/sliderChervon.svg" alt=""

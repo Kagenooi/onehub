@@ -109,19 +109,107 @@ document.addEventListener('click', (event) => {
 });
 
 
-const headerCategories = document.querySelector('.header__categories');
-const headerCategoriesBtns = document.querySelectorAll('.headerCategoriesSmall__btn');
-headerCategoriesBtns.forEach(element => {
-    element.addEventListener('click', () => {
-        const transformValue = element.getAttribute('data-transform');
+// const headerCategories = document.querySelector('.header__categories');
+// const headerCategoriesBtns = document.querySelectorAll('.headerCategoriesSmall__btn');
+// headerCategoriesBtns.forEach(element => {
+//     element.addEventListener('click', () => {
+//         const transformValue = element.getAttribute('data-transform');
+//         headerCategories.style.left = `${transformValue}px`;
+//         for (let i = 0; i < headerCategoriesBtns.length; i++) {
+//             headerCategoriesBtns[i].classList.remove('active');
+//         }
+//         element.classList.add('active');
+//     });
+// });
+// document.querySelector('#defaultCategoriesBtn').click();
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const headerCategories = document.querySelector('.header__categories'); // блок, который двигаем
+    const swipeZone = document.getElementById('headerCategories');          // зона, по которой свайпаем
+    const headerCategoriesBtns = Array.from(document.querySelectorAll('.headerCategoriesSmall__btn'));
+
+    if (!headerCategories || !headerCategoriesBtns.length || !swipeZone) return;
+
+    let currentIndex = headerCategoriesBtns.findIndex(btn => btn.id === 'defaultCategoriesBtn');
+    if (currentIndex === -1) currentIndex = 0;
+
+    // единая функция переключения
+    function setCategory(index) {
+        if (index < 0 || index >= headerCategoriesBtns.length) return;
+
+        const btn = headerCategoriesBtns[index];
+        const transformValue = btn.getAttribute('data-transform');
+
+        // если хочешь через translateX – замени на transform
         headerCategories.style.left = `${transformValue}px`;
-        for (let i = 0; i < headerCategoriesBtns.length; i++) {
-            headerCategoriesBtns[i].classList.remove('active');
-        }
-        element.classList.add('active');
+
+        headerCategoriesBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        currentIndex = index;
+    }
+
+    // клики по кнопкам
+    headerCategoriesBtns.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            setCategory(index);
+        });
     });
+
+    // дефолтное состояние
+    setCategory(currentIndex);
+
+    // ==== свайпы ====
+    let startX = 0;
+    let startY = 0;
+    let isSwiping = false;
+
+    swipeZone.addEventListener('touchstart', (e) => {
+        const touch = e.touches[0];
+        startX = touch.clientX;
+        startY = touch.clientY;
+        isSwiping = true;
+    }, { passive: true });
+
+    swipeZone.addEventListener('touchmove', (e) => {
+        if (!isSwiping) return;
+
+        const touch = e.touches[0];
+        const diffX = touch.clientX - startX;
+        const diffY = touch.clientY - startY;
+
+        // если пользователь уходит в вертикальный скролл — не мешаем
+        if (Math.abs(diffY) > Math.abs(diffX)) {
+            isSwiping = false;
+            return;
+        }
+
+        // чтобы реально блокировать горизонтальный скролл, можно сделать passive: false
+        // и здесь вызвать e.preventDefault()
+    }, { passive: true });
+
+    swipeZone.addEventListener('touchend', (e) => {
+        if (!isSwiping) return;
+
+        const touch = e.changedTouches[0];
+        const diffX = touch.clientX - startX;
+        const threshold = 50; // минимальная длина свайпа в px
+
+        if (Math.abs(diffX) > threshold) {
+            if (diffX < 0) {
+                // свайп влево -> следующая категория
+                setCategory(currentIndex + 1);
+            } else {
+                // свайп вправо -> предыдущая категория
+                setCategory(currentIndex - 1);
+            }
+        }
+
+        isSwiping = false;
+    }, { passive: true });
 });
-document.querySelector('#defaultCategoriesBtn').click();
+
 
 
 
@@ -244,3 +332,55 @@ function updateDecorState() {
         fileDecor.classList.remove('inactive');
     }
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const footerLang = document.querySelector('.footer__lang');
+    if (!footerLang) return;
+
+    const toggleBtn = footerLang.querySelector('.footer__lang_btn');
+    const menu = footerLang.querySelector('.footer__lang_btns');
+    const menuBtns = footerLang.querySelectorAll('.footer__lang_btns_btn');
+
+    let isOpen = false;
+
+    const openMenu = () => {
+        // можно захардкодить, можно по содержимому
+        menu.style.maxWidth = menu.scrollWidth + 'px';
+        isOpen = true;
+    };
+
+    const closeMenu = () => {
+        menu.style.maxWidth = '0';
+        isOpen = false;
+    };
+
+    // клик по основной кнопке — открыть/закрыть
+    toggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // чтобы клик не улетел на document
+        if (isOpen) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    // клик по любому языку — закрыть
+    menuBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            // если нужно менять текст кнопки — раскомментируй:
+            // const label = footerLang.querySelector('.footer__lang_btn_txt');
+            // if (label) label.textContent = btn.textContent.trim();
+
+            closeMenu();
+        });
+    });
+
+    // клик вне блока footer__lang — закрыть
+    document.addEventListener('click', (e) => {
+        if (!footerLang.contains(e.target) && isOpen) {
+            closeMenu();
+        }
+    });
+});

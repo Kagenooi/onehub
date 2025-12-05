@@ -36,11 +36,13 @@
         visibility: hidden;
         opacity: 0;
         z-index: 1020;
+        display: none;
 
         &.active {
             border: 0.5px solid #F62B02;
             visibility: visible;
             opacity: 1;
+            display: block;
         }
 
         &_wrapper {
