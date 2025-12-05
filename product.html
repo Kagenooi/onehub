@@ -12,7 +12,7 @@
 <body>
     <div id="adaptive">
 
-        <nav class="navbar">
+        <nav class="navbar js-scrolled-target">
             <div class="navbarMobile">
                 <div class="navbarMobile__container">
                     <a href="" class="navbarMobile__logo">
@@ -230,8 +230,27 @@
         </div>
 
         <div class="singleProduct">
-            <div class="singleProduct__fixed">
-
+            <div class="singleProduct__fixed js-scrolled-target">
+                <div class="singleProduct__fixed_wrapper">
+                    <div class="singleProduct__fixed_desc">
+                        <p class="singleProduct__fixed_desc_title">BMW X6 xDrive 35i 3.0L BMW X6 | V6 | 3.0 L | 2014 | GCC | Accident-Free | In Excellent Condition</p>
+                        <p class="singleProduct__fixed_desc_price">USD 17,800</p>
+                    </div>
+                    <div class="singleProduct__fixed_social">
+                        <a href="" class="singleProduct__ttx_social_link gc-2 green">
+                            <img src="images/whatsapp.svg" alt="" class="singleProduct__ttx_social_link_icon">
+                            WhatsApp
+                        </a>
+                        <a href="" class="singleProduct__ttx_social_link black">
+                            <img src="images/call.svg" alt="" class="singleProduct__ttx_social_link_icon">
+                            Call
+                        </a>
+                        <a href="" class="singleProduct__ttx_social_link transparent">
+                            <img src="images/email.svg" alt="" class="singleProduct__ttx_social_link_icon">
+                            Email
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="singleProduct__wrapper">
                 <div class="singleProduct__header">
@@ -256,6 +275,10 @@
                     </div>
                 </div>
                 <div class="singleProduct__gallery">
+                    <button type="button" class="singleProduct__gallery_wishlist" onclick="toggleWishlist(this)">
+                        <img src="images/favoriteBlue.svg" alt="" class="singleProduct__gallery_wishlist_icon">
+                        <img src="images/favoriteBlueActive.svg" alt="" class="singleProduct__gallery_wishlist_icon active">
+                    </button>
                     <div class="swiper mySwiper2">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -279,15 +302,33 @@
                 </div>
                 <div class="singleProduct__desc">
                     <h3 class="singleProduct__desc_title">Նկարագիր</h3>
-                    <p class="singleProduct__desc_pr">
-                        FOR LOCAL REGISTRATION : 66,000 <br>
-                        AEDBrand New Honda ENS1 Realm Electric with White / Black interior 2023 <br>
-                        Automatic Transmission is for sale inDetails: <br>
-                        – Battery : Permanent magnet/synchronous <br>
-                        – 68.8KWh Battery Capacity <br>
-                        – 18 Inch Wheels
-                    </p>
-                    <a href="" class="singleProduct__desc_link">Տեսնել ամբողջը</a>
+                    <div class="singleProduct__desc_content" id="singleProductContnet">
+                        <p class="singleProduct__desc_pr">
+                            FOR LOCAL REGISTRATION : 66,000 <br>
+                            AEDBrand New Honda ENS1 Realm Electric with White / Black interior 2023 <br>
+                            Automatic Transmission is for sale inDetails: <br>
+                            – Battery : Permanent magnet/synchronous <br>
+                            – 68.8KWh Battery Capacity <br>
+                            – 18 Inch Wheels
+                        </p>
+                        <p class="singleProduct__desc_pr">
+                            FOR LOCAL REGISTRATION : 66,000 <br>
+                            AEDBrand New Honda ENS1 Realm Electric with White / Black interior 2023 <br>
+                            Automatic Transmission is for sale inDetails: <br>
+                            – Battery : Permanent magnet/synchronous <br>
+                            – 68.8KWh Battery Capacity <br>
+                            – 18 Inch Wheels
+                        </p>
+                        <p class="singleProduct__desc_pr">
+                            FOR LOCAL REGISTRATION : 66,000 <br>
+                            AEDBrand New Honda ENS1 Realm Electric with White / Black interior 2023 <br>
+                            Automatic Transmission is for sale inDetails: <br>
+                            – Battery : Permanent magnet/synchronous <br>
+                            – 68.8KWh Battery Capacity <br>
+                            – 18 Inch Wheels
+                        </p>
+                    </div>
+                    <button type="button" class="singleProduct__desc_link">Տեսնել ամբողջը</button>
                 </div>
                 <div class="singleProduct__ttx">
                     <div class="singleProduct__ttx_social">

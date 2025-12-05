@@ -144,3 +144,32 @@ document.addEventListener('click', (e) => {
         currencyList.style.maxHeight = null;
     }
 });
+
+
+const seeMoreInfo = document.querySelector('.singleProduct__desc_link');
+const seeMoreContent = document.querySelector('#singleProductContnet');
+seeMoreInfo.addEventListener('click', function() {
+    if (seeMoreContent.style.maxHeight) {
+        seeMoreContent.style.maxHeight = null;
+    } else {
+        seeMoreContent.style.maxHeight = seeMoreContent.style.maxHeight + seeMoreContent.scrollHeight + 'px';
+    }
+})
+
+
+const scrollTargets = document.querySelectorAll('.js-scrolled-target'); // любые твои элементы
+
+const SCROLL_THRESHOLD = 200; // порог в пикселях
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    scrollTargets.forEach(el => {
+        if (scrollTop > SCROLL_THRESHOLD) {
+            el.classList.add('scrolledActive');
+        } else {
+            el.classList.remove('scrolledActive');
+        }
+    });
+});
+
