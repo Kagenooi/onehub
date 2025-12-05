@@ -1,5 +1,9 @@
 .ads {
 
+    @media (max-width: 768px) {
+        max-width: 590px;
+        overflow: hidden;
+    }
     &__wrapper {
         width: fit-content;
         margin: 0 auto;

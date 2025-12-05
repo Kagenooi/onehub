@@ -1623,6 +1623,12 @@ input[type=search]::-webkit-search-results-decoration {
   background: #000;
 }
 
+@media (max-width: 768px) {
+  .ads {
+    max-width: 590px;
+    overflow: hidden;
+  }
+}
 .ads__wrapper {
   width: -moz-fit-content;
   width: fit-content;
