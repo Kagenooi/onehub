@@ -2211,6 +2211,89 @@ input[type=search]::-webkit-search-results-decoration {
   }
 }
 
+.select {
+  margin-bottom: 16px;
+  position: relative;
+}
+.select__btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #F3F3F3;
+  border: 1px solid rgba(0, 0, 0, 0.2509803922);
+  justify-content: space-between;
+  padding: 17px 20px;
+}
+.select__btn::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 17px;
+  border-right: 1px solid rgba(0, 0, 0, 0.5019607843);
+  position: absolute;
+  top: 18px;
+  right: 50px;
+}
+.select__btn:hover, .select__btn.active {
+  border-color: #F73004;
+}
+.select__options {
+  background: #E8E4E4;
+  position: absolute;
+  width: 100%;
+  top: 55px;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1020;
+}
+.select__options.active {
+  border: 0.5px solid #F62B02;
+  visibility: visible;
+  opacity: 1;
+}
+.select__options_wrapper {
+  max-height: 390px;
+  overflow-y: auto;
+  background: #fff;
+}
+.select__options_wrapper::-webkit-scrollbar {
+  background: #E8E4E4;
+  width: 19px;
+}
+.select__options_wrapper::-webkit-scrollbar-thumb {
+  background: #AAAAAA;
+  border-radius: 12px;
+  border: 5px solid transparent;
+  background-clip: padding-box;
+}
+.select__options_wrapper::before {
+  content: "";
+  position: absolute;
+  top: 48px;
+  border-radius: 2px;
+  right: 2px;
+  border-style: solid;
+  border-width: 0 8px 10px 8px;
+  border-color: transparent transparent #AAAAAA transparent;
+  pointer-events: none;
+  z-index: 1;
+}
+.select__options_title {
+  font-weight: 600;
+  padding: 21px 31px;
+}
+.select__options_el {
+  border: 0.82px solid rgba(195, 195, 195, 0.5019607843);
+  width: 100%;
+  padding: 20px 31px;
+  background: #fff;
+  text-align: left;
+}
+.select__options_el:hover {
+  background: #F73004;
+  color: #fff;
+}
+
 .header {
   padding: 174px 0 0;
 }
@@ -2239,6 +2322,9 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .header__brands {
   width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 .header__brands_top {
   display: flex;

@@ -36,8 +36,8 @@ const headerSwiper = new Swiper("#headerSlider", {
     slidesPerView: 2,
     spaceBetween: 4,
     navigation: {
-        nextEl: ".header__slider_btns_btn.next",
-        prevEl: ".header__slider_btns_btn.prev",
+        nextEl: ".headerSlider__btns_btn.next",
+        prevEl: ".headerSlider__btns_btn.prev",
     },
     breakpoints: {
         // when window width is >=
@@ -65,7 +65,7 @@ const headerBrands = new Swiper("#headerBrands", {
 });
 
 
-const accSliderEl = new Swiper('.problemFixSlider', {
+let accSliderEl = new Swiper('.problemFixSlider', {
     loop: true,
     slidesPerView: 3,
     spaceBetween: 16,
@@ -74,7 +74,7 @@ const accSliderEl = new Swiper('.problemFixSlider', {
         prevEl: ".problemFixSlider__btns_btn.prev",
     },
     pagination: {
-        el: ".swiper-pagination",
+        el: ".problemFixSlider .swiper-pagination",
         clickable: true,
     },
     breakpoints: {
@@ -153,31 +153,61 @@ const inner = document.querySelector('#files');
 const fileDecor = inner.querySelector('.contactUs__file_inner_decor');
 
 let selectedFiles = [];
+const MAX_FILES = 8;
 
-fileAttach.addEventListener('input', function (e) {
-    const files = Array.from(e.target.files);
+fileAttach.addEventListener('change', handleFilesChange);
 
-    // ограничение до 8
-    const limitedFiles = files.slice(0, 8);
-    if (files.length > 8) {
-        alert('Можно выбрать не больше 8 файлов');
+// сравнение файлов, чтобы не дублировать
+function filesEqual(a, b) {
+    return (
+        a.name === b.name &&
+        a.size === b.size &&
+        a.lastModified === b.lastModified &&
+        a.type === b.type
+    );
+}
+
+function handleFilesChange(e) {
+    const picked = Array.from(e.target.files)
+        .filter(file => file.type.startsWith('image/'));
+
+    if (!picked.length) {
+        fileAttach.value = '';
+        return;
     }
 
-    // пересобираем список файлов (только картинки)
-    selectedFiles = limitedFiles.filter(file => file.type.startsWith('image/'));
+    // объединяем уже выбранные + только что выбранные
+    let merged = [...selectedFiles];
 
-    // чистим ТОЛЬКО превью, декор не трогаем
+    picked.forEach(file => {
+        const alreadyExists = merged.some(f => filesEqual(f, file));
+        if (!alreadyExists) {
+            merged.push(file);
+        }
+    });
+
+    // резка по лимиту
+    if (merged.length > MAX_FILES) {
+        alert(`Можно выбрать не больше ${MAX_FILES} файлов`);
+        merged = merged.slice(0, MAX_FILES);
+    }
+
+    selectedFiles = merged;
+
+    // полностью пересобираем превью из selectedFiles
     clearPreviews();
-
-    // создаём превью под актуальный список
     selectedFiles.forEach(file => createPreview(file));
 
+    // синхронизируем input.files и декор
     syncInputFiles();
     updateDecorState();
-});
+
+    // сбрасываем значение, чтобы повторный выбор тех же файлов снова триггерил change
+    fileAttach.value = '';
+}
 
 function clearPreviews() {
-    // удаляем только блоки превью
+    // удаляем только блоки превью, декор не трогаем
     inner.querySelectorAll('.attachedWrapper').forEach(el => el.remove());
 }
 
@@ -202,14 +232,14 @@ function createPreview(file) {
     wrapper.appendChild(img);
 
     deleteBtn.addEventListener('click', () => {
-        // убираем файл из массива
-        selectedFiles = selectedFiles.filter(f => f !== file);
+        // выкидываем файл из массива
+        selectedFiles = selectedFiles.filter(f => !filesEqual(f, file));
 
         // удаляем превью
         wrapper.remove();
         URL.revokeObjectURL(img.src);
 
-        // синхронизируем input.files и декор
+        // пересобираем input.files и декор
         syncInputFiles();
         updateDecorState();
     });

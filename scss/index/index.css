@@ -2626,6 +2626,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media (max-width: 768px) {
   .callAction__wrapper {
+    min-width: 590px;
     max-width: 590px;
     overflow: hidden;
     position: relative;

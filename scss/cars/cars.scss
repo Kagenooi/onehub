@@ -10,6 +10,7 @@
 @import '../products';
 @import '../crumbs';
 @import '../brands';
+@import '../select';
 
 
 .header {
@@ -39,6 +40,9 @@
 
     &__brands {
         width: 100%;
+        max-width: 1700px;
+        margin: 0 auto;
+        padding: 0 15px;
 
         &_top {
             display: flex;

@@ -28,16 +28,13 @@ footerAcc();
 showSubmenu();
 
 const headerSwiper = new Swiper("#headerSlider", {
-    cssMode: true,
     loop: true,
     slidesPerView: 2,
     spaceBetween: 4,
     navigation: {
-        nextEl: ".header__slider_btns_btn.next",
-        prevEl: ".header__slider_btns_btn.prev",
+        nextEl: ".headerSlider__btns_btn.next",
+        prevEl: ".headerSlider__btns_btn.prev",
     },
-    mousewheel: true,
-    keyboard: true,
     breakpoints: {
         // when window width is >=
         769: {
