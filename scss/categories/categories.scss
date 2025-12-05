@@ -65,6 +65,7 @@
 
         &_inner {
             min-height: 100px;
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
@@ -75,6 +76,10 @@
     &__agree {
         margin: 20px 0;
     }
+}
+
+.seeMore {
+    margin-top: 46px;
 }
 
 .filterToggleBtn {
@@ -108,7 +113,7 @@
             left: 0;
             z-index: 1100;
             width: 590px;
-            padding: 22px;
+            padding: 26px !important;
             max-height: 100vh;
             bottom: -100%;
 
@@ -136,9 +141,50 @@
             }
         }
 
+        &__wrapper {
+            @media (max-width: 768px) {
+                height: 100vw;
+                max-height: 100vw;
+                padding-right: 10px;
+                overflow-y: auto;
+
+                &::-webkit-scrollbar {
+                    width: 9px;
+                    background: none;
+                    border-radius: 20px;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    width: 9px;
+                    border-radius: 20px;
+                    background: #8E8E8E;
+                }
+
+                &::before {
+                    border-width: 0 6px 6px 6px !important;
+                }
+
+                .select__options {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    max-height: 0;
+                    margin-top: -1px;
+                    overflow: hidden;
+                }
+            }
+        }
+
         &__footer {
             display: flex;
             gap: 17px;
+
+            @media (max-width: 768px) {
+                position: absolute;
+                bottom: 26px;
+                left: 26px;
+                width: calc(100% - 44px);
+            }
 
             &_submit {
                 padding: 12px;
@@ -152,9 +198,15 @@
             }
 
             &_clear {
+                display: none;
                 width: 62px;
                 padding: 18px 22px;
                 background: #9E9E9E;
+
+
+                @media (max-width: 768px) {
+                    display: block;
+                }
 
                 &:hover {
                     background: #1E1E1E;

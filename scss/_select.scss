@@ -65,9 +65,9 @@
                 position: absolute;
                 top: 48px;
                 border-radius: 2px;
-                right: 2px; // подгони под центр твоего "узкого" thumb
+                right: 3.5px; // подгони под центр твоего "узкого" thumb
                 border-style: solid;
-                border-width: 0 8px 10px 8px; // ширина треугольника
+                border-width: 0 6px 8px 6px; // ширина треугольника
                 border-color: transparent transparent #AAAAAA transparent;
                 pointer-events: none;
                 z-index: 1;

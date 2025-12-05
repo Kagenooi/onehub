@@ -366,7 +366,7 @@
 
         &_img {
             width: 132px;
-            
+
             @media (max-width: 1296px) {
                 width: 100px;
             }
@@ -456,6 +456,7 @@
             &.active {
                 left: 0;
             }
+
             &__search {
                 padding: 20px 26px;
 
@@ -509,6 +510,29 @@
 
             &__container {
                 padding: 0 26px 26px;
+                position: relative;
+
+
+                &::before {
+                    content: '';
+                    right: 26px;
+                    background: #0080E5;
+                }
+
+                &::after {
+                    content: '';
+                    left: 26px;
+                    background: #F62B02;
+                }
+
+                &::after,
+                &::before {
+                    display: block;
+                    width: calc(50% - 26px);
+                    height: 7px;
+                    position: absolute;
+                    bottom: 23px;
+                }
             }
 
             &__wrapper {
@@ -602,6 +626,7 @@
                     &.active {
                         left: 0;
                     }
+
                     &_title {
                         font-size: 28px;
                         font-weight: 600;

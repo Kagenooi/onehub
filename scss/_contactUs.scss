@@ -150,7 +150,9 @@
             position: relative;
 
             @media (max-width: 768px) {
-                min-height: 104px;
+                height: 104px;
+                min-height: fit-content;
+                grid-template-columns: repeat(2, 1fr);
             }
 
             &_decor {

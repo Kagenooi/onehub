@@ -234,7 +234,7 @@
                 <img src="images/filter.svg" alt="" class="filterToggleBtn__icon">
             </button>
             <div class="aside">
-                <div class="filter">
+                <div class="filter innerHeight">
                     <h3 class="filter__title">
                         <img src="images/filterLoop.svg" alt="" class="filter__title_icon">
                         Փնտրի՛ր մեքենադ
@@ -262,31 +262,12 @@
                                     </div>
                                 </div>
                                 <div class="select gc-2">
-                                    <button type="button" class="select__btn" data-acc="carBrands"
+                                    <button type="button" class="select__btn" data-acc="carBrands1"
                                         onclick="toggleAcc(this)">
                                         <span class="select__btn_txt">Ընտրել մակնիշը</span>
                                         <img src="images/filterArrow.svg" alt="" class="select__btn_arr">
                                     </button>
-                                    <div class="select__options" id="carBrands">
-                                        <p class="select__options_title">Հայտնի մակնիշներ</p>
-                                        <div class="select__options_wrapper">
-                                            <button type="button" class="select__options_el">Mercedes-Benz</button>
-                                            <button type="button" class="select__options_el">Toyota</button>
-                                            <button type="button" class="select__options_el">Honda</button>
-                                            <button type="button" class="select__options_el">Honda</button>
-                                            <button type="button" class="select__options_el">Honda</button>
-                                            <button type="button" class="select__options_el">Honda</button>
-                                            <button type="button" class="select__options_el">Honda</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="select">
-                                    <button type="button" class="select__btn" data-acc="carBrands"
-                                        onclick="toggleAcc(this)">
-                                        <span class="select__btn_txt">Ընտրել մակնիշը</span>
-                                        <img src="images/filterArrow.svg" alt="" class="select__btn_arr">
-                                    </button>
-                                    <div class="select__options" id="carBrands">
+                                    <div class="select__options" id="carBrands1">
                                         <p class="select__options_title">Հայտնի մակնիշներ</p>
                                         <div class="select__options_wrapper">
                                             <button type="button" class="select__options_el">Mercedes-Benz</button>
@@ -318,13 +299,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="select gc-2">
-                                    <button type="button" class="select__btn" data-acc="carBrands"
+                                <div class="select">
+                                    <button type="button" class="select__btn" data-acc="carBrands3"
                                         onclick="toggleAcc(this)">
                                         <span class="select__btn_txt">Ընտրել մակնիշը</span>
                                         <img src="images/filterArrow.svg" alt="" class="select__btn_arr">
                                     </button>
-                                    <div class="select__options" id="carBrands">
+                                    <div class="select__options" id="carBrands3">
                                         <p class="select__options_title">Հայտնի մակնիշներ</p>
                                         <div class="select__options_wrapper">
                                             <button type="button" class="select__options_el">Mercedes-Benz</button>
@@ -338,12 +319,31 @@
                                     </div>
                                 </div>
                                 <div class="select gc-2">
-                                    <button type="button" class="select__btn" data-acc="carBrands"
+                                    <button type="button" class="select__btn" data-acc="carBrands4"
                                         onclick="toggleAcc(this)">
                                         <span class="select__btn_txt">Ընտրել մակնիշը</span>
                                         <img src="images/filterArrow.svg" alt="" class="select__btn_arr">
                                     </button>
-                                    <div class="select__options" id="carBrands">
+                                    <div class="select__options" id="carBrands4">
+                                        <p class="select__options_title">Հայտնի մակնիշներ</p>
+                                        <div class="select__options_wrapper">
+                                            <button type="button" class="select__options_el">Mercedes-Benz</button>
+                                            <button type="button" class="select__options_el">Toyota</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="select gc-2">
+                                    <button type="button" class="select__btn" data-acc="carBrands5"
+                                        onclick="toggleAcc(this)">
+                                        <span class="select__btn_txt">Ընտրել մակնիշը</span>
+                                        <img src="images/filterArrow.svg" alt="" class="select__btn_arr">
+                                    </button>
+                                    <div class="select__options" id="carBrands5">
                                         <p class="select__options_title">Հայտնի մակնիշներ</p>
                                         <div class="select__options_wrapper">
                                             <button type="button" class="select__options_el">Mercedes-Benz</button>
@@ -381,10 +381,10 @@
                                     </div>
                                     <div class="contactUs__el file">
                                         <div class="contactUs__file">
-                                            <div class="contactUs__file_inner" id="files">
+                                            <label for="fileAttach" class="contactUs__file_inner" id="files">
                                                 <img src="images/attachDecor.png" alt=""
                                                     class="contactUs__file_inner_decor">
-                                            </div>
+                                            </label>
                                             <label for="fileAttach" class="contactUs__file_lab">
                                                 <input type="file" name="" id="fileAttach"
                                                     class="contactUs__file_lab_inp" multiple>
@@ -504,6 +504,10 @@
                         </div>
                     </div>
                 </div>
+                <a href="" class="seeMore">
+                    Տեսնել բոլորը
+                    <img src="images/seeMoreArrow.svg" alt="" class="seeMore__icon">
+                </a>
             </div>
         </div>
 

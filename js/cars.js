@@ -231,21 +231,26 @@ function createPreview(file) {
     img.classList.add('attachedImage');
     wrapper.appendChild(img);
 
-    deleteBtn.addEventListener('click', () => {
-        // выкидываем файл из массива
+    deleteBtn.addEventListener('click', (e) => {
+        // не даём клику улететь к label / input
+        e.stopPropagation();
+        e.preventDefault();
+
+        // убираем файл из массива
         selectedFiles = selectedFiles.filter(f => !filesEqual(f, file));
 
         // удаляем превью
         wrapper.remove();
         URL.revokeObjectURL(img.src);
 
-        // пересобираем input.files и декор
+        // синхронизируем input.files и декор
         syncInputFiles();
         updateDecorState();
     });
 
     inner.appendChild(wrapper);
 }
+
 
 function syncInputFiles() {
     const dt = new DataTransfer();

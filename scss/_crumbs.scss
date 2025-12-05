@@ -1,6 +1,14 @@
 .crumbs {
     padding: 24px 26px;
 
+    @media (max-width: 768px) {
+        max-width: 590px;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
     &__list {
         display: flex;
         gap: 25px;
@@ -11,6 +19,7 @@
             gap: 25px;
             font-size: 22px;
             color: #747474;
+            white-space: nowrap;
         }
     }
 }

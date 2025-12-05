@@ -79,6 +79,7 @@
 
             @media (max-width: 768px) {
                 padding: 0;
+                position: relative;
             }
 
             &_all {
@@ -112,7 +113,8 @@
             top: 0;
 
             @media (max-width: 768px) {
-                display: none;
+                right: 26px;
+                top: 0;
             }
 
             &_btn {

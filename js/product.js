@@ -130,3 +130,17 @@ currencyBtn.addEventListener('click', function() {
         this.classList.add('active');
     }
 })
+
+
+const currencyWrapper = document.querySelector('.singleProduct__header_currency');
+const currencyList    = document.querySelector('.singleProduct__header_currency_btns');
+
+document.addEventListener('click', (e) => {
+    if (!currencyWrapper) return;
+
+    // если клик вне блока валюты
+    if (!currencyWrapper.contains(e.target)) {
+        currencyBtn.classList.remove('active');
+        currencyList.style.maxHeight = null;
+    }
+});

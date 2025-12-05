@@ -1109,6 +1109,24 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .navbarMobile .mobileBurger__container {
     padding: 0 26px 26px;
+    position: relative;
+  }
+  .navbarMobile .mobileBurger__container::before {
+    content: "";
+    right: 26px;
+    background: #0080E5;
+  }
+  .navbarMobile .mobileBurger__container::after {
+    content: "";
+    left: 26px;
+    background: #F62B02;
+  }
+  .navbarMobile .mobileBurger__container::after, .navbarMobile .mobileBurger__container::before {
+    display: block;
+    width: calc(50% - 26px);
+    height: 7px;
+    position: absolute;
+    bottom: 23px;
   }
   .navbarMobile .mobileBurger__wrapper {
     background: #fff;
@@ -1992,7 +2010,10 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media (max-width: 768px) {
   .contactUs__file_inner {
-    min-height: 104px;
+    height: 104px;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .contactUs__file_inner_decor {
@@ -2129,6 +2150,15 @@ input[type=search]::-webkit-search-results-decoration {
 .crumbs {
   padding: 24px 26px;
 }
+@media (max-width: 768px) {
+  .crumbs {
+    max-width: 590px;
+    overflow-y: auto;
+  }
+  .crumbs::-webkit-scrollbar {
+    display: none;
+  }
+}
 .crumbs__list {
   display: flex;
   gap: 25px;
@@ -2139,6 +2169,7 @@ input[type=search]::-webkit-search-results-decoration {
   gap: 25px;
   font-size: 22px;
   color: #747474;
+  white-space: nowrap;
 }
 
 .brands {
@@ -2271,9 +2302,9 @@ input[type=search]::-webkit-search-results-decoration {
   position: absolute;
   top: 48px;
   border-radius: 2px;
-  right: 2px;
+  right: 3.5px;
   border-style: solid;
-  border-width: 0 8px 10px 8px;
+  border-width: 0 6px 8px 6px;
   border-color: transparent transparent #AAAAAA transparent;
   pointer-events: none;
   z-index: 1;
