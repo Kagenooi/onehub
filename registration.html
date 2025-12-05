@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="scss/product/product.css">
+    <link rel="stylesheet" href="scss/login/login.css">
 </head>
-
 <body>
     <div id="adaptive">
 
-        <nav class="navbar js-scrolled-target">
+        <nav class="navbar">
             <div class="navbarMobile">
                 <div class="navbarMobile__container">
                     <a href="" class="navbarMobile__logo">
@@ -49,6 +46,27 @@
                                 </label>
                             </label>
                         </form>
+                        <div class="navbar__lang">
+                            <button type="button" class="navbar__lang_btn" onclick="toggleActive(this, 'langWrapper2')">
+                                <img src="images/flag.png" alt="" class="navbar__lang_btn_flag">
+                                <span class="navbar__lang_btn_txt">ARM</span>
+                            </button>
+                            <div class="navbar__lang_wrapper" id="langWrapper2">
+                                <p class="navbar__lang_title">Լեզու</p>
+                                <ul class="navbar__lang_list">
+                                    <li>
+                                        <a href="" class="navbar__lang_list_link">
+                                            <img src="images/flag.png" alt="" class="navbar__lang_list_link_flag">
+                                            <span class="navbar__lang_list_link_txten">ARM</span>
+                                            <span class="navbar__lang_list_link_txt">Հայերեն</span>
+                                            <!-- if language is active, "navbar__lang_list_link_checked" element have a active class -->
+                                            <img src="images/langchecked.svg" alt=""
+                                                class="navbar__lang_list_link_checked">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="mobileBurger__container">
                         <div class="mobileBurger__wrapper">
@@ -112,11 +130,11 @@
                         </li>
                     </ul>
                     <div class="navbar__lang">
-                        <button type="button" class="navbar__lang_btn" onclick="toggleActive(this, 'langWrapper2')">
+                        <button type="button" class="navbar__lang_btn" onclick="toggleActive(this, 'langWrapper')">
                             <img src="images/flag.png" alt="" class="navbar__lang_btn_flag">
                             <span class="navbar__lang_btn_txt">ARM</span>
                         </button>
-                        <div class="navbar__lang_wrapper" id="langWrapper2">
+                        <div class="navbar__lang_wrapper" id="langWrapper">
                             <p class="navbar__lang_title">Լեզու</p>
                             <ul class="navbar__lang_list">
                                 <li>
@@ -216,297 +234,7 @@
             </div>
         </nav>
 
-        <div class="header">
-            <div class="crumbs">
-                <ul class="crumbs__list">
-                    <li>
-                        <a href="" class="crumbs__list_link">
-                            Գլխավոր
-                            <img src="images/crumbs.svg" alt="" class="crumbs__list_link_icon">
-                        </a>
-                    </li>
-                    <li><a href="" class="crumbs__list_link">Ավտոմեքենաներ</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="singleProduct">
-            <div class="singleProduct__fixed js-scrolled-target">
-                <div class="singleProduct__fixed_wrapper">
-                    <div class="singleProduct__fixed_desc">
-                        <p class="singleProduct__fixed_desc_title">BMW X6 xDrive 35i 3.0L BMW X6 | V6 | 3.0 L | 2014 | GCC | Accident-Free | In Excellent Condition</p>
-                        <p class="singleProduct__fixed_desc_price">USD 17,800</p>
-                    </div>
-                    <div class="singleProduct__fixed_social">
-                        <a href="" class="singleProduct__ttx_social_link gc-2 green">
-                            <img src="images/whatsapp.svg" alt="" class="singleProduct__ttx_social_link_icon">
-                            WhatsApp
-                        </a>
-                        <a href="" class="singleProduct__ttx_social_link black">
-                            <img src="images/call.svg" alt="" class="singleProduct__ttx_social_link_icon">
-                            Call
-                        </a>
-                        <a href="" class="singleProduct__ttx_social_link transparent">
-                            <img src="images/email.svg" alt="" class="singleProduct__ttx_social_link_icon">
-                            Email
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="singleProduct__wrapper">
-                <div class="singleProduct__header">
-                    <h1 class="singleProduct__header_title">BMW X6 xDrive 35i 3.0L BMW X6 | V6 | 3.0 L | 2014 | GCC |
-                        Accident-Free | In Excellent Condition</h1>
-                    <div class="singleProduct__header_price">
-                        <p class="singleProduct__header_price_all">USD 17,800</p>
-                        <p class="singleProduct__header_price_mounthly">
-                            <b>USD 300 </b>
-                            ամսական /5 տր
-                        </p>
-                        <div class="singleProduct__header_currency">
-                            <button type="button" class="singleProduct__header_currency_btn">
-                                AMD
-                                <img src="images/chervonDown.svg" alt="" class="singleProduct__header_currency_btn_icon">
-                            </button>
-                            <div class="singleProduct__header_currency_btns">
-                                <button type="button" class="singleProduct__header_currency_btns_btn">USD</button>
-                                <button type="button" class="singleProduct__header_currency_btns_btn">RUB</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="singleProduct__gallery">
-                    <button type="button" class="singleProduct__gallery_wishlist" onclick="toggleWishlist(this)">
-                        <img src="images/favoriteBlue.svg" alt="" class="singleProduct__gallery_wishlist_icon">
-                        <img src="images/favoriteBlueActive.svg" alt="" class="singleProduct__gallery_wishlist_icon active">
-                    </button>
-                    <div class="swiper mySwiper2">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="images/single.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="images/single.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div thumbsSlider="" class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="images/single.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="images/single.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="singleProduct__desc">
-                    <h3 class="singleProduct__desc_title">Նկարագիր</h3>
-                    <div class="singleProduct__desc_content" id="singleProductContnet">
-                        <p class="singleProduct__desc_pr">
-                            FOR LOCAL REGISTRATION : 66,000 <br>
-                            AEDBrand New Honda ENS1 Realm Electric with White / Black interior 2023 <br>
-                            Automatic Transmission is for sale inDetails: <br>
-                            – Battery : Permanent magnet/synchronous <br>
-                            – 68.8KWh Battery Capacity <br>
-                            – 18 Inch Wheels
-                        </p>
-                        <p class="singleProduct__desc_pr">
-                            FOR LOCAL REGISTRATION : 66,000 <br>
-                            AEDBrand New Honda ENS1 Realm Electric with White / Black interior 2023 <br>
-                            Automatic Transmission is for sale inDetails: <br>
-                            – Battery : Permanent magnet/synchronous <br>
-                            – 68.8KWh Battery Capacity <br>
-                            – 18 Inch Wheels
-                        </p>
-                        <p class="singleProduct__desc_pr">
-                            FOR LOCAL REGISTRATION : 66,000 <br>
-                            AEDBrand New Honda ENS1 Realm Electric with White / Black interior 2023 <br>
-                            Automatic Transmission is for sale inDetails: <br>
-                            – Battery : Permanent magnet/synchronous <br>
-                            – 68.8KWh Battery Capacity <br>
-                            – 18 Inch Wheels
-                        </p>
-                    </div>
-                    <button type="button" class="singleProduct__desc_link">Տեսնել ամբողջը</button>
-                </div>
-                <div class="singleProduct__ttx">
-                    <div class="singleProduct__ttx_social">
-                        <a href="" class="singleProduct__ttx_social_link gc-2 green">
-                            <img src="images/whatsapp.svg" alt="" class="singleProduct__ttx_social_link_icon">
-                            WhatsApp
-                        </a>
-                        <a href="" class="singleProduct__ttx_social_link black">
-                            <img src="images/call.svg" alt="" class="singleProduct__ttx_social_link_icon">
-                            Call
-                        </a>
-                        <a href="" class="singleProduct__ttx_social_link transparent">
-                            <img src="images/email.svg" alt="" class="singleProduct__ttx_social_link_icon">
-                            Email
-                        </a>
-                    </div>
-                    <div class="singleProduct__ttx_info">
-                        <h3 class="singleProduct__ttx_info_title">Հիմնական առավելություններ</h3>
-                        <div class="singleProduct__ttx_info_links">
-                            <a href="" class="singleProduct__ttx_info_links_link">
-                                <img src="images/locationSingle.svg" alt=""
-                                    class="singleProduct__ttx_info_links_link_icon">
-                                Location
-                            </a>
-                            <a href="" class="singleProduct__ttx_info_links_link">
-                                <img src="images/year.svg" alt="" class="singleProduct__ttx_info_links_link_icon">
-                                Year
-                            </a>
-                            <a href="" class="singleProduct__ttx_info_links_link">
-                                <img src="images/year.svg" alt="" class="singleProduct__ttx_info_links_link_icon">
-                                Year
-                            </a>
-                            <a href="" class="singleProduct__ttx_info_links_link">
-                                <img src="images/year.svg" alt="" class="singleProduct__ttx_info_links_link_icon">
-                                Year
-                            </a>
-                        </div>
-                        <div class="singleProduct__ttx_info_list">
-                            <ul class="singleProduct__ttx_info_list_el">
-                                <li>
-                                    <span>Make</span>
-                                    <a href="">Honda</a>
-                                </li>
-                            </ul>
-                            <ul class="singleProduct__ttx_info_list_el">
-                                <li>
-                                    <span>Make</span>
-                                    <a href="">Honda</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="singleProduct__ttx_info_acc">
-                            <div class="singleProduct__ttx_info_acc_el">
-                                <button type="button" class="singleProduct__ttx_info_acc_el_btn">
-                                    Interior
-                                    <img src="images/chervonDown.svg" alt=""
-                                        class="singleProduct__ttx_info_acc_el_btn_icon">
-                                </button>
-                                <div class="singleProduct__ttx_info_acc_el_content">
-                                    <p class="singleProduct__ttx_info_acc_el_pr">Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Incidunt, eligendi.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="" class="singleProduct__ttx_link">
-                        <img src="images/shest.svg" alt="" class="singleProduct__ttx_link_icon">
-                        Պահեստամասեր BMW X6 -ի համար
-                    </a>
-                </div>
-            </div>
-        </div>
-
-
-        <section class="products">
-            <div class="products__container">
-                <h2 class="products__title">ՊԱՀԵՍՏԱՄԱՍԵՐԻ ԱՄԵՆԱՄԵԾ ԽԱՆՈՒԹԸ ՀԱՅԱՍՏԱՆՈՒՄ</h2>
-                <div class="products__wrapper">
-                    <div class="product">
-                        <div class="product__pic">
-                            <img src="images/product.png" alt="" class="product__pic_img">
-                        </div>
-                        <button class="product__wishlist">
-                            <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
-                            <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
-                        </button>
-                        <div class="product__desc">
-                            <p class="product__desc_price">
-                                <span class="product__desc_price_static">3.600֏</span>
-                                <span class="product__desc_price_new">2.600֏</span>
-                            </p>
-                            <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
-                            <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
-                        </div>
-                        <button type="button" class="product__btn">
-                            <img src="images/productBasket.svg" alt="" class="product__btn_icon">
-                            <span class="product__btn_txt">Այսօր</span>
-                        </button>
-                    </div>
-                    <div class="product">
-                        <div class="product__pic">
-                            <img src="images/product.png" alt="" class="product__pic_img">
-                        </div>
-                        <button class="product__wishlist">
-                            <img src="images/favorite.svg" alt="" class="product__wishlist_icon">
-                            <img src="images/favoriteActive.svg" alt="" class="product__wishlist_icon checked">
-                        </button>
-                        <div class="product__desc">
-                            <p class="product__desc_price">
-                                <span class="product__desc_price_static">3.600֏</span>
-                                <span class="product__desc_price_new">2.600֏</span>
-                            </p>
-                            <p class="product__desc_name">RIDEX PLUS 82B1800P Brake disc</p>
-                            <p class="product__desc_txt">Rear Axle, 264x10mm, 5, solid</p>
-                        </div>
-                        <button type="button" class="product__btn">
-                            <img src="images/productBasket.svg" alt="" class="product__btn_icon">
-                            <span class="product__btn_txt">Այսօր</span>
-                        </button>
-                    </div>
-                </div>
-                <a href="" class="seeMore">
-                    Տեսնել բոլորը
-                    <img src="images/seeMoreArrow.svg" alt="" class="seeMore__icon">
-                </a>
-            </div>
-        </section>
-
-        <section class="articles">
-            <h2 class="articles__title">Օգտակար Հոդվածներ և Տեխնիկական Խորհուրդներ</h2>
-            <p class="articles__pr">«Կարդացեք ավտոմեքենայի սպասարկման, պահեստամասերի ընտրության և ճիշտ շահագործման
-                վերաբերյալ մասնագիտական նյութեր՝ պարզ և հասկանալի լեզվով»։</p>
-            <div class="articles__container">
-                <div class="articles__wrapper">
-                    <div class="articles__item">
-                        <img src="images/article.png" alt="" class="articles__item_img">
-                        <p class="articles__item_txt">Անվճար մանրամասն ուղեցույցներ և տեսանյութեր՝ ինքնուրույն
-                            մեքենաների վերանորոգման համար</p>
-                        <a href="" class="articles__item_link">
-                            <span class="articles__item_link_txt">ՏԵՍՆԵԼ ՀՈԴՎԱԾԸ</span>
-                            <img src="images/newsLinkIcon.svg" alt="" class="articles__item_link_icon">
-                        </a>
-                    </div>
-                    <div class="articles__item">
-                        <img src="images/article.png" alt="" class="articles__item_img">
-                        <p class="articles__item_txt">Անվճար մանրամասն ուղեցույցներ և տեսանյութեր՝ ինքնուրույն
-                            մեքենաների վերանորոգման համար</p>
-                        <a href="" class="articles__item_link">
-                            <span class="articles__item_link_txt">ՏԵՍՆԵԼ ՀՈԴՎԱԾԸ</span>
-                            <img src="images/newsLinkIcon.svg" alt="" class="articles__item_link_icon">
-                        </a>
-                    </div>
-                    <div class="articles__item">
-                        <img src="images/article.png" alt="" class="articles__item_img">
-                        <p class="articles__item_txt">Անվճար մանրամասն ուղեցույցներ և տեսանյութեր՝ ինքնուրույն
-                            մեքենաների վերանորոգման համար</p>
-                        <a href="" class="articles__item_link">
-                            <span class="articles__item_link_txt">ՏԵՍՆԵԼ ՀՈԴՎԱԾԸ</span>
-                            <img src="images/newsLinkIcon.svg" alt="" class="articles__item_link_icon">
-                        </a>
-                    </div>
-                    <div class="articles__item">
-                        <img src="images/article.png" alt="" class="articles__item_img">
-                        <p class="articles__item_txt">Անվճար մանրամասն ուղեցույցներ և տեսանյութեր՝ ինքնուրույն
-                            մեքենաների վերանորոգման համար</p>
-                        <a href="" class="articles__item_link">
-                            <span class="articles__item_link_txt">ՏԵՍՆԵԼ ՀՈԴՎԱԾԸ</span>
-                            <img src="images/newsLinkIcon.svg" alt="" class="articles__item_link_icon">
-                        </a>
-                    </div>
-                </div>
-                <a href="" class="seeMore">
-                    Տեսնել բոլորը
-                    <img src="images/seeMoreArrow.svg" alt="" class="seeMore__icon">
-                </a>
-            </div>
-        </section>
+        
 
         <footer class="footer">
             <div class="footer__container gray">
@@ -650,7 +378,15 @@
                 </div>
                 <div class="footer__wrapper">
                     <div class="footer__lang">
-
+                        <button type="button" class="footer__lang_btn">
+                            <img src="images/globus.svg" alt="" class="footer__lang_btn_globus">
+                            <span class="footer__lang_btn_txt">Armenia</span>
+                            <img src="images/chevronRight.svg" alt="" class="footer__lang_btn_icon">
+                        </button>
+                        <div class="footer__lang_btns">
+                            <button type="button" class="footer__lang_btns_btn">Russian</button>
+                            <button type="button" class="footer__lang_btns_btn">English</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -658,8 +394,6 @@
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module" src="js/product.js"></script>
+    <script type="module" src="js/login.js"></script>
 </body>
-
 </html>

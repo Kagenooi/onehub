@@ -9,7 +9,388 @@
 <body>
     <div id="adaptive">
 
-        
+        <nav class="navbar">
+            <div class="navbarMobile">
+                <div class="navbarMobile__container">
+                    <a href="" class="navbarMobile__logo">
+                        <img src="images/mobileLogo.png" alt="" class="navbarMobile__logo_img">
+                    </a>
+                    <div class="navbarMobile__btns">
+                        <a href="" class="navbarMobile__btns_phone">
+                            <img src="images/phoneWhite.svg" alt="" class="navbarMobile__btns_phone_icon">
+                        </a>
+                        <a href="" class="navbarMobile__btns_sign">
+                            <img src="images/user.svg" alt="" class="navbarMobile__btns_sign_icon">
+                        </a>
+                        <button class="navbarMobile__btns_basket">
+                            <img src="images/basket.svg" alt="" class="navbarMobile__btns_basket_icon">
+                        </button>
+                        <button class="navbarMobile__btns_burger" onclick="toggleMobileMenu('mobileBurger', this)">
+                            <img src="images/burger.svg" alt="" class="navbarMobile__btns_burger_icon">
+                            <img src="images/closeBurger.svg" alt="" class="navbarMobile__btns_burger_icon active">
+                        </button>
+                    </div>
+                </div>
+                <div class="mobileBurger innerHeight" id="mobileBurger">
+                    <div class="mobileBurger__search">
+                        <form action="">
+                            <label class="mobileBurger__search_lab">
+                                <input type="search" name="" class="mobileBurger__search_lab_inp"
+                                    placeholder="Փնտրի’ր Ավտոմեքենա">
+                                <button class="mobileBurger__search_lab_btn">
+                                    <img src="images/loop.svg" alt="" class="mobileBurger__search_lab_btn_icon">
+                                </button>
+                                <label for="photo" class="mobileBurger__search_lab_photo">
+                                    <img src="images/photo.svg" alt="" class="mobileBurger__search_lab_photo_icon">
+                                    <input type="file" class="mobileBurger__search_lab_photo_inp" id="photo">
+                                </label>
+                            </label>
+                        </form>
+                        <div class="navbar__lang">
+                            <button type="button" class="navbar__lang_btn" onclick="toggleActive(this, 'langWrapper2')">
+                                <img src="images/flag.png" alt="" class="navbar__lang_btn_flag">
+                                <span class="navbar__lang_btn_txt">ARM</span>
+                            </button>
+                            <div class="navbar__lang_wrapper" id="langWrapper2">
+                                <p class="navbar__lang_title">Լեզու</p>
+                                <ul class="navbar__lang_list">
+                                    <li>
+                                        <a href="" class="navbar__lang_list_link">
+                                            <img src="images/flag.png" alt="" class="navbar__lang_list_link_flag">
+                                            <span class="navbar__lang_list_link_txten">ARM</span>
+                                            <span class="navbar__lang_list_link_txt">Հայերեն</span>
+                                            <!-- if language is active, "navbar__lang_list_link_checked" element have a active class -->
+                                            <img src="images/langchecked.svg" alt=""
+                                                class="navbar__lang_list_link_checked">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobileBurger__container">
+                        <div class="mobileBurger__wrapper">
+                            <div class="mobileBurger__menu">
+                                <div class="mobileBurger__menu_btns">
+                                    <button type="button" class="mobileBurger__menu_btns_btn"
+                                        onclick="toggleSubmenu('mobileBurgerItem')">
+                                        <img src="images/burgerProduct.svg" alt=""
+                                            class="mobileBurger__menu_btns_btn_icon">
+                                        <span class="mobileBurger__menu_btns_btn_txt">Պահեստամասեր</span>
+                                        <img src="images/chevron.svg" alt="" class="mobileBurger__menu_btns_btn_arr">
+                                    </button>
+                                </div>
+                                <div class="mobileBurger__menu_list" id="mobileBurgerItem">
+                                    <h4 class="mobileBurger__menu_list_title">Պահեստամասեր</h4>
+                                    <button type="button" class="mobileBurger__menu_list_closeBtn"
+                                        onclick="toggleSubmenu('mobileBurgerItem')">
+                                        <img src="images/close.png" alt=""
+                                            class="mobileBurger__menu_list_closeBtn_icon">
+                                    </button>
+                                    <div class="mobileBurgerMenu">
+                                        <ul class="mobileBurgerMenu__list">
+                                            <li><a href="" class="mobileBurgerMenu__list_link">Պահեստամաս 1</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="mobileBurger__footer">
+                                <li>
+                                    <a href="" class="mobileBurger__footer_link">
+                                        <img src="images/locationNavTop.svg" alt=""
+                                            class="mobileBurger__footer_link_icon">
+                                        <span class="mobileBurger__footer_link_txt">Ք. Երևան, Դավիթ Բեկի 21/3</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="mobileBurger__footer_link">
+                                        <img src="images/phoneNavTop.svg" alt="" class="mobileBurger__footer_link_icon">
+                                        <span class="mobileBurger__footer_link_txt">
+                                            +374 98 56 56 65 <br>
+                                            +374 98 56 56 65
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar__container black">
+                <div class="navbar__wrapper">
+                    <ul class="navbar__contacts">
+                        <li class="navbar__contacts_el">
+                            <img src="images/phoneNavTop.svg" alt="" class="navbar__contacts_el_icon">
+                            <a href="tel:+37496949466" class="navbar__contacts_el_link">+374-96-94-94-66</a>
+                            <a href="tel:+37496949466" class="navbar__contacts_el_link">+374-96-94-94-66</a>
+                        </li>
+                        <li class="navbar__contacts_el">
+                            <img src="images/locationNavTop.svg" alt="" class="navbar__contacts_el_icon">
+                            <a href="" class="navbar__contacts_el_link">Ք. Երևան, Դավիթ Բեկի 11/8</a>
+                        </li>
+                    </ul>
+                    <div class="navbar__lang">
+                        <button type="button" class="navbar__lang_btn" onclick="toggleActive(this, 'langWrapper')">
+                            <img src="images/flag.png" alt="" class="navbar__lang_btn_flag">
+                            <span class="navbar__lang_btn_txt">ARM</span>
+                        </button>
+                        <div class="navbar__lang_wrapper" id="langWrapper">
+                            <p class="navbar__lang_title">Լեզու</p>
+                            <ul class="navbar__lang_list">
+                                <li>
+                                    <a href="" class="navbar__lang_list_link">
+                                        <img src="images/flag.png" alt="" class="navbar__lang_list_link_flag">
+                                        <span class="navbar__lang_list_link_txten">ARM</span>
+                                        <span class="navbar__lang_list_link_txt">Հայերեն</span>
+                                        <!-- if language is active, "navbar__lang_list_link_checked" element have a active class -->
+                                        <img src="images/langchecked.svg" alt="" class="navbar__lang_list_link_checked">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar__container">
+                <div class="navbar__wrapper bottom">
+                    <a href="" class="navbar__logo">
+                        <img src="images/mobileLogo.png" alt="" class="navbar__logo_img">
+                    </a>
+                    <div class="navbar__burger">
+                        <button type="button" class="navbar__burger_btn">
+                            <img src="images/burger.svg" alt="" class="navbar__burger_btn_icon">
+                        </button>
+                        <div class="navbar__burger_wrapper innerHeight" id="burger">
+                            <div class="burger">
+                                <div class="burger__menu firstItem toggle">
+                                    <ul class="burger__menu_list">
+                                        <li>
+                                            <a href="" class="burger__menu_list_link" data-submenu="first">
+                                                <img src="images/menuLink.png" alt=""
+                                                    class="burger__menu_list_link_icon">
+                                                <span class="burger__menu_list_link_txt">Պահեստամասեր</span>
+                                                <img src="images/chevron.svg" alt="" class="burger__menu_list_link_arr">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="burger__menu_list_link" data-submenu="second">
+                                                <img src="images/menuLink.png" alt=""
+                                                    class="burger__menu_list_link_icon">
+                                                <span class="burger__menu_list_link_txt">Պահեստամասեր 2</span>
+                                                <img src="images/chevron.svg" alt="" class="burger__menu_list_link_arr">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="burger__submenu toggle" id="first">
+                                    <h3 class="burger__submenu_title">Պահեստամասեր</h3>
+                                    <ul class="burger__submenu_list">
+                                        <li>
+                                            <a href="" class="burger__submenu_list_link">Պահեստամասեր</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="burger__submenu toggle" id="second">
+                                    <h3 class="burger__submenu_title">Պահեստամասեր 2</h3>
+                                    <ul class="burger__submenu_list">
+                                        <li>
+                                            <a href="" class="burger__submenu_list_link">Պահեստամասեր 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar__search">
+                        <form action="">
+                            <div class="navbar__search_wrapper">
+                                <input type="search" class="navbar__search_inp"
+                                    placeholder="Գտի՛ր ցանկացած պահեստամաս ONE HUB-ում">
+                                <label for="photo" class="navbar__search_photo">
+                                    <input type="file" id="photo">
+                                    <img src="images/photo.svg" alt="" class="navbar__search_photo_icon">
+                                </label>
+                                <button type="button" class="navbar__search_loop">
+                                    <img src="images/loop.svg" alt="" class="navbar__search_loop_icon">
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="navbar__controls">
+                        <button type="button" class="navbar__controls_btn">
+                            <img src="images/location.svg" alt="" class="navbar__controls_btn_icon">
+                            <span class="navbar__controls_btn_txt">Հասցե</span>
+                        </button>
+                        <button type="button" class="navbar__controls_btn">
+                            <img src="images/user.svg" alt="" class="navbar__controls_btn_icon">
+                            <span class="navbar__controls_btn_txt">Մուտք</span>
+                        </button>
+                        <button type="button" class="navbar__controls_btn">
+                            <img src="images/basket.svg" alt="" class="navbar__controls_btn_icon">
+                            <span class="navbar__controls_btn_txt">Զամբյուղ</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <footer class="footer">
+            <div class="footer__container gray">
+                <div class="footer__wrapper top">
+                    <div class="footer__menu">
+                        <div class="footer__menu_el">
+                            <h3 class="footer__menu_el_title">
+                                ONE HUB-ի ՄԱՍԻՆ
+                                <img src="images/footerArr.svg" alt="">
+                            </h3>
+                            <ul class="footer__menu_el_list">
+                                <li>
+                                    <a href="" class="footer__menu_el_list_link">Մեր մասին</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu_el">
+                            <h3 class="footer__menu_el_title">
+                                ՕԳՆՈՒԹՅՈՒՆ ԵՎ ԱՋԱԿՑՈՒԹՅՈՒՆ
+                                <img src="images/footerArr.svg" alt="">
+                            </h3>
+                            <ul class="footer__menu_el_list">
+                                <li>
+                                    <a href="" class="footer__menu_el_list_link">Մեր մասին</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu_el">
+                            <h3 class="footer__menu_el_title">
+                                ONE HUB-ի ՄԱՍԻՆ
+                                <img src="images/footerArr.svg" alt="">
+                            </h3>
+                            <ul class="footer__menu_el_list">
+                                <li>
+                                    <a href="" class="footer__menu_el_list_link">Մեր մասին</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__menu_el">
+                            <h3 class="footer__menu_el_title">
+                                ONE HUB-ի ՄԱՍԻՆ
+                                <img src="images/footerArr.svg" alt="">
+                            </h3>
+                            <ul class="footer__menu_el_list">
+                                <li>
+                                    <a href="" class="footer__menu_el_list_link">Մեր մասին</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__container black">
+                <div class="footer__wrapper bottom">
+                    <ul class="footer__bankList">
+                        <li>
+                            <a href="" class="footer__bankList_link">
+                                <img src="images/bank.png" alt="" class="footer__bankList_link_img">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__bankList_link">
+                                <img src="images/bank.png" alt="" class="footer__bankList_link_img">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__bankList_link">
+                                <img src="images/bank.png" alt="" class="footer__bankList_link_img">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__bankList_link">
+                                <img src="images/bank.png" alt="" class="footer__bankList_link_img">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__bankList_link">
+                                <img src="images/bank.png" alt="" class="footer__bankList_link_img">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="footer__bankList_link">
+                                <img src="images/bank.png" alt="" class="footer__bankList_link_img">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer__content bottom">
+                        <div class="footer__desc big">
+                            <h3 class="footer__desc_title">Ուշադրություն</h3>
+                            <p class="footer__desc_txt">
+                                Այստեղ ցուցադրված տվյալները, մասնավորապես ամբողջ
+                                տվյալների բազան, չեն կարող պատճենվել: Տվյալների և տվյալների բազայի վերարտադրումն ու
+                                տարածումը առանց ONEHUB-ի նախնական համաձայնության և/կամ երրորդ կողմերին նման
+                                գործողություններում ներգրավելը խստիվ արգելվում է: Բովանդակության ցանկացած չարտոնված
+                                օգտագործում համարվում է հեղինակային իրավունքի խախտում և կհանգեցնի իրավական հետևանքների:
+                            </p>
+                        </div>
+                        <div class="footer__desc">
+                            <h3 class="footer__desc_title">
+                                Հաճախորդների սպասարկման <br>
+                                ժամերը հայաստանում
+                            </h3>
+                            <p class="footer__desc_txt">
+                                Երկուշաբթի-Ուրբաթ 7:00-20:00 <br>
+                                Շաբաթ 7:00-16:00 <br>
+                                Կիրակի՝ փակ է <br>
+                            </p>
+                        </div>
+                        <div class="footer__desc_social">
+                            <ul class="footer__desc_social_list">
+                                <li>
+                                    <a href="" class="footer__desc_social_link">
+                                        <img src="images/social.svg" alt="" class="footer__desc_social_link_icon">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer__desc_social_link">
+                                        <img src="images/social.svg" alt="" class="footer__desc_social_link_icon">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer__desc_social_link">
+                                        <img src="images/social.svg" alt="" class="footer__desc_social_link_icon">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer__desc_social_link">
+                                        <img src="images/social.svg" alt="" class="footer__desc_social_link_icon">
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="mailto:info@onehub.am" class="footer__desc_social_link">info@onehub.am</a>
+                            <p class="footer__desc_social_txt">Davit Bek 21/80, Yerevan</p>
+                            <a href="tel:+37496949466" class="footer__desc_social_link bold">+374-96-94-94-66</a>
+                        </div>
+                        <div class="footer__pic">
+                            <img src="images/footerLogo.png" alt="" class="footer__pic_img">
+                            <p class="footer__pic_txt">Բոլոր իրավունքները պաշտպանված են</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__wrapper">
+                    <div class="footer__lang">
+                        <button type="button" class="footer__lang_btn">
+                            <img src="images/globus.svg" alt="" class="footer__lang_btn_globus">
+                            <span class="footer__lang_btn_txt">Armenia</span>
+                            <img src="images/chevronRight.svg" alt="" class="footer__lang_btn_icon">
+                        </button>
+                        <div class="footer__lang_btns">
+                            <button type="button" class="footer__lang_btns_btn">Russian</button>
+                            <button type="button" class="footer__lang_btns_btn">English</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
     </div>
 

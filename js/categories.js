@@ -86,14 +86,14 @@ const productsSwiper = new Swiper("#productsSwiper", {
 });
 
 const langWrapper = document.getElementById('langWrapper');
-
+const langWrapper2 = document.getElementById('langWrapper2');
 document.addEventListener('click', (event) => {
   // если клик произошёл НЕ внутри .navbar__lang
   if (!event.target.closest('.navbar__lang')) {
     langWrapper.classList.remove('active');
+    langWrapper2.classList.remove('active');
   }
 });
-
 
 
 document.addEventListener('click', (event) => {
