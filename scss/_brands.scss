@@ -4,6 +4,7 @@
     @media (max-width: 768px) {
         max-width: 540px;
         margin: 0 auto;
+        width: 100%;
 
         .seeMore {
             max-width: 100%;
@@ -46,7 +47,6 @@
         @media (max-width: 768px) {
             flex-wrap: wrap;
             justify-content: center;
-            max-width: 150px;
             padding: 16px 13px;
             gap: 12px;
         }

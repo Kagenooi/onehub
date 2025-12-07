@@ -2296,6 +2296,7 @@ input[type=search]::-webkit-search-results-decoration {
   .brands {
     max-width: 540px;
     margin: 0 auto;
+    width: 100%;
   }
   .brands .seeMore {
     max-width: 100%;
@@ -2338,7 +2339,6 @@ input[type=search]::-webkit-search-results-decoration {
   .brands__link {
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 150px;
     padding: 16px 13px;
     gap: 12px;
   }
