@@ -178,10 +178,22 @@
                     transform: scale(1.1);
                 }
 
+                @media (max-width: 768px) {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
                 span {
                     font-size: 22px;
                     font-weight: 700;
                     text-transform: uppercase;
+
+                    @media (max-width: 768px) {
+                        font-size: 14px;
+                        text-align: center;
+                        white-space: nowrap;
+                        display: block;
+                    }
                 }
 
                 &_img {
