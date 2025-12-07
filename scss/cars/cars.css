@@ -2367,8 +2367,8 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media (max-width: 768px) {
   .brands__link_img {
-    width: 64px;
-    height: 64px;
+    width: 90px;
+    height: 90px;
   }
 }
 .brands__title {
@@ -2650,8 +2650,8 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media (max-width: 768px) {
   .header__brands_slider_link_img {
-    width: 64px;
-    height: 64px;
+    width: 90px;
+    height: 90px;
   }
 }
 .header__brands_slider_btns {
