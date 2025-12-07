@@ -2548,6 +2548,7 @@ input[type=search]::-webkit-search-results-decoration {
     padding-left: 26px;
     max-width: 510px;
     margin-right: auto;
+    margin-left: -16px;
   }
 }
 .header__brands_top_title {
