@@ -2367,8 +2367,8 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media (max-width: 768px) {
   .brands__link_img {
-    width: 32px;
-    height: 32px;
+    width: 64px;
+    height: 64px;
   }
 }
 .brands__title {
@@ -2643,7 +2643,16 @@ input[type=search]::-webkit-search-results-decoration {
   }
 }
 .header__brands_slider_link_img {
+  width: 48px;
   height: 48px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 768px) {
+  .header__brands_slider_link_img {
+    width: 64px;
+    height: 64px;
+  }
 }
 .header__brands_slider_btns {
   position: absolute;
