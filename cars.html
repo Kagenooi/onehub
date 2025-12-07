@@ -49,6 +49,27 @@
                                 </label>
                             </label>
                         </form>
+                        <div class="navbar__lang">
+                            <button type="button" class="navbar__lang_btn" onclick="toggleActive(this, 'langWrapper2')">
+                                <img src="images/flag.png" alt="" class="navbar__lang_btn_flag">
+                                <span class="navbar__lang_btn_txt">ARM</span>
+                            </button>
+                            <div class="navbar__lang_wrapper" id="langWrapper2">
+                                <p class="navbar__lang_title">Լեզու</p>
+                                <ul class="navbar__lang_list">
+                                    <li>
+                                        <a href="" class="navbar__lang_list_link">
+                                            <img src="images/flag.png" alt="" class="navbar__lang_list_link_flag">
+                                            <span class="navbar__lang_list_link_txten">ARM</span>
+                                            <span class="navbar__lang_list_link_txt">Հայերեն</span>
+                                            <!-- if language is active, "navbar__lang_list_link_checked" element have a active class -->
+                                            <img src="images/langchecked.svg" alt=""
+                                                class="navbar__lang_list_link_checked">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="mobileBurger__container">
                         <div class="mobileBurger__wrapper">
@@ -217,7 +238,7 @@
         </nav>
 
         <header class="header">
-            
+
             <div class="header__brands">
                 <div class="crumbs">
                     <ul class="crumbs__list">
@@ -320,20 +341,13 @@
                                     <div class="select__options" id="carBrands">
                                         <p class="select__options_title">Հայտնի մակնիշներ</p>
                                         <div class="select__options_wrapper">
-                                            <button type="button"
-                                                class="select__options_el">Mercedes-Benz</button>
-                                            <button type="button"
-                                                class="select__options_el">Toyota</button>
-                                            <button type="button"
-                                                class="select__options_el">Honda</button>
-                                            <button type="button"
-                                                class="select__options_el">Honda</button>
-                                            <button type="button"
-                                                class="select__options_el">Honda</button>
-                                            <button type="button"
-                                                class="select__options_el">Honda</button>
-                                            <button type="button"
-                                                class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Mercedes-Benz</button>
+                                            <button type="button" class="select__options_el">Toyota</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
+                                            <button type="button" class="select__options_el">Honda</button>
                                         </div>
                                     </div>
                                 </div>
