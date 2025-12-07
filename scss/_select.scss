@@ -33,16 +33,12 @@
         position: absolute;
         width: 100%;
         top: 55px;
-        visibility: hidden;
-        opacity: 0;
         z-index: 1020;
-        display: none;
+        max-height: 0px;
+        overflow: hidden;
 
         &.active {
             border: 0.5px solid #F62B02;
-            visibility: visible;
-            opacity: 1;
-            display: block;
         }
 
         &_wrapper {

@@ -202,7 +202,10 @@ input[type=search]::-webkit-search-results-decoration {
   transform: scale(1.1);
 }
 .product__pic_img {
+  width: 100%;
   height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin: 0 auto;
 }
 .product__wishlist {
@@ -866,7 +869,6 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media (max-width: 768px) {
   .navbar__lang {
-    background: #333;
     border-radius: 6px;
     width: -moz-fit-content;
     width: fit-content;
@@ -943,7 +945,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media (max-width: 768px) {
   .navbar__lang_btn {
-    background: #333;
+    background: none;
     padding: 12px;
   }
 }
@@ -976,7 +978,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media (max-width: 768px) {
   .navbar__lang_btn_txt {
-    font-size: 22px;
+    display: none;
   }
 }
 .navbar__lang_wrapper {
@@ -2300,7 +2302,9 @@ input[type=search]::-webkit-search-results-decoration {
   }
 }
 .brands__link {
-  display: block;
+  display: flex;
+  gap: 15px;
+  align-items: center;
   padding: 16px 24px;
   background: #fff;
   width: 100%;
@@ -2309,14 +2313,24 @@ input[type=search]::-webkit-search-results-decoration {
   .brands__link {
     padding: 16px 13px;
     height: 64px;
+    gap: 12px;
   }
 }
 .brands__link:hover .brands__link_img {
   transform: scale(1.05);
 }
+.brands__link span {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .brands__link span {
+    font-size: 14px;
+  }
+}
 .brands__link_img {
-  width: 100%;
-  height: 100%;
+  height: 32px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -2440,16 +2454,12 @@ input[type=search]::-webkit-search-results-decoration {
   position: absolute;
   width: 100%;
   top: 55px;
-  visibility: hidden;
-  opacity: 0;
   z-index: 1020;
-  display: none;
+  max-height: 0px;
+  overflow: hidden;
 }
 .select__options.active {
   border: 0.5px solid #F62B02;
-  visibility: visible;
-  opacity: 1;
-  display: block;
 }
 .select__options_wrapper {
   max-height: 390px;

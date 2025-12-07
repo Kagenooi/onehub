@@ -64,30 +64,8 @@ const headerBrands = new Swiper("#headerBrands", {
     },
 });
 
-
-// let accSliderEl = new Swiper('.problemFixSlider', {
-//     loop: true,
-//     slidesPerView: 3,
-//     spaceBetween: 16,
-//     navigation: {
-//         nextEl: ".problemFixSlider__btns_btn.next",
-//         prevEl: ".problemFixSlider__btns_btn.prev",
-//     },
-//     pagination: {
-//         el: ".problemFixSlider .swiper-pagination",
-//         clickable: true,
-//     },
-//     breakpoints: {
-//         // when window width is >=
-//         769: {
-//             slidesPerView: 5,
-//             spaceBetween: 26
-//         }
-//     }
-// });
-
 var swiper = new Swiper(".problemFixSlider", {
-    loop: true,
+    // loop: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,

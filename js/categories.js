@@ -21,11 +21,13 @@ window.toggleActive = toggleActive;
 window.toggleAcc = toggleAcc;
 window.toggleWishlist = toggleWishlist;
 window.toggleSubmenu = toggleSubmenu;
-window.toggleMobileMenu = toggleMobileMenu; 
+window.toggleMobileMenu = toggleMobileMenu;
 window.footerAcc = footerAcc;
 
 footerAcc();
 showSubmenu();
+
+
 document.addEventListener('click', (e) => {
     if (!e.target.closest('.select')) {
         toggleAcc(); // закрываем все селекты
@@ -88,11 +90,11 @@ const productsSwiper = new Swiper("#productsSwiper", {
 const langWrapper = document.getElementById('langWrapper');
 const langWrapper2 = document.getElementById('langWrapper2');
 document.addEventListener('click', (event) => {
-  // если клик произошёл НЕ внутри .navbar__lang
-  if (!event.target.closest('.navbar__lang')) {
-    langWrapper.classList.remove('active');
-    langWrapper2.classList.remove('active');
-  }
+    // если клик произошёл НЕ внутри .navbar__lang
+    if (!event.target.closest('.navbar__lang')) {
+        langWrapper.classList.remove('active');
+        langWrapper2.classList.remove('active');
+    }
 });
 
 
@@ -241,26 +243,13 @@ function updateDecorState() {
 }
 
 
-const selectBtns = document.querySelectorAll('.select__btn');
-selectBtns.forEach(element => {
-    element.addEventListener('click', function() {
-        let options = this.nextElementSibling;
-        if (options.style.maxHeight) {
-            options.style.maxHeight = null;
-        } else {
-            options.style.maxHeight = options.style.maxHeight + options.scrollHeight + 'px';
-        }
-    })
-});
-
-
 
 const catBtn = document.querySelectorAll('.categorie__header_btns_btn');
 const categories = document.querySelector('#categories');
 const products = categories.querySelectorAll('.product');
 
 const LS_SIZE_KEY = 'productSize';
-const LS_CAT_KEY  = 'categoriesClass';
+const LS_CAT_KEY = 'categoriesClass';
 
 // единая функция применения выбранного размера
 function applySize(size) {

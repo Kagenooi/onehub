@@ -19,22 +19,6 @@ export function toggleMobileMenu(burger, btn) {
     }
 }
 
-// export function toggleAcc(event) {
-//     let acc = document.querySelector(`#${event.dataset.acc}`);
-//     let choose = event.querySelector('span');
-//     event.classList.toggle('active');
-//     acc.classList.toggle('active');
-
-//     let accBtns = acc.querySelectorAll('button');
-//     accBtns.forEach(element => {
-//         element.addEventListener('click', function () {
-//             choose.innerHTML = element.innerHTML;
-//             event.classList.remove('active');
-//             acc.classList.remove('active');
-//         })
-//     });
-// }
-
 // одна публичная функция
 export function toggleAcc(btn) {
     const allBtns = document.querySelectorAll('.select__btn');
@@ -79,6 +63,15 @@ export function toggleAcc(btn) {
 
     optionBtns.forEach(optionBtn => {
         optionBtn.onclick = () => {
+
+            let el = optionBtn;
+            while (el && !el.classList.contains('select')) {
+                el = el.parentElement;
+            }
+            let hiddenInp = el.querySelector('.select__hidden');
+            hiddenInp.value = optionBtn.value;
+            
+
             if (textSpan) {
                 textSpan.textContent = optionBtn.textContent;
             }

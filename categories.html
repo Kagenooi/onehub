@@ -49,6 +49,27 @@
                                 </label>
                             </label>
                         </form>
+                        <div class="navbar__lang">
+                            <button type="button" class="navbar__lang_btn" onclick="toggleActive(this, 'langWrapper2')">
+                                <img src="images/flag.png" alt="" class="navbar__lang_btn_flag">
+                                <span class="navbar__lang_btn_txt">ARM</span>
+                            </button>
+                            <div class="navbar__lang_wrapper" id="langWrapper2">
+                                <p class="navbar__lang_title">Լեզու</p>
+                                <ul class="navbar__lang_list">
+                                    <li>
+                                        <a href="" class="navbar__lang_list_link">
+                                            <img src="images/flag.png" alt="" class="navbar__lang_list_link_flag">
+                                            <span class="navbar__lang_list_link_txten">ARM</span>
+                                            <span class="navbar__lang_list_link_txt">Հայերեն</span>
+                                            <!-- if language is active, "navbar__lang_list_link_checked" element have a active class -->
+                                            <img src="images/langchecked.svg" alt=""
+                                                class="navbar__lang_list_link_checked">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="mobileBurger__container">
                         <div class="mobileBurger__wrapper">
@@ -112,11 +133,11 @@
                         </li>
                     </ul>
                     <div class="navbar__lang">
-                        <button type="button" class="navbar__lang_btn" onclick="toggleActive(this, 'langWrapper2')">
+                        <button type="button" class="navbar__lang_btn" onclick="toggleActive(this, 'langWrapper')">
                             <img src="images/flag.png" alt="" class="navbar__lang_btn_flag">
                             <span class="navbar__lang_btn_txt">ARM</span>
                         </button>
-                        <div class="navbar__lang_wrapper" id="langWrapper2">
+                        <div class="navbar__lang_wrapper" id="langWrapper">
                             <p class="navbar__lang_title">Լեզու</p>
                             <ul class="navbar__lang_list">
                                 <li>
@@ -244,6 +265,7 @@
                         <form action="">
                             <div class="filter__form">
                                 <div class="select gc-2">
+                                    <input type="hidden" name="" id="" class="select__hidden">
                                     <button type="button" class="select__btn" data-acc="carBrands"
                                         onclick="toggleAcc(this)">
                                         <span class="select__btn_txt">Ընտրել մակնիշը</span>
@@ -810,7 +832,15 @@
                 </div>
                 <div class="footer__wrapper">
                     <div class="footer__lang">
-
+                        <button type="button" class="footer__lang_btn">
+                            <img src="images/globus.svg" alt="" class="footer__lang_btn_globus">
+                            <span class="footer__lang_btn_txt">Armenia</span>
+                            <img src="images/chevronRight.svg" alt="" class="footer__lang_btn_icon">
+                        </button>
+                        <div class="footer__lang_btns">
+                            <button type="button" class="footer__lang_btns_btn">Russian</button>
+                            <button type="button" class="footer__lang_btns_btn">English</button>
+                        </div>
                     </div>
                 </div>
             </div>
