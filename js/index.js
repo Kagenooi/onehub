@@ -27,6 +27,13 @@ window.footerAcc = footerAcc;
 footerAcc();
 showSubmenu();
 
+
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.select')) {
+        toggleAcc(); // закрываем все селекты
+    }
+});
+
 const headerSwiper = new Swiper("#headerSlider", {
     loop: true,
     slidesPerView: 2,

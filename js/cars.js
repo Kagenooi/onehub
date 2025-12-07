@@ -120,6 +120,12 @@ document.addEventListener('click', (event) => {
   }
 });
 
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.select')) {
+        toggleAcc(); // закрываем все селекты
+    }
+});
+
 
 
 document.addEventListener('click', (event) => {
