@@ -2336,8 +2336,10 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media (max-width: 768px) {
   .brands__link {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 150px;
     padding: 16px 13px;
-    height: 64px;
     gap: 12px;
   }
 }

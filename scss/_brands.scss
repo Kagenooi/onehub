@@ -44,8 +44,10 @@
         width: 100%;
 
         @media (max-width: 768px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 150px;
             padding: 16px 13px;
-            height: 64px;
             gap: 12px;
         }
 
