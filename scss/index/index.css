@@ -2331,6 +2331,7 @@ input[type=search]::-webkit-search-results-decoration {
     display: block;
     font-size: 14px;
     text-align: center;
+    white-space: nowrap;
   }
 }
 .brands__link_img {
