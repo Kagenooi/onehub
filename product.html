@@ -49,6 +49,27 @@
                                 </label>
                             </label>
                         </form>
+                        <div class="navbar__lang">
+                            <button type="button" class="navbar__lang_btn" onclick="toggleActive(this, 'langWrapper2')">
+                                <img src="images/flag.png" alt="" class="navbar__lang_btn_flag">
+                                <span class="navbar__lang_btn_txt">ARM</span>
+                            </button>
+                            <div class="navbar__lang_wrapper" id="langWrapper2">
+                                <p class="navbar__lang_title">Լեզու</p>
+                                <ul class="navbar__lang_list">
+                                    <li>
+                                        <a href="" class="navbar__lang_list_link">
+                                            <img src="images/flag.png" alt="" class="navbar__lang_list_link_flag">
+                                            <span class="navbar__lang_list_link_txten">ARM</span>
+                                            <span class="navbar__lang_list_link_txt">Հայերեն</span>
+                                            <!-- if language is active, "navbar__lang_list_link_checked" element have a active class -->
+                                            <img src="images/langchecked.svg" alt=""
+                                                class="navbar__lang_list_link_checked">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="mobileBurger__container">
                         <div class="mobileBurger__wrapper">
@@ -112,11 +133,11 @@
                         </li>
                     </ul>
                     <div class="navbar__lang">
-                        <button type="button" class="navbar__lang_btn" onclick="toggleActive(this, 'langWrapper2')">
+                        <button type="button" class="navbar__lang_btn" onclick="toggleActive(this, 'langWrapper')">
                             <img src="images/flag.png" alt="" class="navbar__lang_btn_flag">
                             <span class="navbar__lang_btn_txt">ARM</span>
                         </button>
-                        <div class="navbar__lang_wrapper" id="langWrapper2">
+                        <div class="navbar__lang_wrapper" id="langWrapper">
                             <p class="navbar__lang_title">Լեզու</p>
                             <ul class="navbar__lang_list">
                                 <li>
@@ -234,7 +255,8 @@
             <div class="singleProduct__fixed js-scrolled-target">
                 <div class="singleProduct__fixed_wrapper">
                     <div class="singleProduct__fixed_desc">
-                        <p class="singleProduct__fixed_desc_title">BMW X6 xDrive 35i 3.0L BMW X6 | V6 | 3.0 L | 2014 | GCC | Accident-Free | In Excellent Condition</p>
+                        <p class="singleProduct__fixed_desc_title">BMW X6 xDrive 35i 3.0L BMW X6 | V6 | 3.0 L | 2014 |
+                            GCC | Accident-Free | In Excellent Condition</p>
                         <p class="singleProduct__fixed_desc_price">USD 17,800</p>
                     </div>
                     <div class="singleProduct__fixed_social">
@@ -265,10 +287,13 @@
                         </p>
                         <div class="singleProduct__header_currency">
                             <button type="button" class="singleProduct__header_currency_btn">
-                                AMD
-                                <img src="images/chervonDown.svg" alt="" class="singleProduct__header_currency_btn_icon">
+                                <span class="singleProduct__header_currency_btn_txt">AMD</span>
+                                <img src="images/chervonDown.svg" alt=""
+                                    class="singleProduct__header_currency_btn_icon">
                             </button>
                             <div class="singleProduct__header_currency_btns">
+                                <button type="button" class="singleProduct__header_currency_btns_btn"
+                                    id="defaultCurrency">AMD</button>
                                 <button type="button" class="singleProduct__header_currency_btns_btn">USD</button>
                                 <button type="button" class="singleProduct__header_currency_btns_btn">RUB</button>
                             </div>
@@ -278,7 +303,8 @@
                 <div class="singleProduct__gallery">
                     <button type="button" class="singleProduct__gallery_wishlist" onclick="toggleWishlist(this)">
                         <img src="images/favoriteBlue.svg" alt="" class="singleProduct__gallery_wishlist_icon">
-                        <img src="images/favoriteBlueActive.svg" alt="" class="singleProduct__gallery_wishlist_icon active">
+                        <img src="images/favoriteBlueActive.svg" alt=""
+                            class="singleProduct__gallery_wishlist_icon active">
                     </button>
                     <div class="swiper mySwiper2">
                         <div class="swiper-wrapper">

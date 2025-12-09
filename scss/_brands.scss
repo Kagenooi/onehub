@@ -69,14 +69,9 @@
         }
 
         &_img {
-            width: 48px;
-            height: 48px;
+            width: 90px;
+            height: 90px;
             object-fit: contain;
-
-            @media (max-width: 768px) {
-                width: 90px;
-                height: 90px;
-            }
         }
     }
 

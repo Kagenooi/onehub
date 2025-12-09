@@ -27,6 +27,20 @@ window.footerAcc = footerAcc;
 footerAcc();
 showSubmenu();
 
+
+const currencyBtnProduct = document.querySelectorAll('.singleProduct__header_currency_btns_btn');
+const choosedCurrency = document.querySelector('.singleProduct__header_currency_btn_txt');
+currencyBtnProduct.forEach(element => {
+    element.addEventListener('click', function () {
+        for (let i = 0; i < currencyBtnProduct.length; i++) {
+            currencyBtnProduct[i].classList.remove('active');
+        }
+        choosedCurrency.innerHTML = this.innerHTML;
+        this.classList.add('active');
+    })
+});
+document.querySelector('#defaultCurrency').click();
+
 const productsSwiper = new Swiper("#productsSwiper", {
     cssMode: true,
     loop: true,
@@ -55,11 +69,11 @@ const productsSwiper = new Swiper("#productsSwiper", {
 const langWrapper = document.getElementById('langWrapper');
 const langWrapper2 = document.getElementById('langWrapper2');
 document.addEventListener('click', (event) => {
-  // если клик произошёл НЕ внутри .navbar__lang
-  if (!event.target.closest('.navbar__lang')) {
-    langWrapper.classList.remove('active');
-    langWrapper2.classList.remove('active');
-  }
+    // если клик произошёл НЕ внутри .navbar__lang
+    if (!event.target.closest('.navbar__lang')) {
+        langWrapper.classList.remove('active');
+        langWrapper2.classList.remove('active');
+    }
 });
 
 
@@ -109,7 +123,7 @@ const swiper2 = new Swiper(".mySwiper2", {
 
 const ttxAcc = document.querySelectorAll('.singleProduct__ttx_info_acc_el_btn');
 ttxAcc.forEach(element => {
-    element.addEventListener('click', function() {
+    element.addEventListener('click', function () {
         let acc = this.nextElementSibling;
         if (acc.style.maxHeight) {
             acc.style.maxHeight = null;
@@ -121,7 +135,7 @@ ttxAcc.forEach(element => {
 
 
 const currencyBtn = document.querySelector('.singleProduct__header_currency_btn');
-currencyBtn.addEventListener('click', function() {
+currencyBtn.addEventListener('click', function () {
     let allCurrency = this.nextElementSibling;
     if (allCurrency.style.maxHeight) {
         allCurrency.style.maxHeight = null;
@@ -134,7 +148,7 @@ currencyBtn.addEventListener('click', function() {
 
 
 const currencyWrapper = document.querySelector('.singleProduct__header_currency');
-const currencyList    = document.querySelector('.singleProduct__header_currency_btns');
+const currencyList = document.querySelector('.singleProduct__header_currency_btns');
 
 document.addEventListener('click', (e) => {
     if (!currencyWrapper) return;
@@ -149,7 +163,7 @@ document.addEventListener('click', (e) => {
 
 const seeMoreInfo = document.querySelector('.singleProduct__desc_link');
 const seeMoreContent = document.querySelector('#singleProductContnet');
-seeMoreInfo.addEventListener('click', function() {
+seeMoreInfo.addEventListener('click', function () {
     if (seeMoreContent.style.maxHeight) {
         seeMoreContent.style.maxHeight = null;
     } else {
