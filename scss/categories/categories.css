@@ -1920,8 +1920,8 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media (max-width: 768px) {
   .aside .filter__wrapper {
-    height: 100vw;
-    max-height: 100vw;
+    height: 100vh;
+    max-height: 100vh;
     padding-right: 10px;
     overflow-y: auto;
   }
@@ -2058,10 +2058,14 @@ input[type=search]::-webkit-search-results-decoration {
   }
 }
 
+.productsSlider {
+  padding-bottom: 120px;
+}
 @media (max-width: 768px) {
   .productsSlider {
     max-width: 590px;
     overflow: hidden;
+    padding-bottom: 50px;
   }
 }
 @media (max-width: 768px) {

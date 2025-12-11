@@ -1,6 +1,7 @@
 export function adaptive() {
     const wrapper = document.querySelector('#adaptive');
     const innerHeightBlocks = document.querySelectorAll('.innerHeight');
+    const innerHeightBlocks2 = document.querySelector('.innerHeight2');
 
     if (!wrapper) return;
 
@@ -21,6 +22,11 @@ export function adaptive() {
     const navbar = document.querySelector('.navbar');
     const navbarHeight = navbar ? navbar.offsetHeight : 0;
 
+    if (document.body.clientWidth < 769) {
+        innerHeightBlocks2.style.height = (viewportHeight / zoom) - 200 + 'px';
+        innerHeightBlocks2.style.maxHeight = (viewportHeight / zoom) - 200 + 'px';
+        innerHeightBlocks2.style.minHeight = (viewportHeight / zoom) - 200 + 'px';
+    }
     // чтобы блок «под зумом» занимал 100% высоты экрана:
     innerHeightBlocks.forEach((block) => {
         block.style.height = (viewportHeight / zoom) + 'px';
@@ -30,7 +36,7 @@ export function adaptive() {
 
     const mobileBurgerSearch = document.querySelector('.mobileBurger__search');
     const mobileBurgerContainer = document.querySelector('.mobileBurger__container');
-    const mobileBurgerContainerHeight  = mobileBurgerSearch ? mobileBurgerSearch.offsetHeight : 0;
+    const mobileBurgerContainerHeight = mobileBurgerSearch ? mobileBurgerSearch.offsetHeight : 0;
     const mobileBurgerMenu = document.querySelector('.mobileBurger__menu');
     mobileBurgerMenu.style.height = ((viewportHeight / zoom) - 440) + 'px';
     mobileBurgerMenu.style.minHeight = ((viewportHeight / zoom) - 440) + 'px';
