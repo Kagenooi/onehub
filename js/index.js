@@ -13,7 +13,8 @@ import {
     showSubmenu,
     toggleSubmenu,
     toggleMobileMenu,
-    footerAcc
+    footerAcc,
+    initSelects
 } from "./module.js";
 
 window.showSubmenu = showSubmenu;
@@ -23,7 +24,9 @@ window.toggleWishlist = toggleWishlist;
 window.toggleSubmenu = toggleSubmenu;
 window.toggleMobileMenu = toggleMobileMenu; 
 window.footerAcc = footerAcc;
+window.initSelects = initSelects;
 
+initSelects();
 footerAcc();
 showSubmenu();
 

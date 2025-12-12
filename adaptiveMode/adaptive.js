@@ -22,7 +22,7 @@ export function adaptive() {
     const navbar = document.querySelector('.navbar');
     const navbarHeight = navbar ? navbar.offsetHeight : 0;
 
-    if (document.body.clientWidth < 769) {
+    if (innerHeightBlocks2 & document.body.clientWidth < 769) {
         innerHeightBlocks2.style.height = (viewportHeight / zoom) - 200 + 'px';
         innerHeightBlocks2.style.maxHeight = (viewportHeight / zoom) - 200 + 'px';
         innerHeightBlocks2.style.minHeight = (viewportHeight / zoom) - 200 + 'px';
