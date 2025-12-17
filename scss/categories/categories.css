@@ -568,6 +568,9 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .footer__menu_el_list_link {
   font-size: 15px;
+  line-height: 1.5;
+  display: block;
+  padding: 3px 0;
   color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
 }
