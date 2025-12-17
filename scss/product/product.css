@@ -1740,9 +1740,14 @@ input[type=search]::-webkit-search-results-decoration {
 .singleProduct__gallery .mySwiper2 .swiper-slide img {
   max-width: 100%;
   height: 100%;
-  max-height: 590px;
+  max-height: 600px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+@media (max-width: 768px) {
+  .singleProduct__gallery .mySwiper2 .swiper-slide img {
+    max-height: 360px;
+  }
 }
 .singleProduct__gallery .mySwiper .swiper-slide {
   display: flex;

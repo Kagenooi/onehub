@@ -2636,7 +2636,6 @@ input[type=search]::-webkit-search-results-decoration {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  overflow: hidden;
 }
 @media (max-width: 768px) {
   .header__categories_el {
@@ -2676,6 +2675,8 @@ input[type=search]::-webkit-search-results-decoration {
   transition: 0.3s;
   margin: 0 auto;
   max-width: 100%;
+  position: relative;
+  z-index: 1010;
 }
 @media (max-width: 1296px) {
   .header__categories_el_img {
@@ -2707,6 +2708,8 @@ input[type=search]::-webkit-search-results-decoration {
   font-size: 24px;
   opacity: 0;
   transition: 0.3s;
+  border-radius: 15px;
+  z-index: 1020;
 }
 .header__categories_el.comingSoon:hover::before {
   opacity: 1;
