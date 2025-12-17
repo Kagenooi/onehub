@@ -567,7 +567,7 @@ input[type=search]::-webkit-search-results-decoration {
   }
 }
 .footer__menu_el_list_link {
-  font-size: 12px;
+  font-size: 15px;
   color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
 }
@@ -1492,7 +1492,7 @@ input[type=search]::-webkit-search-results-decoration {
   position: absolute;
   width: 100%;
   top: 55px;
-  z-index: 1020;
+  z-index: 1089;
   max-height: 0px;
   overflow: hidden;
 }

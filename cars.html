@@ -323,37 +323,41 @@
                             <h3 class="headerFilter__title">
                                 <img src="images/filterLoop.svg" alt="" class="headerFilter__title_icon">
                                 Փնտրի՛ր մեքենադ VIN համարով
+                                <img src="images/filterArrow.svg" alt="" class="headerFilter__title_arr">
                             </h3>
-                            <div class="headerFilter__search">
-                                <p class="headerFilter__search_name">VIN</p>
-                                <input type="search" class="headerFilter__search_inp" placeholder="VIN DPJ022408777">
-                                <button class="headerFilter__search_btn">
-                                    <img src="images/filterLoop2.svg" alt="" class="headerFilter__search_btn_icon">
-                                </button>
-                            </div>
-                            <div class="headerFilter__wrapper">
-                                <div class="select">
-                                    <button type="button" class="select__btn" data-acc="carBrands"
-                                        onclick="toggleAcc(this)">
-                                        <span class="select__btn_txt">Ընտրել մակնիշը</span>
-                                        <img src="images/filterArrow.svg" alt="" class="select__btn_arr">
+                            <div class="headerFilter__container_acc">
+                                <div class="headerFilter__search">
+                                    <p class="headerFilter__search_name">VIN</p>
+                                    <input type="search" class="headerFilter__search_inp"
+                                        placeholder="VIN DPJ022408777">
+                                    <button class="headerFilter__search_btn">
+                                        <img src="images/filterLoop2.svg" alt="" class="headerFilter__search_btn_icon">
                                     </button>
-                                    <div class="select__options" id="carBrands">
-                                        <p class="select__options_title">Հայտնի մակնիշներ</p>
-                                        <div class="select__options_wrapper">
-                                            <button type="button" class="select__options_el">Mercedes-Benz</button>
-                                            <button type="button" class="select__options_el">Toyota</button>
-                                            <button type="button" class="select__options_el">Honda</button>
-                                            <button type="button" class="select__options_el">Honda</button>
-                                            <button type="button" class="select__options_el">Honda</button>
-                                            <button type="button" class="select__options_el">Honda</button>
-                                            <button type="button" class="select__options_el">Honda</button>
+                                </div>
+                                <div class="headerFilter__wrapper">
+                                    <div class="select">
+                                        <button type="button" class="select__btn" data-acc="carBrands"
+                                            onclick="toggleAcc(this)">
+                                            <span class="select__btn_txt">Ընտրել մակնիշը</span>
+                                            <img src="images/filterArrow.svg" alt="" class="select__btn_arr">
+                                        </button>
+                                        <div class="select__options" id="carBrands">
+                                            <p class="select__options_title">Հայտնի մակնիշներ</p>
+                                            <div class="select__options_wrapper">
+                                                <button type="button" class="select__options_el">Mercedes-Benz</button>
+                                                <button type="button" class="select__options_el">Toyota</button>
+                                                <button type="button" class="select__options_el">Honda</button>
+                                                <button type="button" class="select__options_el">Honda</button>
+                                                <button type="button" class="select__options_el">Honda</button>
+                                                <button type="button" class="select__options_el">Honda</button>
+                                                <button type="button" class="select__options_el">Honda</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <button type="submit" class="headerFilter__submit">ՓՆՏՐԵԼ</button>
+                                <a href="" class="someLink">Ֆիլտր</a>
                             </div>
-                            <button type="submit" class="headerFilter__submit">ՓՆՏՐԵԼ</button>
-                            <a href="" class="someLink">Ֆիլտր</a>
                         </div>
                     </form>
                 </div>
