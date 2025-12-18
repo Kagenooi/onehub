@@ -37,6 +37,18 @@ document.addEventListener('click', (e) => {
     }
 });
 
+const filterBtn = document.querySelector('.headerFilter__title');
+filterBtn.addEventListener('click', function() {
+    let acc = filterBtn.nextElementSibling;
+    if (acc.style.maxHeight) {
+        acc.style.maxHeight = null;
+        acc.style.marginTop = -20 + 'px';
+    } else {
+        acc.style.maxHeight = acc.style.maxHeight + acc.scrollHeight + 'px';
+        acc.style.marginTop = 0 + 'px';
+    }
+})
+
 const headerSwiper = new Swiper("#headerSlider", {
     loop: true,
     slidesPerView: 2,
