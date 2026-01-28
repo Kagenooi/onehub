@@ -22,7 +22,7 @@ window.toggleActive = toggleActive;
 window.toggleAcc = toggleAcc;
 window.toggleWishlist = toggleWishlist;
 window.toggleSubmenu = toggleSubmenu;
-window.toggleMobileMenu = toggleMobileMenu; 
+window.toggleMobileMenu = toggleMobileMenu;
 window.footerAcc = footerAcc;
 window.initSelects = initSelects;
 
@@ -38,7 +38,7 @@ document.addEventListener('click', (e) => {
 });
 
 const filterBtn = document.querySelector('.headerFilter__title');
-filterBtn.addEventListener('click', function() {
+filterBtn.addEventListener('click', function () {
     let acc = filterBtn.nextElementSibling;
     if (acc.style.maxHeight) {
         acc.style.maxHeight = null;
@@ -99,11 +99,11 @@ const productsSwiper = new Swiper("#productsSwiper", {
 const langWrapper = document.getElementById('langWrapper');
 const langWrapper2 = document.getElementById('langWrapper2');
 document.addEventListener('click', (event) => {
-  // если клик произошёл НЕ внутри .navbar__lang
-  if (!event.target.closest('.navbar__lang')) {
-    langWrapper.classList.remove('active');
-    langWrapper2.classList.remove('active');
-  }
+    // если клик произошёл НЕ внутри .navbar__lang
+    if (!event.target.closest('.navbar__lang')) {
+        langWrapper.classList.remove('active');
+        langWrapper2.classList.remove('active');
+    }
 });
 
 
@@ -130,107 +130,104 @@ document.addEventListener('click', (event) => {
     burgerBlock.classList.remove('active');
 });
 
-
-// const headerCategories = document.querySelector('.header__categories');
-// const headerCategoriesBtns = document.querySelectorAll('.headerCategoriesSmall__btn');
-// headerCategoriesBtns.forEach(element => {
-//     element.addEventListener('click', () => {
-//         const transformValue = element.getAttribute('data-transform');
-//         headerCategories.style.left = `${transformValue}px`;
-//         for (let i = 0; i < headerCategoriesBtns.length; i++) {
-//             headerCategoriesBtns[i].classList.remove('active');
-//         }
-//         element.classList.add('active');
-//     });
-// });
-// document.querySelector('#defaultCategoriesBtn').click();
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const headerCategories = document.querySelector('.header__categories'); // блок, который двигаем
-    const swipeZone = document.getElementById('headerCategories');          // зона, по которой свайпаем
-    const headerCategoriesBtns = Array.from(document.querySelectorAll('.headerCategoriesSmall__btn'));
-
-    if (!headerCategories || !headerCategoriesBtns.length || !swipeZone) return;
-
-    let currentIndex = headerCategoriesBtns.findIndex(btn => btn.id === 'defaultCategoriesBtn');
-    if (currentIndex === -1) currentIndex = 0;
-
-    // единая функция переключения
-    function setCategory(index) {
-        if (index < 0 || index >= headerCategoriesBtns.length) return;
-
-        const btn = headerCategoriesBtns[index];
-        const transformValue = btn.getAttribute('data-transform');
-
-        // если хочешь через translateX – замени на transform
-        headerCategories.style.left = `${transformValue}px`;
-
-        headerCategoriesBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        currentIndex = index;
+var cat = new Swiper("#headerCategories", {
+    slidesPerView: 3,
+    spaceBetween: 8,
+    loop: true,
+    autoplay: true,
+    breakpoints: {
+        769: {
+            spaceBetween: 32,
+        }
     }
-
-    // клики по кнопкам
-    headerCategoriesBtns.forEach((btn, index) => {
-        btn.addEventListener('click', () => {
-            setCategory(index);
-        });
-    });
-
-    // дефолтное состояние
-    setCategory(currentIndex);
-
-    // ==== свайпы ====
-    let startX = 0;
-    let startY = 0;
-    let isSwiping = false;
-
-    swipeZone.addEventListener('touchstart', (e) => {
-        const touch = e.touches[0];
-        startX = touch.clientX;
-        startY = touch.clientY;
-        isSwiping = true;
-    }, { passive: true });
-
-    swipeZone.addEventListener('touchmove', (e) => {
-        if (!isSwiping) return;
-
-        const touch = e.touches[0];
-        const diffX = touch.clientX - startX;
-        const diffY = touch.clientY - startY;
-
-        // если пользователь уходит в вертикальный скролл — не мешаем
-        if (Math.abs(diffY) > Math.abs(diffX)) {
-            isSwiping = false;
-            return;
-        }
-
-        // чтобы реально блокировать горизонтальный скролл, можно сделать passive: false
-        // и здесь вызвать e.preventDefault()
-    }, { passive: true });
-
-    swipeZone.addEventListener('touchend', (e) => {
-        if (!isSwiping) return;
-
-        const touch = e.changedTouches[0];
-        const diffX = touch.clientX - startX;
-        const threshold = 50; // минимальная длина свайпа в px
-
-        if (Math.abs(diffX) > threshold) {
-            if (diffX < 0) {
-                // свайп влево -> следующая категория
-                setCategory(currentIndex + 1);
-            } else {
-                // свайп вправо -> предыдущая категория
-                setCategory(currentIndex - 1);
-            }
-        }
-
-        isSwiping = false;
-    }, { passive: true });
 });
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const headerCategories = document.querySelector('.header__categories'); // блок, который двигаем
+//     const swipeZone = document.getElementById('headerCategories');          // зона, по которой свайпаем
+//     const headerCategoriesBtns = Array.from(document.querySelectorAll('.headerCategoriesSmall__btn'));
+
+//     if (!headerCategories || !headerCategoriesBtns.length || !swipeZone) return;
+
+//     let currentIndex = headerCategoriesBtns.findIndex(btn => btn.id === 'defaultCategoriesBtn');
+//     if (currentIndex === -1) currentIndex = 0;
+
+//     // единая функция переключения
+//     function setCategory(index) {
+//         if (index < 0 || index >= headerCategoriesBtns.length) return;
+
+//         const btn = headerCategoriesBtns[index];
+//         const transformValue = btn.getAttribute('data-transform');
+
+//         // если хочешь через translateX – замени на transform
+//         headerCategories.style.left = `${transformValue}px`;
+
+//         headerCategoriesBtns.forEach(b => b.classList.remove('active'));
+//         btn.classList.add('active');
+
+//         currentIndex = index;
+//     }
+
+//     // клики по кнопкам
+//     headerCategoriesBtns.forEach((btn, index) => {
+//         btn.addEventListener('click', () => {
+//             setCategory(index);
+//         });
+//     });
+
+//     // дефолтное состояние
+//     setCategory(currentIndex);
+
+//     // ==== свайпы ====
+//     let startX = 0;
+//     let startY = 0;
+//     let isSwiping = false;
+
+//     swipeZone.addEventListener('touchstart', (e) => {
+//         const touch = e.touches[0];
+//         startX = touch.clientX;
+//         startY = touch.clientY;
+//         isSwiping = true;
+//     }, { passive: true });
+
+//     swipeZone.addEventListener('touchmove', (e) => {
+//         if (!isSwiping) return;
+
+//         const touch = e.touches[0];
+//         const diffX = touch.clientX - startX;
+//         const diffY = touch.clientY - startY;
+
+//         // если пользователь уходит в вертикальный скролл — не мешаем
+//         if (Math.abs(diffY) > Math.abs(diffX)) {
+//             isSwiping = false;
+//             return;
+//         }
+
+//         // чтобы реально блокировать горизонтальный скролл, можно сделать passive: false
+//         // и здесь вызвать e.preventDefault()
+//     }, { passive: true });
+
+//     swipeZone.addEventListener('touchend', (e) => {
+//         if (!isSwiping) return;
+
+//         const touch = e.changedTouches[0];
+//         const diffX = touch.clientX - startX;
+//         const threshold = 50; // минимальная длина свайпа в px
+
+//         if (Math.abs(diffX) > threshold) {
+//             if (diffX < 0) {
+//                 // свайп влево -> следующая категория
+//                 setCategory(currentIndex + 1);
+//             } else {
+//                 // свайп вправо -> предыдущая категория
+//                 setCategory(currentIndex - 1);
+//             }
+//         }
+
+//         isSwiping = false;
+//     }, { passive: true });
+// });
 
 
 
