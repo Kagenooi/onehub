@@ -845,9 +845,8 @@ input[type=search]::-webkit-search-results-decoration {
   left: -100%;
   transition: 0.5s;
   z-index: 1100;
+  height: 100vh;
   padding: 20px 13px;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 .navbar__burger #burger .burger__submenu_title {
   font-size: 20px;
