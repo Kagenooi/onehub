@@ -32,6 +32,7 @@
         @media (max-width: 768px) {
             grid-template-columns: 1fr;
         }
+
         &_el {
             position: relative;
 
@@ -54,7 +55,16 @@
             }
 
             &_img {
-                margin: 46px auto 6px;
+                margin: 0px auto 6px;
+            }
+
+            &_title {
+                font-weight: 300;
+                font-style: Light;
+                font-size: 54.66px;
+                line-height: 67px;
+                text-align: center;
+                color: #efefef;
             }
 
             &_list {
@@ -65,6 +75,7 @@
                         margin-bottom: 15px;
                     }
                 }
+
                 a {
                     display: flex;
                     align-items: center;
@@ -74,6 +85,10 @@
                     border-radius: 4px;
                     background: #E8E4E4;
                     padding: 13px;
+
+                    &:hover {
+                        background: #c2c1c1;
+                    }
                 }
             }
         }

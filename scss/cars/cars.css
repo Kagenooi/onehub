@@ -2520,7 +2520,15 @@ input[type=search]::-webkit-search-results-decoration {
   z-index: 1020;
 }
 .header__items_el_img {
-  margin: 46px auto 6px;
+  margin: 0px auto 6px;
+}
+.header__items_el_title {
+  font-weight: 300;
+  font-style: Light;
+  font-size: 54.66px;
+  line-height: 67px;
+  text-align: center;
+  color: #efefef;
 }
 .header__items_el_list {
   width: 100%;
@@ -2537,6 +2545,9 @@ input[type=search]::-webkit-search-results-decoration {
   border-radius: 4px;
   background: #E8E4E4;
   padding: 13px;
+}
+.header__items_el_list a:hover {
+  background: #c2c1c1;
 }
 .header .crumbs {
   padding: 24px 0;
