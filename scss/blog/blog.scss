@@ -775,6 +775,7 @@ li {
         &__content {
             padding: 95px 35px;
             background: url('../../images/blogHeaderBg.png') no-repeat center;
+            background-size: cover;
 
             @media (max-width: 768px) {
                 padding: 295px 40px 75px;

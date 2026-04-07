@@ -2073,6 +2073,7 @@ li {
 .globalBlog .header__content {
   padding: 95px 35px;
   background: url("../../images/blogHeaderBg.png") no-repeat center;
+  background-size: cover;
 }
 @media (max-width: 768px) {
   .globalBlog .header__content {
